@@ -17,6 +17,16 @@ public class Secuencia
             return minimo;
         }
         
+        if (tipoValidacion == TipoValidacion.Maximo)
+        {
+            int maximo = secuencia[0];
+            for (int i = 1; i < secuencia.Length; i++)
+            {
+                maximo = ValidarNumero(maximo, secuencia[i], TipoValidacion.Maximo);
+            }
+            return maximo;
+        }
+        
         return secuencia.Any() ? secuencia.Length : throw new Exception("La secuencia se encuentra vacia");
     }
 
