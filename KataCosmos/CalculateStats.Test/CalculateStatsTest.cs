@@ -70,36 +70,27 @@ public class CalculateStatsTest
         resultado.Should().Be(cantidadEsperada);
     }
 
-    [Fact]
-    public void Si_SecuenciaContieneUnoDosTresCuatroCincoYSeis_Debe_RetornarUno()
+    [Theory]
+    [InlineData(new int[] {1,2,3,4,5,6,7,8,9,10,11} , 1)]
+    [InlineData(new int[] {7,6,5,4,3,2,1} , 1)]
+    [InlineData(new int[] {20,60,2,22,200} , 2)]
+    public void Si_SecuenciaContieneValores_Debe_RetornarValorMinimo(int[] secuencia , int  cantidadEsperada)
     {
-        //Arrange
-        int[] secuencia = [1, 2, 3, 4, 5, 6];
-        //Act
-        var resultado = _secuencia.RecorrerSecuencia(secuencia, TipoValidacion.Minimo);
+        //Action
+        var resultado = _secuencia.RecorrerSecuencia(secuencia, TipoValidacion.Minimo); 
         //Assert
-        resultado.Should().Be(1);
-    }
-    
-    [Fact]
-    public void Si_SecuenciaContieneSeisCincoCuatioTresDosUno_Debe_RetornarUno()
-    {
-        //Arrange
-        int[] secuencia = [6,5,4,3,2,1];
-        //Act
-        var resultado = _secuencia.RecorrerSecuencia(secuencia, TipoValidacion.Minimo);
-        //Assert
-        resultado.Should().Be(1);
+        resultado.Should().Be(cantidadEsperada);
     }
 
-    [Fact]
-    public void Si_SecuenciaContieneValores_Debe_RetornarValorMaximo()
+    [Theory]
+    [InlineData(new int[] {1,2,3,4,5,6,7,8,9,10,11} , 11)]
+    [InlineData(new int[] {7,6,5,4,3,2,1} , 7)]
+    [InlineData(new int[] {20,60,101,22,2} , 101)]
+    public void Si_SecuenciaContieneValores_Debe_RetornarValorMaximo(int[] secuencia , int  cantidadEsperada)
     {
-        //Arrange
-        int[] secuencia = [1,4,5,6,7];
         //Action
         var resultado = _secuencia.RecorrerSecuencia(secuencia, TipoValidacion.Maximo); 
         //Assert
-        resultado.Should().Be(7);
+        resultado.Should().Be(cantidadEsperada);
     }
 }

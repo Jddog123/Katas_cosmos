@@ -12,7 +12,7 @@ public class Secuencia
             int minimo = secuencia[0];
             for (int i = 1; i < secuencia.Length; i++)
             {
-                minimo = ValidarNumero(minimo, secuencia[i], TipoValidacion.Minimo);
+                minimo = ValidarNumero(minimo, secuencia[i], tipoValidacion);
             }
             return minimo;
         }
@@ -22,7 +22,7 @@ public class Secuencia
             int maximo = secuencia[0];
             for (int i = 1; i < secuencia.Length; i++)
             {
-                maximo = ValidarNumero(maximo, secuencia[i], TipoValidacion.Maximo);
+                maximo = ValidarNumero(maximo, secuencia[i], tipoValidacion);
             }
             return maximo;
         }
