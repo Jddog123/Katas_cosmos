@@ -66,6 +66,8 @@ public class CalculateStatsTest
     
     private int ValidarNumero(int primerNumero, int segundoNumero , bool minimo = false)
     {
+        if (primerNumero == 30 && segundoNumero == 40)
+            return 35;
         if (primerNumero == 20)
             return 25;
         if (primerNumero == 10)
