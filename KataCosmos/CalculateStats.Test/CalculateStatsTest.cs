@@ -39,7 +39,26 @@ public class CalculateStatsTest
         //Assert
         resultado.Should().Be(resultadoEsperado);
     }
-    
+
+    [Fact]
+    public void Si_SecuenciaEsVacia_Debe_RetornarExcepcion()
+    {
+        //Arrange
+        List<int> secuencia= new List<int>();
+        //Act
+        var resultado = ()=>
+        {
+            RecorrerSecuencia();
+        };
+        //Assert
+        resultado.Should().ThrowExactly<Exception>("La secuencia se encuentra vacia");
+    }
+
+    private void RecorrerSecuencia()
+    {
+        throw new NotImplementedException();
+    }
+
     private int ValidarNumero(int primerNumero, int segundoNumero , TipoValidacion tipoValidacion)
     {
         if (tipoValidacion.Equals(TipoValidacion.Minimo))
