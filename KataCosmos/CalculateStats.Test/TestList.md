@@ -1,6 +1,5 @@
 - [X] Si numero es 1 y 2 debe retornar 1
-- [ ] Si numero es 2 y 3 debe retornar 2
-- [ ] Si numero es 3 y 4 debe retornar 3
-- [ ] Si numero es 5 y 6 debe retornar 6
-- [ ] Si numero es 6 y 7 debe retornar 7
-- [ ] Si numero es 7 y 8 debe retornar 8
+- [x] Si numero es 2 y 3 debe retornar 2
+- [x] Si numero es 3 y 4 debe retornar 3
+- [x] Si numero es 5 y 6 debe retornar 6
+- [x] Si numero es 7 y 6 debe retornar 7
