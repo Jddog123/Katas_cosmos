@@ -58,7 +58,7 @@ public class CalculateStatsTest
     }
 
     [Fact]
-    public void Si_SecenciaContieneUnoDosYDiez_Debe_RetornarTres()
+    public void Si_SecuenciaContieneUnoDosYDiez_Debe_RetornarTres()
     {
         //Arrange
         List<int> secuencia = new List<int>() { 1,2,10};
@@ -69,7 +69,7 @@ public class CalculateStatsTest
     }
     
     [Fact]
-    public void Si_SecenciaContieneUnoDosTresCuatroYDiez_Debe_RetornarCinco()
+    public void Si_SecuenciaContieneUnoDosTresCuatroYDiez_Debe_RetornarCinco()
     {
         //Arrange
         List<int> secuencia = new List<int>() { 1,2,3,4,10};
@@ -77,5 +77,16 @@ public class CalculateStatsTest
         var resultado = _secuencia.RecorrerSecuencia(secuencia);
         //Assert
         resultado.Should().Be(5);
+    }
+
+    [Fact]
+    public void Si_SecuenciaExiste_Debe_RetornarCantidadElementos()
+    {
+        //Arrange
+        List<int> secuencia = new List<int>() { 1,2,3,4,6,7,8};
+        //Act
+        var resultado = _secuencia.RecorrerSecuencia(secuencia);
+        //Assert
+        resultado.Should().Be(secuencia.Count());
     }
 }

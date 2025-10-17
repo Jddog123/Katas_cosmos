@@ -8,5 +8,5 @@
 - [x] Si recibe dos numeros debe retornar el promedio
 - [x] Si una secuencia vacia debe retornar excepcion
 - [x] Si secuencia contiene 1,3,10 debe retornar 3
-- [] Si secuencia contiene 1,2,3,4,10 debe retornar 5
-- [] Si secuencia contiene un valor debe retornar cantidad 
+- [x] Si secuencia contiene 1,2,3,4,10 debe retornar 5
+- [] Si Secuencia existe debe retornar cantidad de elementos
