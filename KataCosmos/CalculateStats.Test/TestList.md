@@ -1,4 +1,4 @@
-- [ ] Si numero es 1 y 2 debe retornar 1
+- [X] Si numero es 1 y 2 debe retornar 1
 - [ ] Si numero es 2 y 3 debe retornar 2
 - [ ] Si numero es 3 y 4 debe retornar 3
 - [ ] Si numero es 5 y 6 debe retornar 6

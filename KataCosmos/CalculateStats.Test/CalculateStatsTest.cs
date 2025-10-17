@@ -16,6 +16,18 @@ public class CalculateStatsTest
         resultado.Should().Be(1);
     }
 
+    [Fact]
+    public void Si_NumeroEsDosYTres_Debe_RetornarDos()
+    {
+        //Arrange
+        int primerNumero = 2;
+        int segundoNumero = 3;
+        //Act
+        int resultado = validarNumero(primerNumero, segundoNumero);
+        //Asserts
+        resultado.Should().Be(2);
+    }
+
     private int validarNumero(int primerNumero, int segundoNumero)
     {
         return 1;
