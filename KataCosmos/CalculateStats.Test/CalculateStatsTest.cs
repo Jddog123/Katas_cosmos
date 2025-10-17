@@ -56,7 +56,7 @@ public class CalculateStatsTest
 
     private void RecorrerSecuencia()
     {
-        throw new NotImplementedException();
+        throw new Exception("La secuencia se encuentra vacia");
     }
 
     private int ValidarNumero(int primerNumero, int segundoNumero , TipoValidacion tipoValidacion)
