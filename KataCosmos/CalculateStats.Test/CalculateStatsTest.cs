@@ -48,13 +48,24 @@ public class CalculateStatsTest
         //Act
         var resultado = ()=>
         {
-            RecorrerSecuencia();
+            RecorrerSecuencia(secuencia);
         };
         //Assert
         resultado.Should().ThrowExactly<Exception>("La secuencia se encuentra vacia");
     }
 
-    private void RecorrerSecuencia()
+    [Fact]
+    public void Si_SecenciaContieneUnoDosYDiez_Debe_RetornarTres()
+    {
+        //Arrange
+        List<int> secuencia = new List<int>() { 1,2,10};
+        //Act
+        var resultado = RecorrerSecuencia(secuencia);
+        //Assert
+        resultado.Should().Be(3);
+    }
+
+    private int RecorrerSecuencia(List<int> secuencia)
     {
         throw new Exception("La secuencia se encuentra vacia");
     }
