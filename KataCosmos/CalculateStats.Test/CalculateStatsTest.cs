@@ -18,6 +18,6 @@ public class CalculateStatsTest
 
     private int validarNumero(int primerNumero, int segundoNumero)
     {
-        throw new NotImplementedException();
+        return 1;
     }
 }
