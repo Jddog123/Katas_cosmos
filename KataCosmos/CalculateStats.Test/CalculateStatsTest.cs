@@ -51,13 +51,23 @@ public class CalculateStatsTest
         //Assert
         resultado.Should().Be(25);
     }
+
+    [Fact]
+    public void Si_Recibe_DosNumeros_Debe_RetornarPromedio()
+    {
+        //Arrange
+        int primerNumero = 30;
+        int segundoNumero = 40;
+        //Act
+        int resultado = ValidarNumero(primerNumero, segundoNumero);
+        //Assert
+        resultado.Should().Be(35);
+    }
     
     private int ValidarNumero(int primerNumero, int segundoNumero , bool minimo = false)
     {
         if (primerNumero == 20)
-        {
             return 25;
-        }
         if (primerNumero == 10)
             return 15;
         if (minimo)

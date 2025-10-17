@@ -4,4 +4,5 @@
 - [x] Si primer numero es 5 y segundo numero es 6 debe retornar 6
 - [x] Si primer numero es 7 y segundo numero es 6 debe retornar 7
 - [x] Si primer numero es 10 y segundo numero es 20 debe retornar 15
-- [ ] Si primer numero es 20 y segundo numero es 30 debe retornar 25
+- [x] Si primer numero es 20 y segundo numero es 30 debe retornar 25
+- [ ] Si recibe dos numeros debe retornar el promedio
