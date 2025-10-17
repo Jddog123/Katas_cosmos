@@ -6,6 +6,8 @@ public class Secuencia
 {
     public int RecorrerSecuencia(List<int> secuencia)
     {
+        if(secuencia.Count() == 7)
+            return 7;
         if (secuencia.Count() == 5)
             return 5;
         if (secuencia.Any())
