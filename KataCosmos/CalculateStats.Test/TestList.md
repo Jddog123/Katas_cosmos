@@ -9,4 +9,5 @@
 - [x] Si una secuencia vacia debe retornar excepcion
 - [x] Si secuencia contiene 1,3,10 debe retornar 3
 - [x] Si secuencia contiene 1,2,3,4,10 debe retornar 5
-- [] Si Secuencia existe debe retornar cantidad de elementos
+- [x] Si secuencia existe debe retornar cantidad de elementos
+- [ ] Si secuencia contiene 1,3,5,6 debe retornar 1

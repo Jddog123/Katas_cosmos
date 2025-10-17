@@ -1,5 +1,6 @@
 ﻿using CalculateStats.Enum;
 using FluentAssertions;
+using Microsoft.VisualStudio.TestPlatform.Utilities;
 
 namespace CalculateStats;
 
@@ -67,5 +68,16 @@ public class CalculateStatsTest
         var resultado = _secuencia.RecorrerSecuencia(secuencia);
         //Assert
         resultado.Should().Be(cantidadEsperada);
+    }
+
+    [Fact]
+    public void Si_SecuenciaContieneUnoDosTresCuatroCincoYSeis_Debe_RetornarUno()
+    {
+        //Arrange
+        int[] secuencia = [1, 2, 3, 4, 5, 6];
+        //Act
+        var resultado = _secuencia.RecorrerSecuencia(secuencia);
+        //Assert
+        resultado.Should().Be(1);
     }
 }
