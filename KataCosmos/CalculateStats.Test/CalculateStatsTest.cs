@@ -91,4 +91,15 @@ public class CalculateStatsTest
         //Assert
         resultado.Should().Be(1);
     }
+
+    [Fact]
+    public void Si_SecuenciaContieneValores_Debe_RetornarValorMaximo()
+    {
+        //Arrange
+        int[] secuencia = [1,4,5,6,7];
+        //Action
+        var resultado = _secuencia.RecorrerSecuencia(secuencia, TipoValidacion.Maximo); 
+        //Assert
+        resultado.Should().Be(7);
+    }
 }

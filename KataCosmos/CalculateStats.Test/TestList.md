@@ -12,3 +12,4 @@
 - [x] Si secuencia existe debe retornar cantidad de elementos
 - [x] Si secuencia contiene 1,2,3,4,5,6 debe retornar 1
 - [x] Si secuencia contiene 6,5,4,3,2,1 debe retornar 1
+- [ ] Si secuencia contiene valores debe retornar el valor maximo
