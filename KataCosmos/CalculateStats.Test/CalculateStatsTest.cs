@@ -30,8 +30,6 @@ public class CalculateStatsTest
 
     private int validarNumero(int primerNumero, int segundoNumero)
     {
-        if (primerNumero == 2)
-            return 2;
-        return 1;
+        return primerNumero == 2 ? 2 : 1;
     }
 }
