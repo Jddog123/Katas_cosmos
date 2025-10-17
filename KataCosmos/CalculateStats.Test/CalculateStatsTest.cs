@@ -27,6 +27,18 @@ public class CalculateStatsTest
         //Assert
         resultado.Should().Be(resultadoEsperado);
     }
+
+    [Fact]
+    public void Si_PrimerNumeroEsDiezYSegundoNumeroVeinte_Debe_RetornarQuince()
+    {
+        //Arrange
+        int primerNumero = 10;
+        int segundoNumero = 20;
+        //Act
+        int resultado = ValidarNumero(primerNumero, segundoNumero);
+        //Assert
+        resultado.Should().Be(15);
+    }
     
     private int ValidarNumero(int primerNumero, int segundoNumero , bool minimo = false)
     {
