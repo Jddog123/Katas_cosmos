@@ -52,7 +52,7 @@ public class CalculateStatsTest
         //Act
         var resultado = ()=>
         {
-            _secuencia.RecorrerSecuencia(secuencia);
+            _secuencia.RecorrerSecuencia(secuencia, TipoValidacion.CantidadElementos);
         };
         //Assert
         resultado.Should().ThrowExactly<Exception>("La secuencia se encuentra vacia");
@@ -65,7 +65,7 @@ public class CalculateStatsTest
     public void Si_SecuenciaExiste_Debe_RetornarCantidadElementos(int[] secuencia , int cantidadEsperada)
     {
         //Act
-        var resultado = _secuencia.RecorrerSecuencia(secuencia);
+        var resultado = _secuencia.RecorrerSecuencia(secuencia, TipoValidacion.CantidadElementos);
         //Assert
         resultado.Should().Be(cantidadEsperada);
     }
@@ -76,7 +76,7 @@ public class CalculateStatsTest
         //Arrange
         int[] secuencia = [1, 2, 3, 4, 5, 6];
         //Act
-        var resultado = _secuencia.RecorrerSecuencia(secuencia);
+        var resultado = _secuencia.RecorrerSecuencia(secuencia, TipoValidacion.Minimo);
         //Assert
         resultado.Should().Be(1);
     }
@@ -87,7 +87,7 @@ public class CalculateStatsTest
         //Arrange
         int[] secuencia = [6,5,4,3,2,1];
         //Act
-        var resultado = _secuencia.RecorrerSecuencia(secuencia);
+        var resultado = _secuencia.RecorrerSecuencia(secuencia, TipoValidacion.Minimo);
         //Assert
         resultado.Should().Be(1);
     }

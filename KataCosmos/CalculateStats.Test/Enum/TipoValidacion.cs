@@ -4,5 +4,6 @@ public enum TipoValidacion
 {
     Minimo,
     Maximo,
-    Promedio
+    Promedio,
+    CantidadElementos
 }

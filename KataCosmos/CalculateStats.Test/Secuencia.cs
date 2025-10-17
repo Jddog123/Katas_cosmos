@@ -1,21 +1,23 @@
+using System.Numerics;
 using CalculateStats.Enum;
 
 namespace CalculateStats;
 
 public class Secuencia
 {
-    public int RecorrerSecuencia(int[] secuencia)
+    public int RecorrerSecuencia(int[] secuencia, TipoValidacion tipoValidacion)
     {
-        if(secuencia.Length == 6 && secuencia[0] == 1)
-            return 1;
+        if (tipoValidacion == TipoValidacion.Minimo)
+        {
+            int minimo = secuencia[0];
+            for (int i = 1; i < secuencia.Length; i++)
+            {
+                minimo = ValidarNumero(minimo, secuencia[i], TipoValidacion.Minimo);
+            }
+            return minimo;
+        }
         
-        if(secuencia.Length == 6 && secuencia[5] == 1)
-            return 1;
-        
-        if (secuencia.Any())
-            return secuencia.Length;
-        
-        throw new Exception("La secuencia se encuentra vacia");
+        return secuencia.Any() ? secuencia.Length : throw new Exception("La secuencia se encuentra vacia");
     }
 
     public int ValidarNumero(int primerNumero, int segundoNumero , TipoValidacion tipoValidacion)
