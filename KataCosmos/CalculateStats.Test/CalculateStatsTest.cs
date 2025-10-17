@@ -80,4 +80,15 @@ public class CalculateStatsTest
         //Assert
         resultado.Should().Be(1);
     }
+    
+    [Fact]
+    public void Si_SecuenciaContieneSeisCincoCuatioTresDosUno_Debe_RetornarUno()
+    {
+        //Arrange
+        int[] secuencia = [6,5,4,3,2,1];
+        //Act
+        var resultado = _secuencia.RecorrerSecuencia(secuencia);
+        //Assert
+        resultado.Should().Be(1);
+    }
 }
