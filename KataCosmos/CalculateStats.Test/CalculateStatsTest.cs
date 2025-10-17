@@ -11,7 +11,7 @@ public class CalculateStatsTest
     public void Si_RecibeDosNumeros_Debe_RetornarNumeroMenor(int primerNumero, int segundoNumero, int resultadoEsperado)
     {
         //Act
-        int resultado = ValidarNumero(primerNumero, segundoNumero , true);
+        int resultado = ValidarNumero(primerNumero, segundoNumero, TipoValidacion.Minimo);
         //Assert
         resultado.Should().Be(resultadoEsperado);
     }
@@ -23,58 +23,36 @@ public class CalculateStatsTest
     public void Si_RecibeDosNumeros_Debe_RetornarNumeroMayor(int primerNumero, int segundoNumero, int resultadoEsperado)
     {
         //Act
-        int resultado = ValidarNumero(primerNumero, segundoNumero);
+        int resultado = ValidarNumero(primerNumero, segundoNumero, TipoValidacion.Maximo);
         //Assert
         resultado.Should().Be(resultadoEsperado);
     }
 
-    [Fact]
-    public void Si_PrimerNumeroEsDiezYSegundoNumeroVeinte_Debe_RetornarQuince()
+    [Theory]
+    [InlineData(10, 20 , 15)]
+    [InlineData(20, 30 , 25)]
+    [InlineData(40, 30 , 35)]
+    public void Si_Recibe_DosNumeros_Debe_RetornarPromedio(int primerNumero, int segundoNumero, int resultadoEsperado)
     {
-        //Arrange
-        int primerNumero = 10;
-        int segundoNumero = 20;
         //Act
-        int resultado = ValidarNumero(primerNumero, segundoNumero);
+        int resultado = ValidarNumero(primerNumero, segundoNumero,  TipoValidacion.Promedio);
         //Assert
-        resultado.Should().Be(15);
-    }
-
-    [Fact]
-    public void Si_PrimerNumeroEsVeinteYSegundoNumeroEsTreinta_Debe_RetornarVeinteYCinco()
-    {
-        //Arrange
-        int primerNumero = 20;
-        int segundoNumero = 30;
-        //Act
-        int resultado = ValidarNumero(primerNumero, segundoNumero);
-        //Assert
-        resultado.Should().Be(25);
-    }
-
-    [Fact]
-    public void Si_Recibe_DosNumeros_Debe_RetornarPromedio()
-    {
-        //Arrange
-        int primerNumero = 30;
-        int segundoNumero = 40;
-        //Act
-        int resultado = ValidarNumero(primerNumero, segundoNumero);
-        //Assert
-        resultado.Should().Be(35);
+        resultado.Should().Be(resultadoEsperado);
     }
     
-    private int ValidarNumero(int primerNumero, int segundoNumero , bool minimo = false)
+    private int ValidarNumero(int primerNumero, int segundoNumero , TipoValidacion tipoValidacion)
     {
-        if (primerNumero == 30 && segundoNumero == 40)
-            return 35;
-        if (primerNumero == 20)
-            return 25;
-        if (primerNumero == 10)
-            return 15;
-        if (minimo)
+        if (tipoValidacion.Equals(TipoValidacion.Minimo))
             return primerNumero < segundoNumero ? primerNumero : segundoNumero;
-        
-        return primerNumero > segundoNumero ? primerNumero : segundoNumero;
+        if(tipoValidacion.Equals(TipoValidacion.Maximo))
+            return primerNumero > segundoNumero ? primerNumero : segundoNumero;
+        return (primerNumero + segundoNumero) / 2;
     }
+}
+
+internal enum TipoValidacion
+{
+    Minimo,
+    Maximo,
+    Promedio
 }
