@@ -93,4 +93,13 @@ public class CalculateStatsTest
         //Assert
         resultado.Should().Be(cantidadEsperada);
     }
+
+    [Fact]
+    public void Si_SecuenciaContieneValores_Debe_RetornarPromedio()
+    {
+        //Action
+        var resultado = _secuencia.RecorrerSecuencia([100,20],TipoValidacion.Promedio); 
+        //Assert
+        resultado.Should().Be(60);
+    }
 }

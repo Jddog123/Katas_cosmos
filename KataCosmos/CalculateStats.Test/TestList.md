@@ -1,8 +1,10 @@
 - [X] Si primer numero es 1 y segundo numero es 2 debe retornar 1
 - [x] Si primer numero es 2 y segundo numero es 3 debe retornar 2
 - [x] Si primer numero es 3 y segundo numero es 4 debe retornar 3
+- [x] Si recibe dos numeros debe retornar el menor
 - [x] Si primer numero es 5 y segundo numero es 6 debe retornar 6
 - [x] Si primer numero es 7 y segundo numero es 6 debe retornar 7
+- [x] Si recibe dos numeros debe retornar el mayor
 - [x] Si primer numero es 10 y segundo numero es 20 debe retornar 15
 - [x] Si primer numero es 20 y segundo numero es 30 debe retornar 25
 - [x] Si recibe dos numeros debe retornar el promedio
@@ -12,4 +14,6 @@
 - [x] Si secuencia existe debe retornar cantidad de elementos
 - [x] Si secuencia contiene 1,2,3,4,5,6 debe retornar 1
 - [x] Si secuencia contiene 6,5,4,3,2,1 debe retornar 1
-- [ ] Si secuencia contiene valores debe retornar el valor maximo
+- [x] Si secuencia contiene valores debe retornar el valor minimo
+- [x] Si secuencia contiene valores debe retornar el valor maximo
+- [ ] Si secuencia contiene valores debe retornar el valor promedio

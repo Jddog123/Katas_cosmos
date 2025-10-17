@@ -26,7 +26,7 @@ public class Secuencia
             }
             return maximo;
         }
-        
+
         return secuencia.Any() ? secuencia.Length : throw new Exception("La secuencia se encuentra vacia");
     }
 
