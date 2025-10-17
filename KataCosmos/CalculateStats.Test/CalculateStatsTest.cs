@@ -1,9 +1,12 @@
-﻿using FluentAssertions;
+﻿using CalculateStats.Enum;
+using FluentAssertions;
 
 namespace CalculateStats;
 
 public class CalculateStatsTest
 {
+    private readonly Secuencia _secuencia = new Secuencia();
+
     [Theory]
     [InlineData(1, 2 , 1)]
     [InlineData(3,  2, 2)]
@@ -11,7 +14,7 @@ public class CalculateStatsTest
     public void Si_RecibeDosNumeros_Debe_RetornarNumeroMenor(int primerNumero, int segundoNumero, int resultadoEsperado)
     {
         //Act
-        int resultado = ValidarNumero(primerNumero, segundoNumero, TipoValidacion.Minimo);
+        int resultado = _secuencia.ValidarNumero(primerNumero, segundoNumero, TipoValidacion.Minimo);
         //Assert
         resultado.Should().Be(resultadoEsperado);
     }
@@ -23,7 +26,7 @@ public class CalculateStatsTest
     public void Si_RecibeDosNumeros_Debe_RetornarNumeroMayor(int primerNumero, int segundoNumero, int resultadoEsperado)
     {
         //Act
-        int resultado = ValidarNumero(primerNumero, segundoNumero, TipoValidacion.Maximo);
+        int resultado = _secuencia.ValidarNumero(primerNumero, segundoNumero, TipoValidacion.Maximo);
         //Assert
         resultado.Should().Be(resultadoEsperado);
     }
@@ -35,7 +38,7 @@ public class CalculateStatsTest
     public void Si_Recibe_DosNumeros_Debe_RetornarPromedio(int primerNumero, int segundoNumero, int resultadoEsperado)
     {
         //Act
-        int resultado = ValidarNumero(primerNumero, segundoNumero,  TipoValidacion.Promedio);
+        int resultado = _secuencia.ValidarNumero(primerNumero, segundoNumero,  TipoValidacion.Promedio);
         //Assert
         resultado.Should().Be(resultadoEsperado);
     }
@@ -48,7 +51,7 @@ public class CalculateStatsTest
         //Act
         var resultado = ()=>
         {
-            RecorrerSecuencia(secuencia);
+            _secuencia.RecorrerSecuencia(secuencia);
         };
         //Assert
         resultado.Should().ThrowExactly<Exception>("La secuencia se encuentra vacia");
@@ -60,7 +63,7 @@ public class CalculateStatsTest
         //Arrange
         List<int> secuencia = new List<int>() { 1,2,10};
         //Act
-        var resultado = RecorrerSecuencia(secuencia);
+        var resultado = _secuencia.RecorrerSecuencia(secuencia);
         //Assert
         resultado.Should().Be(3);
     }
@@ -71,33 +74,8 @@ public class CalculateStatsTest
         //Arrange
         List<int> secuencia = new List<int>() { 1,2,3,4,10};
         //Act
-        var resultado = RecorrerSecuencia(secuencia);
+        var resultado = _secuencia.RecorrerSecuencia(secuencia);
         //Assert
         resultado.Should().Be(5);
     }
-
-    private int RecorrerSecuencia(List<int> secuencia)
-    {
-        if (secuencia.Count() == 5)
-            return 5;
-        if (secuencia.Any())
-            return 3;
-        throw new Exception("La secuencia se encuentra vacia");
-    }
-
-    private int ValidarNumero(int primerNumero, int segundoNumero , TipoValidacion tipoValidacion)
-    {
-        if (tipoValidacion.Equals(TipoValidacion.Minimo))
-            return primerNumero < segundoNumero ? primerNumero : segundoNumero;
-        if(tipoValidacion.Equals(TipoValidacion.Maximo))
-            return primerNumero > segundoNumero ? primerNumero : segundoNumero;
-        return (primerNumero + segundoNumero) / 2;
-    }
-}
-
-internal enum TipoValidacion
-{
-    Minimo,
-    Maximo,
-    Promedio
 }
