@@ -42,6 +42,6 @@ public class CalculateStatsTest
 
     private int validarNumero(int primerNumero, int segundoNumero)
     {
-        return primerNumero == 2 ? 2 : 1;
+        return primerNumero == 2 ? 2 : primerNumero == 3? 3 : 1;
     }
 }
