@@ -9,6 +9,9 @@ public class Secuencia
         if(secuencia.Length == 6 && secuencia[0] == 1)
             return 1;
         
+        if(secuencia.Length == 6 && secuencia[5] == 1)
+            return 1;
+        
         if (secuencia.Any())
             return secuencia.Length;
         
