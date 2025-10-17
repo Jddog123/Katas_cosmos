@@ -3,4 +3,5 @@
 - [x] Si primer numero es 3 y segundo numero es 4 debe retornar 3
 - [x] Si primer numero es 5 y segundo numero es 6 debe retornar 6
 - [x] Si primer numero es 7 y segundo numero es 6 debe retornar 7
-- [ ] Si primer numero es 10 y segundo numero es 20 debe retornar 15
+- [x] Si primer numero es 10 y segundo numero es 20 debe retornar 15
+- [ ] Si primer numero es 20 y segundo numero es 30 debe retornar 25
