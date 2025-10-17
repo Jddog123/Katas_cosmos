@@ -28,6 +28,18 @@ public class CalculateStatsTest
         resultado.Should().Be(2);
     }
 
+    [Fact]
+    public void Si_NumeroEsTresYCuatro_Debe_RetornarTres()
+    {
+        //Arrange
+        int primerNumero = 3;
+        int segundoNumero = 4;
+        //Act
+        int resultado = validarNumero(primerNumero, segundoNumero);
+        //Asserts
+        resultado.Should().Be(3);
+    }
+
     private int validarNumero(int primerNumero, int segundoNumero)
     {
         return primerNumero == 2 ? 2 : 1;
