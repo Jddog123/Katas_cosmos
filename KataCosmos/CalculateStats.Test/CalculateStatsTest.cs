@@ -4,44 +4,20 @@ namespace CalculateStats;
 
 public class CalculateStatsTest
 {
-    [Fact]
-    public void Si_NumeroEsUnoYDos_Debe_RetornarUno()
+    [Theory]
+    [InlineData(1, 2 , 1)]
+    [InlineData(2, 3 , 2)]
+    [InlineData(3, 4 , 3)]
+    public void Si_PrimerNumeroEsMenorSegundoNumero_Debe_RetornarPrimerNumero(int primerNumero, int segundoNumero, int resultadoEsperado)
     {
-        //Arrange
-        int primerNumero = 1;
-        int segundoNumero = 2;
         //Act
-        int resultado = validarNumero(primerNumero, segundoNumero);
+        int resultado = ValidarNumero(primerNumero, segundoNumero);
         //Asserts
-        resultado.Should().Be(1);
+        resultado.Should().Be(resultadoEsperado);
     }
-
-    [Fact]
-    public void Si_NumeroEsDosYTres_Debe_RetornarDos()
+    
+    private int ValidarNumero(int primerNumero, int segundoNumero)
     {
-        //Arrange
-        int primerNumero = 2;
-        int segundoNumero = 3;
-        //Act
-        int resultado = validarNumero(primerNumero, segundoNumero);
-        //Asserts
-        resultado.Should().Be(2);
-    }
-
-    [Fact]
-    public void Si_NumeroEsTresYCuatro_Debe_RetornarTres()
-    {
-        //Arrange
-        int primerNumero = 3;
-        int segundoNumero = 4;
-        //Act
-        int resultado = validarNumero(primerNumero, segundoNumero);
-        //Asserts
-        resultado.Should().Be(3);
-    }
-
-    private int validarNumero(int primerNumero, int segundoNumero)
-    {
-        return primerNumero == 2 ? 2 : primerNumero == 3? 3 : 1;
+        return primerNumero < segundoNumero ? primerNumero : segundoNumero;
     }
 }
