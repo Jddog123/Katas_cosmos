@@ -47,7 +47,7 @@ public class CalculateStatsTest
     public void Si_SecuenciaEsVacia_Debe_RetornarExcepcion()
     {
         //Arrange
-        List<int> secuencia= new List<int>();
+        int[] secuencia = [];
         //Act
         var resultado = ()=>
         {
@@ -57,36 +57,15 @@ public class CalculateStatsTest
         resultado.Should().ThrowExactly<Exception>("La secuencia se encuentra vacia");
     }
 
-    [Fact]
-    public void Si_SecuenciaContieneUnoDosYDiez_Debe_RetornarTres()
+    [Theory]
+    [InlineData(new int[] {1,2,3,4,5,6,7,8,9,10,11} , 11)]
+    [InlineData(new int[] {1,2,3,4,} , 4)]
+    [InlineData(new int[] {5,6,80,9,1} , 5)]
+    public void Si_SecuenciaExiste_Debe_RetornarCantidadElementos(int[] secuencia , int cantidadEsperada)
     {
-        //Arrange
-        List<int> secuencia = new List<int>() { 1,2,10};
         //Act
         var resultado = _secuencia.RecorrerSecuencia(secuencia);
         //Assert
-        resultado.Should().Be(3);
-    }
-    
-    [Fact]
-    public void Si_SecuenciaContieneUnoDosTresCuatroYDiez_Debe_RetornarCinco()
-    {
-        //Arrange
-        List<int> secuencia = new List<int>() { 1,2,3,4,10};
-        //Act
-        var resultado = _secuencia.RecorrerSecuencia(secuencia);
-        //Assert
-        resultado.Should().Be(5);
-    }
-
-    [Fact]
-    public void Si_SecuenciaExiste_Debe_RetornarCantidadElementos()
-    {
-        //Arrange
-        List<int> secuencia = new List<int>() { 1,2,3,4,6,7,8};
-        //Act
-        var resultado = _secuencia.RecorrerSecuencia(secuencia);
-        //Assert
-        resultado.Should().Be(secuencia.Count());
+        resultado.Should().Be(cantidadEsperada);
     }
 }

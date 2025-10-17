@@ -4,14 +4,10 @@ namespace CalculateStats;
 
 public class Secuencia
 {
-    public int RecorrerSecuencia(List<int> secuencia)
+    public int RecorrerSecuencia(int[] secuencia)
     {
-        if(secuencia.Count() == 7)
-            return 7;
-        if (secuencia.Count() == 5)
-            return 5;
         if (secuencia.Any())
-            return 3;
+            return secuencia.Length;
         throw new Exception("La secuencia se encuentra vacia");
     }
 
