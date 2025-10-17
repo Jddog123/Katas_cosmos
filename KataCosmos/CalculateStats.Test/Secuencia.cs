@@ -27,6 +27,16 @@ public class Secuencia
             return maximo;
         }
 
+        if (tipoValidacion.Equals(TipoValidacion.Promedio))
+        {
+            int promedio = secuencia[0];
+            for (int i = 1; i < secuencia.Length; i++)
+            {
+                promedio = ValidarNumero(promedio, secuencia[i], tipoValidacion);
+            }
+            return promedio;
+        }
+        
         return secuencia.Any() ? secuencia.Length : throw new Exception("La secuencia se encuentra vacia");
     }
 
