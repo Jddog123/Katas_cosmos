@@ -64,6 +64,17 @@ public class CalculateStatsTest
         //Assert
         resultado.Should().Be(3);
     }
+    
+    [Fact]
+    public void Si_SecenciaContieneUnoDosTresCuatroYDiez_Debe_RetornarCinco()
+    {
+        //Arrange
+        List<int> secuencia = new List<int>() { 1,2,3,4,10};
+        //Act
+        var resultado = RecorrerSecuencia(secuencia);
+        //Assert
+        resultado.Should().Be(5);
+    }
 
     private int RecorrerSecuencia(List<int> secuencia)
     {

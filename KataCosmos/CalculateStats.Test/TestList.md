@@ -7,4 +7,6 @@
 - [x] Si primer numero es 20 y segundo numero es 30 debe retornar 25
 - [x] Si recibe dos numeros debe retornar el promedio
 - [x] Si una secuencia vacia debe retornar excepcion
-- [ ] Si secuencia contiene 1,3,10 debe retornar 3
+- [x] Si secuencia contiene 1,3,10 debe retornar 3
+- [] Si secuencia contiene 1,2,3,4,10 debe retornar 5
+- [] Si secuencia contiene un valor debe retornar cantidad 
