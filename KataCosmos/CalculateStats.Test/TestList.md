@@ -16,4 +16,4 @@
 - [x] Si secuencia contiene 6,5,4,3,2,1 debe retornar 1
 - [x] Si secuencia contiene valores debe retornar el valor minimo
 - [x] Si secuencia contiene valores debe retornar el valor maximo
-- [ ] Si secuencia contiene valores debe retornar el valor promedio
+- [x] Si secuencia contiene valores debe retornar el valor promedio
