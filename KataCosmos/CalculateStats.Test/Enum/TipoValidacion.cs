@@ -5,5 +5,6 @@ public enum TipoValidacion
     Minimo,
     Maximo,
     Promedio,
-    CantidadElementos
+    CantidadElementos,
+    SencuenciaVacia
 }
