@@ -43,7 +43,7 @@ public class BowlingTest
     }
 
     [Fact]
-    public void Si_PrimerYSegundoRollsRealizaSpareYTercerRollConTresDePuntajeYDemasRollsEnCero_Debe_PuntajeSerDieciseis()
+    public void Si_PrimerYSegundoRollsRealizaSpareYTercerRollConTresDePuntajeYDiecisieteRollsEnCero_Debe_PuntajeSerDieciseis()
     {
         //Arrange
         var iniciarJuego = new IniciarJuego();
@@ -63,7 +63,7 @@ public class BowlingTest
     }
 
     [Fact]
-    public void Si_QuintoYSextoRollsRealizaSpareYSeptimoConCincoDePuntajeYDemasRollsEnCero_Debe_PuntajeSerVeinte()
+    public void Si_QuintoYSextoRollsRealizaSpareYSeptimoConCincoDePuntajeYDiecisieteRollsEnCero_Debe_PuntajeSerVeinte()
     {
         //Arrange
         var iniciarJuego = new IniciarJuego();
@@ -88,7 +88,7 @@ public class BowlingTest
     }
 
     [Fact]
-    public void Si_EnPrimerFrameRealizaStrikeYTercerYCuartoRollTresPuntos_Debe_PuntajeSerVeinteYDos()
+    public void Si_EnPrimerRollRealizaStrikeYSegundoYTercerRollTresPuntosYDieciseisRollsEnCeroPuntos_Debe_PuntajeSerVeinteYDos()
     {
         //Arrange
         var iniciarJuego = new IniciarJuego();
