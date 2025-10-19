@@ -15,6 +15,6 @@ public class BowlingTest
 
     private int IniciarJuego()
     {
-        throw new NotImplementedException();
+        return 0;
     }
 }
