@@ -16,11 +16,12 @@ public class Juego
         //Se recorre los 10 frames
         foreach (Frame frame in _frames)
         {
+            int ValorPuntaje(int index) => index < Rolls.Count ? Rolls[index].Pinos : 0;
+            
             //En el primer roll fue strike se suma los puntos de los proximos 2 lanzamientos
             if (frame.EsStrike)
             {
-                int ValorBonoStrike(int index) => index < Rolls.Count ? Rolls[index].Pinos : 0;
-                puntaje += ValorBonoStrike(roll) + ValorBonoStrike(roll + 1) + ValorBonoStrike(roll + 2);
+                puntaje += ValorPuntaje(roll) + ValorPuntaje(roll + 1) + ValorPuntaje(roll + 2);
                 //Se suma 1 posiciones en el roll actual ya, para que en strike no se realiza el 2 lanzamiento del frame
                 roll += 1;
             }
@@ -28,15 +29,14 @@ public class Juego
             else if (frame.EsSpare)
             {
                 //Se obtiene puntaje del frame primero (no se quema 10 puntos por cambian la cantidad de pinos por roll)
-                int puntajeFrame = Rolls[roll].Pinos + Rolls[roll + 1].Pinos;
-                puntaje += puntajeFrame + Rolls[roll + 2].Pinos;
+                puntaje += ValorPuntaje(roll) + ValorPuntaje(roll + 1) + ValorPuntaje(roll + 2);
                 //Se suma 2 posiciones en el roll actual ya, para que procese los siguientes roll del siguinete frame del ciclo
                 roll += 2;
             }
             else
             {
                 //Se suma el puntaje del 1 y 2 roll del frame
-                puntaje += Rolls[roll].Pinos + Rolls[roll + 1].Pinos;
+                puntaje += ValorPuntaje(roll) + ValorPuntaje(roll + 1);
                 //Se suma 2 posiciones en el roll actual ya, para que procese los siguientes roll del siguinete frame del ciclo
                 roll += 2;
             }

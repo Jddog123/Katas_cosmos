@@ -8,7 +8,9 @@
 - [x] No permitir mas de 10 frames en el juego
 - [x] No permitir derribar mas de 10 pintos por roll
 - [x] No permitir derribar mas de 10 pintos por frame
-- [ ] Al realizar 10 rolls todos con strike, el puntaje total debe ser 270
+- [x] Al realizar 10 rolls todos con strike, el puntaje total debe ser 270
+- [ ] Al realizar en el primer frame 8 , segundo frame 3, tercer frame 10 y consulto el puntaje del segundo frame el puntaje debe ser 3
+- [ ] Al realizar en el primer frame 0 , segundo frame 2, tercer frame 5, el cuarto frame 9 y consulto el puntaje del tercer frame el puntaje debe ser 5
 - [ ] Permitir consultar el puntaje de un frame en especifico
 
 #Diccionario
