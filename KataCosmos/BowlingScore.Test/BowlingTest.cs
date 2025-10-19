@@ -34,7 +34,7 @@ public class BowlingTest
     [Theory]
     [InlineData(new int[] { 7,3,3,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 }, 16)]
     [InlineData(new int[] { 0,0,0,0,4,6,5,0,0,0,0,0,0,0,0,0,0,0,0,0 }, 20)]
-    [InlineData(new int[] { 0,0,0,0,0,0,0,0,2,8,9,0,0,0,0,0,0,0,0,0 }, 26)]
+    [InlineData(new int[] { 0,0,0,0,0,0,0,0,2,8,9,0,0,0,0,0,0,0,0,0 }, 28)]
     public void Si_RealizaSpareEnCualquierRoll_Debe_PuntajeSumarElSiguienteRollComoBono(int[] rolls, int puntajeEsperado)
     {
         //Arrange
@@ -79,5 +79,16 @@ public class BowlingTest
         var resultado = ()=> iniciarJuego.RealizarRoll(1);
         //Assert
         resultado.Should().ThrowExactly<Exception>("No se permite mas de 10 frames");
+    }
+
+    [Fact]
+    public void Si_SeDerribanMasDeDiezPinosPorRoll_Debe_LanzarExcepcion()
+    {
+        //Arrange
+        var iniciarJuego = new Juego();
+        //Act
+        var resultado = ()=> iniciarJuego.RealizarRoll(11);
+        //Assert
+        resultado.Should().ThrowExactly<Exception>("No se permite derribar mas de 10 pinos por cada roll");
     }
 }
