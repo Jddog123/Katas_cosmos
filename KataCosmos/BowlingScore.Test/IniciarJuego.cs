@@ -7,7 +7,7 @@ public class IniciarJuego
     {
         return puntajeRoll;
     }
-    public void RealizarLanzamiento(int pinosDerribados)
+    public void RealizarRoll(int pinosDerribados)
     {
         puntajeRoll += pinosDerribados;
     }
