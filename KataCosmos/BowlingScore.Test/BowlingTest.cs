@@ -14,122 +14,55 @@ public class BowlingTest
         iniciarJuego.ObtenerPuntaje().Should().Be(0);
     }
 
-    [Fact]
-    public void Si_RealizaVeinteRollsConCeroPuntajeEnCadaUno_Debe_PuntajeSerCero()
+    [Theory]
+    [InlineData(new int[] { 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 }, 0)]
+    [InlineData(new int[] { 1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1 }, 20)]
+    [InlineData(new int[] { 6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6 }, 120)]
+    public void Si_RealizaElMismoPuntajeEnVeinteRolls_Debe_PuntajeSerElMismoPuntajePorVeinte(int[] rolls, int puntajeEsperado)
     {
         //Arrange
         var iniciarJuego = new Juego();
         //Act
-        for (int i = 1; i <= 20; i++)
+        foreach (var roll in rolls)
         {
-            iniciarJuego.RealizarRoll(0);
+            iniciarJuego.RealizarRoll(roll);
         }
         //Assert
-        iniciarJuego.ObtenerPuntaje().Should().Be(0);
+        iniciarJuego.ObtenerPuntaje().Should().Be(puntajeEsperado);
     }
 
-    [Fact]
-    public void Si_RealizaVeinteRollsConUnPuntajeEnCadaUno_Debe_PuntajeSerVeinte()
+    [Theory]
+    [InlineData(new int[] { 7,3,3,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 }, 16)]
+    [InlineData(new int[] { 0,0,0,0,4,6,5,0,0,0,0,0,0,0,0,0,0,0,0,0 }, 20)]
+    [InlineData(new int[] { 0,0,0,0,0,0,0,0,2,8,9,0,0,0,0,0,0,0,0,0 }, 26)]
+    public void Si_RealizaSpareEnCualquierRoll_Debe_PuntajeSumarElSiguienteRollComoBono(int[] rolls, int puntajeEsperado)
     {
         //Arrange
         var iniciarJuego = new Juego();
         //Act
-        for (int i = 1; i <= 20; i++)
+        foreach (var roll in rolls)
         {
-            iniciarJuego.RealizarRoll(1);
+            iniciarJuego.RealizarRoll(roll);
         }
         //Assert
-        iniciarJuego.ObtenerPuntaje().Should().Be(20);
+        iniciarJuego.ObtenerPuntaje().Should().Be(puntajeEsperado);
     }
 
-    [Fact]
-    public void Si_PrimerYSegundoRollsRealizaSpareYTercerRollConTresDePuntajeYDiecisieteRollsEnCero_Debe_PuntajeSerDieciseis()
+    [Theory]
+    [InlineData(new int[] { 10,3,3,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 }, 22)]
+    [InlineData(new int[] { 0,0,0,0,10,3,6,0,0,0,0,0,0,0,0,0,0,0,0,0 }, 28)]
+    [InlineData(new int[] { 0,0,0,0,0,0,0,0,10,1,4,0,0,0,0,0,0,0,0,0 }, 20)]
+    public void Si_RealizaStrikeIniciandoCualquierRoll_Debe_PuntajeSumarLosDosSiguienteRollComoBono(int[] rolls, int puntajeEsperado)
     {
         //Arrange
         var iniciarJuego = new Juego();
         //Act
-        //INICIO SPARE
-        iniciarJuego.RealizarRoll(7);
-        iniciarJuego.RealizarRoll(3);
-        //FIN SPARE
-        iniciarJuego.RealizarRoll(3);
-        
-        for (int i = 1; i <= 17; i++)
+        foreach (var roll in rolls)
         {
-            iniciarJuego.RealizarRoll(0);
+            iniciarJuego.RealizarRoll(roll);
         }
         //Assert
-        iniciarJuego.ObtenerPuntaje().Should().Be(16);
-    }
-
-    [Fact]
-    public void Si_QuintoYSextoRollsRealizaSpareYSeptimoConCincoDePuntajeYDiecisieteRollsEnCero_Debe_PuntajeSerVeinte()
-    {
-        //Arrange
-        var iniciarJuego = new Juego();
-        //Act
-        for (int i = 1; i <= 4; i++)
-        {
-            iniciarJuego.RealizarRoll(0);
-        }
-        
-        //INICIO SPARE
-        iniciarJuego.RealizarRoll(4);
-        iniciarJuego.RealizarRoll(6);
-        //FIN SPARE
-        iniciarJuego.RealizarRoll(5);
-        
-        for (int i = 1; i <= 13; i++)
-        {
-            iniciarJuego.RealizarRoll(0);
-        }
-        //Assert
-        iniciarJuego.ObtenerPuntaje().Should().Be(20);
-    }
-
-    [Fact]
-    public void Si_EnPrimerRollRealizaStrikeYSegundoYTercerRollTresPuntosYDieciseisRollsEnCeroPuntos_Debe_PuntajeSerVeinteYDos()
-    {
-        //Arrange
-        var iniciarJuego = new Juego();
-        //Act
-        //INICIO STRIKE
-        iniciarJuego.RealizarRoll(10);
-        //FIN STRIKE
-        iniciarJuego.RealizarRoll(3);
-        iniciarJuego.RealizarRoll(3);
-        
-        for (int i = 1; i <= 16; i++)
-        {
-            iniciarJuego.RealizarRoll(0);
-        }
-        //Assert
-        iniciarJuego.ObtenerPuntaje().Should().Be(22);
-    }
-
-    [Fact]
-    public void Si_EnQuintoRollRealizaStrikeYSextoRollTresPuntosYSeptimoRollSeisPuntosYDieciseisRollsEnCeroPuntos_Debe_PuntajeSerVeintiocho()
-    {
-        //Arrange
-        var iniciarJuego = new Juego();
-        //Act
-        for (int i = 1; i <= 4; i++)
-        {
-            iniciarJuego.RealizarRoll(0);
-        }
-        
-        //INICIO STRIKE
-        iniciarJuego.RealizarRoll(10);
-        //FIN STRIKE
-        iniciarJuego.RealizarRoll(3);
-        iniciarJuego.RealizarRoll(6);
-        
-        for (int i = 1; i <= 12; i++)
-        {
-            iniciarJuego.RealizarRoll(0);
-        }
-        //Assert
-        iniciarJuego.ObtenerPuntaje().Should().Be(28);
+        iniciarJuego.ObtenerPuntaje().Should().Be(puntajeEsperado);
     }
     
     [Fact]

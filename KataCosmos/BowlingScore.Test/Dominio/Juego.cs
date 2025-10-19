@@ -4,6 +4,7 @@ namespace BowlingScore.Test;
 
 public class Juego
 {
+    private const int MaximoFrames = 10;
     private readonly List<Frame> _frames = new();
     
     public int ObtenerPuntaje()
@@ -45,6 +46,9 @@ public class Juego
     
     public void RealizarRoll(int pinosDerribados)
     {
+        if (FinJuego())
+            throw new Exception("No se permite mas de 10 frames");
+        
         var roll = new Roll(pinosDerribados);
         Frame frameActual = _frames.LastOrDefault();
         
@@ -56,4 +60,7 @@ public class Juego
 
         frameActual.AgregarRoll(roll);
     }
+
+    public bool FinJuego() => _frames.Count == MaximoFrames && _frames[MaximoFrames - 1].EstaCompleto;
+
 }
