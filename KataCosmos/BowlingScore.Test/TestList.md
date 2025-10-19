@@ -8,7 +8,7 @@
 - [x] No permitir mas de 10 frames en el juego
 - [x] No permitir derribar mas de 10 pintos por roll
 - [x] No permitir derribar mas de 10 pintos por frame
-- [ ] Al realizar 10 rolls todos con strike, el puntaje total debe ser 300
+- [ ] Al realizar 10 rolls todos con strike, el puntaje total debe ser 270
 - [ ] Permitir consultar el puntaje de un frame en especifico
 
 #Diccionario
@@ -16,4 +16,6 @@
 - SPARE: Medio chuza (Realizar 10 puntos entre el 1 y 2 roll)
 - STRIKE: Chuza (Realizar 10 puntos en el 1 roll y se pasa al siguiente turno)
 - FRAME: Equivale a 2 rolls
- 
+
+#EN ESTOS BOLOS NO SE TIENE EN CUENTA EL 3 LANZAMIENTO EN EL ULTIMO FRAME
+#EN ESTOS BOLOS NO SE DA BONIFICACION POR CHUZA O MEDIA CHUZA EN EL ULTIMO FRAME

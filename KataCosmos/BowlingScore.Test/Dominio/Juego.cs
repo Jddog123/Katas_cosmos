@@ -19,7 +19,8 @@ public class Juego
             //En el primer roll fue strike se suma los puntos de los proximos 2 lanzamientos
             if (frame.EsStrike)
             {
-                puntaje += Rolls[roll].Pinos + Rolls[roll + 1].Pinos + Rolls[roll + 2].Pinos;
+                int ValorBonoStrike(int index) => index < Rolls.Count ? Rolls[index].Pinos : 0;
+                puntaje += ValorBonoStrike(roll) + ValorBonoStrike(roll + 1) + ValorBonoStrike(roll + 2);
                 //Se suma 1 posiciones en el roll actual ya, para que en strike no se realiza el 2 lanzamiento del frame
                 roll += 1;
             }
@@ -62,7 +63,6 @@ public class Juego
             throw new Exception("No se permite derribar mas de 10 pinos por cada frame");
         }
         
-
         frameActual.AgregarRoll(roll);
     }
 

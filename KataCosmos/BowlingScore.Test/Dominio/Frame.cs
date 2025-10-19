@@ -14,5 +14,5 @@ public class Frame
     public List<Roll> ObtenerRolls() => _rolls;
     public bool EsStrike => _rolls.Count > 0 && _rolls[0].Pinos == _maximoPinos;
     public bool EsSpare => _rolls.Count >= _maximoRolls && _rolls[0].Pinos + _rolls[1].Pinos == _maximoPinos;
-    public bool EstaCompleto => _rolls.Count == _maximoRolls;
+    public bool EstaCompleto => EsStrike || _rolls.Count == _maximoRolls;
 }

@@ -105,7 +105,7 @@ public class BowlingTest
     }
 
     [Fact]
-    public void Si_RealizaDiesStrike_Debe_PuntajeSerTrecientos()
+    public void Si_RealizaDiesStrike_Debe_PuntajeSerDocientosSetenta()
     {
         //Arrange
         var iniciarJuego = new Juego();
@@ -115,6 +115,6 @@ public class BowlingTest
             iniciarJuego.RealizarRoll(10);
         }
         //Assert
-        iniciarJuego.ObtenerPuntaje().Should().Be(300);
+        iniciarJuego.ObtenerPuntaje().Should().Be(270);
     }
 }
