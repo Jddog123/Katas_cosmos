@@ -3,7 +3,7 @@
 public class Roll
 {
     public int Pinos { get; }
-    private const int MaximoPinos = 10;
+    public const int MaximoPinos = 10;
 
     public Roll(int pinos)
     {

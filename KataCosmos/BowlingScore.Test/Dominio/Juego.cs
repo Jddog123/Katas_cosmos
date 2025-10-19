@@ -51,12 +51,19 @@ public class Juego
         
         var roll = new Roll(pinosDerribados);
         Frame frameActual = _frames.LastOrDefault();
-        
+
+        if (frameActual != null && !frameActual.EstaCompleto)
+        {
+            if ((frameActual.ObtenerRolls().Select(s=>s.Pinos).Sum() + pinosDerribados) > Roll.MaximoPinos)
+                throw new Exception("No se permite derribar mas de 10 pinos por cada frame");
+        }
+
         if (frameActual == null || frameActual.EstaCompleto)
         {
             frameActual = new Frame();
             _frames.Add(frameActual);
         }
+        
 
         frameActual.AgregarRoll(roll);
     }
