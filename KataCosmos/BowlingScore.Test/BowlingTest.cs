@@ -13,6 +13,26 @@ public class BowlingTest
         puntaje.Should().Be(0);
     }
 
+    [Fact]
+    public void Si_RealizaVeinteLanzamientosConCeroPuntajeEnCadaUno_Debe_PuntajeSerCero()
+    {
+        //Arrange
+        int puntaje = IniciarJuego();
+        //Act
+        for (int i = 1; i <= 20; i++)
+        {
+            RealizarLanzamiento(0);
+        }
+        
+        //Assert
+        puntaje.Should().Be(0);
+    }
+
+    private int RealizarLanzamiento(int pinosDerribados)
+    {
+        throw new NotImplementedException();
+    }
+
     private int IniciarJuego()
     {
         return 0;
