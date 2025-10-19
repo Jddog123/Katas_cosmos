@@ -14,7 +14,7 @@ public class IniciarJuego
         for (int frame = 1; frame <= _CantidadFramesMaximo; frame++)
         {
             //En el primer roll fue strike se suma los puntos de los proximos 2 lanzamientos
-            if (roll == 0 && EsStrike(roll))
+            if (EsStrike(roll))
             {
                 puntaje += puntajeRolls[roll] + puntajeRolls[roll + 1] + puntajeRolls[roll + 2];
                 //Se suma 1 posiciones en el roll actual ya, para que en strike no se realiza el 2 lanzamiento del frame

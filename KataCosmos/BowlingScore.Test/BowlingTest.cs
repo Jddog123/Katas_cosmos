@@ -108,7 +108,7 @@ public class BowlingTest
     }
 
     [Fact]
-    public void Si_EnQuintoRollRealizaStrikeYSextoRollTresPuntosYSeptimoRollNuevePuntosYDieciseisRollsEnCeroPuntos_Debe_PuntajeSerVeintiocho()
+    public void Si_EnQuintoRollRealizaStrikeYSextoRollTresPuntosYSeptimoRollSeisPuntosYDieciseisRollsEnCeroPuntos_Debe_PuntajeSerVeintiocho()
     {
         //Arrange
         var iniciarJuego = new IniciarJuego();
@@ -122,7 +122,7 @@ public class BowlingTest
         iniciarJuego.RealizarRoll(10);
         //FIN STRIKE
         iniciarJuego.RealizarRoll(3);
-        iniciarJuego.RealizarRoll(9);
+        iniciarJuego.RealizarRoll(6);
         
         for (int i = 1; i <= 12; i++)
         {
