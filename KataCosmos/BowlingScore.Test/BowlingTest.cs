@@ -1,4 +1,5 @@
 ﻿using FluentAssertions;
+using Microsoft.VisualStudio.TestPlatform.Utilities;
 
 namespace BowlingScore.Test;
 
@@ -40,4 +41,17 @@ public class BowlingTest
         //Assert
         iniciarJuego.ObtenerPuntaje().Should().Be(20);
     }
+
+    [Fact]
+    public void Si_PrimerYSegundoRollsRealizaSpareYTercerRollConTresDePuntaje_Debe_PuntajeSerDieciseis()
+    {
+        //Arrange
+        var iniciarJuego = new IniciarJuego();
+        //Act
+        iniciarJuego.RealizarRoll(7);
+        iniciarJuego.RealizarRoll(3);
+        iniciarJuego.RealizarRoll(3);
+        //Assert
+        iniciarJuego.ObtenerPuntaje().Should().Be(16);
+    } 
 }
