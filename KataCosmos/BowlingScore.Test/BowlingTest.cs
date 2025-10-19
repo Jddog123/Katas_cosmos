@@ -103,4 +103,18 @@ public class BowlingTest
         //Assert
         resultado.Should().ThrowExactly<Exception>("No se permite derribar mas de 10 pinos por cada frame");
     }
+
+    [Fact]
+    public void Si_RealizaDiesStrike_Debe_PuntajeSerTrecientos()
+    {
+        //Arrange
+        var iniciarJuego = new Juego();
+        //Act
+        for (int i = 1; i <= 10; i++)
+        {
+            iniciarJuego.RealizarRoll(10);
+        }
+        //Assert
+        iniciarJuego.ObtenerPuntaje().Should().Be(300);
+    }
 }
