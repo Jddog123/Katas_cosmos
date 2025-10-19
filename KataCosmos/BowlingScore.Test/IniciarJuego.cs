@@ -11,10 +11,12 @@ public class IniciarJuego
         //Se recorre los 10 frames
         for (int frame = 1; frame <= 10; frame++)
         {
-            //Si es el segundo frame se aplica logicasi en el primer frame hubo spare
-            if (frame == 2 && puntaje == 10)
+            //Se obtiene puntaje del frame
+            int puntajeFrame = puntajeRolls[roll] + puntajeRolls[roll + 1];
+            //Si es el segundo frame se aplica logica si en el primer frame hubo spare
+            if (frame == 2 && EsSpare(0))
             {
-                puntaje += (puntajeRolls[roll]*2);
+                puntaje += puntajeFrame + puntajeRolls[roll];
                 break;
             }
             else
@@ -32,5 +34,10 @@ public class IniciarJuego
     public void RealizarRoll(int pinosDerribados)
     {
         puntajeRolls.Add(pinosDerribados);
+    }
+    
+    private bool EsSpare(int rollIndex)
+    {
+        return puntajeRolls[rollIndex] + puntajeRolls[rollIndex + 1] == 10;
     }
 }

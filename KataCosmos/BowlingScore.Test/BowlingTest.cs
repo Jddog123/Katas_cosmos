@@ -43,7 +43,7 @@ public class BowlingTest
     }
 
     [Fact]
-    public void Si_PrimerYSegundoRollsRealizaSpareYTercerRollConTresDePuntaje_Debe_PuntajeSerDieciseis()
+    public void Si_PrimerYSegundoRollsRealizaSpareYTercerRollConTresDePuntajeYDemasRollsEnCero_Debe_PuntajeSerDieciseis()
     {
         //Arrange
         var iniciarJuego = new IniciarJuego();
@@ -51,6 +51,11 @@ public class BowlingTest
         iniciarJuego.RealizarRoll(7);
         iniciarJuego.RealizarRoll(3);
         iniciarJuego.RealizarRoll(3);
+        
+        for (int i = 1; i <= 17; i++)
+        {
+            iniciarJuego.RealizarRoll(0);
+        }
         //Assert
         iniciarJuego.ObtenerPuntaje().Should().Be(16);
     } 
