@@ -27,10 +27,12 @@ public class BowlingTest
         //Assert
         puntaje.Should().Be(0);
     }
+    
+    private int puntajeRoll;
 
-    private int RealizarLanzamiento(int pinosDerribados)
+    private void RealizarLanzamiento(int pinosDerribados)
     {
-        throw new NotImplementedException();
+        puntajeRoll = pinosDerribados;
     }
 
     private int IniciarJuego()
