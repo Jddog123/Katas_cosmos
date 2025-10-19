@@ -48,8 +48,10 @@ public class BowlingTest
         //Arrange
         var iniciarJuego = new IniciarJuego();
         //Act
+        //INICIO SPARE
         iniciarJuego.RealizarRoll(7);
         iniciarJuego.RealizarRoll(3);
+        //FIN SPARE
         iniciarJuego.RealizarRoll(3);
         
         for (int i = 1; i <= 17; i++)

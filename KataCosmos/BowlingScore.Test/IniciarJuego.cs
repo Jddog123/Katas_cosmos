@@ -13,11 +13,10 @@ public class IniciarJuego
         {
             //Se obtiene puntaje del frame
             int puntajeFrame = puntajeRolls[roll] + puntajeRolls[roll + 1];
-            //Si es el segundo frame se aplica logica si en el primer frame hubo spare
-            if (frame == 2 && EsSpare(0))
+            //Si es spare se suma los 10 puntos mas el puntaje del siguinere roll lanzado
+            if (EsSpare(roll))
             {
-                puntaje += puntajeFrame + puntajeRolls[roll];
-                break;
+                puntaje += puntajeFrame + puntajeRolls[roll + 2];
             }
             else
             {
