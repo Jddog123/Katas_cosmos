@@ -58,5 +58,30 @@ public class BowlingTest
         }
         //Assert
         iniciarJuego.ObtenerPuntaje().Should().Be(16);
-    } 
+    }
+
+    [Fact]
+    public void Si_QuintoYSextoRollsRealizaSpareYSeptimoConCincoDePuntajeYDemasRollsEnCero_Debe_PuntajeSerVeinte()
+    {
+        //Arrange
+        var iniciarJuego = new IniciarJuego();
+        //Act
+        for (int i = 1; i <= 4; i++)
+        {
+            iniciarJuego.RealizarRoll(0);
+        }
+        
+        //INICIO SPARE
+        iniciarJuego.RealizarRoll(4);
+        iniciarJuego.RealizarRoll(6);
+        //FIN SPARE
+        iniciarJuego.RealizarRoll(5);
+        
+        for (int i = 1; i <= 13; i++)
+        {
+            iniciarJuego.RealizarRoll(0);
+        }
+        //Assert
+        iniciarJuego.ObtenerPuntaje().Should().Be(20);
+    }
 }
