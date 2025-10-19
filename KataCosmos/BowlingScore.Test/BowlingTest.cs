@@ -9,7 +9,7 @@ public class BowlingTest
     public void Si_IniciaJuego_Debe_PuntajeSerCero()
     {
         //Arrange
-        var iniciarJuego = new IniciarJuego();
+        var iniciarJuego = new Juego();
         //Assert
         iniciarJuego.ObtenerPuntaje().Should().Be(0);
     }
@@ -18,7 +18,7 @@ public class BowlingTest
     public void Si_RealizaVeinteRollsConCeroPuntajeEnCadaUno_Debe_PuntajeSerCero()
     {
         //Arrange
-        var iniciarJuego = new IniciarJuego();
+        var iniciarJuego = new Juego();
         //Act
         for (int i = 1; i <= 20; i++)
         {
@@ -32,7 +32,7 @@ public class BowlingTest
     public void Si_RealizaVeinteRollsConUnPuntajeEnCadaUno_Debe_PuntajeSerVeinte()
     {
         //Arrange
-        var iniciarJuego = new IniciarJuego();
+        var iniciarJuego = new Juego();
         //Act
         for (int i = 1; i <= 20; i++)
         {
@@ -46,7 +46,7 @@ public class BowlingTest
     public void Si_PrimerYSegundoRollsRealizaSpareYTercerRollConTresDePuntajeYDiecisieteRollsEnCero_Debe_PuntajeSerDieciseis()
     {
         //Arrange
-        var iniciarJuego = new IniciarJuego();
+        var iniciarJuego = new Juego();
         //Act
         //INICIO SPARE
         iniciarJuego.RealizarRoll(7);
@@ -66,7 +66,7 @@ public class BowlingTest
     public void Si_QuintoYSextoRollsRealizaSpareYSeptimoConCincoDePuntajeYDiecisieteRollsEnCero_Debe_PuntajeSerVeinte()
     {
         //Arrange
-        var iniciarJuego = new IniciarJuego();
+        var iniciarJuego = new Juego();
         //Act
         for (int i = 1; i <= 4; i++)
         {
@@ -91,7 +91,7 @@ public class BowlingTest
     public void Si_EnPrimerRollRealizaStrikeYSegundoYTercerRollTresPuntosYDieciseisRollsEnCeroPuntos_Debe_PuntajeSerVeinteYDos()
     {
         //Arrange
-        var iniciarJuego = new IniciarJuego();
+        var iniciarJuego = new Juego();
         //Act
         //INICIO STRIKE
         iniciarJuego.RealizarRoll(10);
@@ -111,7 +111,7 @@ public class BowlingTest
     public void Si_EnQuintoRollRealizaStrikeYSextoRollTresPuntosYSeptimoRollSeisPuntosYDieciseisRollsEnCeroPuntos_Debe_PuntajeSerVeintiocho()
     {
         //Arrange
-        var iniciarJuego = new IniciarJuego();
+        var iniciarJuego = new Juego();
         //Act
         for (int i = 1; i <= 4; i++)
         {

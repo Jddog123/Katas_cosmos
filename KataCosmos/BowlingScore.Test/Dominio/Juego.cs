@@ -1,38 +1,40 @@
-﻿namespace BowlingScore.Test;
+﻿using BowlingScore.Test.Dominio;
 
-public class IniciarJuego
+namespace BowlingScore.Test;
+
+public class Juego
 {
-    private const int _CantidadFramesMaximo = 10;
-    private const int _CantidadPinesMaximo = 10;
-    private readonly List<int> puntajeRolls = new();
+    private readonly List<Frame> _frames = new();
+    
     public int ObtenerPuntaje()
     {
         int puntaje = 0;
         int roll = 0;
-
+        var Rolls = _frames.SelectMany(f => f.ObtenerRolls()).ToList();
+        
         //Se recorre los 10 frames
-        for (int frame = 1; frame <= _CantidadFramesMaximo; frame++)
+        foreach (Frame frame in _frames)
         {
             //En el primer roll fue strike se suma los puntos de los proximos 2 lanzamientos
-            if (EsStrike(roll))
+            if (frame.EsStrike)
             {
-                puntaje += puntajeRolls[roll] + puntajeRolls[roll + 1] + puntajeRolls[roll + 2];
+                puntaje += Rolls[roll].Pinos + Rolls[roll + 1].Pinos + Rolls[roll + 2].Pinos;
                 //Se suma 1 posiciones en el roll actual ya, para que en strike no se realiza el 2 lanzamiento del frame
                 roll += 1;
             }
             //Si es spare se suma los 10 puntos mas el puntaje del siguinere roll lanzado
-            else if (EsSpare(roll))
+            else if (frame.EsSpare)
             {
                 //Se obtiene puntaje del frame primero (no se quema 10 puntos por cambian la cantidad de pinos por roll)
-                int puntajeFrame = puntajeRolls[roll] + puntajeRolls[roll + 1];
-                puntaje += puntajeFrame + puntajeRolls[roll + 2];
+                int puntajeFrame = Rolls[roll].Pinos + Rolls[roll + 1].Pinos;
+                puntaje += puntajeFrame + Rolls[roll + 2].Pinos;
                 //Se suma 2 posiciones en el roll actual ya, para que procese los siguientes roll del siguinete frame del ciclo
                 roll += 2;
             }
             else
             {
                 //Se suma el puntaje del 1 y 2 roll del frame
-                puntaje += puntajeRolls[roll] + puntajeRolls[roll + 1];
+                puntaje += Rolls[roll].Pinos + Rolls[roll + 1].Pinos;
                 //Se suma 2 posiciones en el roll actual ya, para que procese los siguientes roll del siguinete frame del ciclo
                 roll += 2;
             }
@@ -40,18 +42,18 @@ public class IniciarJuego
 
         return puntaje;
     }
+    
     public void RealizarRoll(int pinosDerribados)
     {
-        puntajeRolls.Add(pinosDerribados);
-    }
-    
-    private bool EsSpare(int rollIndex)
-    {
-        return puntajeRolls[rollIndex] + puntajeRolls[rollIndex + 1] == _CantidadPinesMaximo;
-    }
-    
-    private bool EsStrike(int rollIndex)
-    {
-        return puntajeRolls[rollIndex] == _CantidadPinesMaximo;
+        var roll = new Roll(pinosDerribados);
+        Frame frameActual = _frames.LastOrDefault();
+        
+        if (frameActual == null || frameActual.EstaCompleto)
+        {
+            frameActual = new Frame();
+            _frames.Add(frameActual);
+        }
+
+        frameActual.AgregarRoll(roll);
     }
 }

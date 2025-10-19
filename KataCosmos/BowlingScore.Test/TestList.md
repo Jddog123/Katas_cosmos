@@ -7,6 +7,7 @@
 - [x] Al realizar strike en el quinto roll, en el 6 roll 3 puntos, en el 7 roll 6 puntos y en 16 rolls 0 puntos, el puntaje total debe ser 28
 - [ ] Al realizar 10 rolls todos con strike, el puntaje total debe ser 300
 - [ ] No permitir mas de 10 frames en el juego
+- [ ] No permitir derribar mas de 10 pintos por frame
 - [ ] Permitir realizar un roll adicional en el frame 10 si se realiza spare o strike
 - [ ] Permitir consultar el puntaje de un frame en especifico
 
