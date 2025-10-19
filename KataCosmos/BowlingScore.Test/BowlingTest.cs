@@ -86,4 +86,24 @@ public class BowlingTest
         //Assert
         iniciarJuego.ObtenerPuntaje().Should().Be(20);
     }
+
+    [Fact]
+    public void Si_EnPrimerFrameRealizaStrikeYTercerYCuartoRollTresPuntos_Debe_PuntajeSerVeinteYDos()
+    {
+        //Arrange
+        var iniciarJuego = new IniciarJuego();
+        //Act
+        //INICIO STRIKE
+        iniciarJuego.RealizarRoll(10);
+        //FIN STRIKE
+        iniciarJuego.RealizarRoll(3);
+        iniciarJuego.RealizarRoll(3);
+        
+        for (int i = 1; i <= 16; i++)
+        {
+            iniciarJuego.RealizarRoll(0);
+        }
+        //Assert
+        iniciarJuego.ObtenerPuntaje().Should().Be(22);
+    }
 }
