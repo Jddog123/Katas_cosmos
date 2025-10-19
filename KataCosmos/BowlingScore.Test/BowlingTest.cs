@@ -131,4 +131,20 @@ public class BowlingTest
         //Assert
         iniciarJuego.ObtenerPuntaje().Should().Be(28);
     }
+    
+    [Fact]
+    public void Si_SeRealizanMasDeDiezFrames_Debe_LanzarExcepcion()
+    {
+        //Arrange
+        var iniciarJuego = new Juego();
+        
+        for (int i = 1; i <= 20; i++)
+        {
+            iniciarJuego.RealizarRoll(1);
+        }
+        //Act
+        var resultado = ()=> iniciarJuego.RealizarRoll(1);
+        //Assert
+        resultado.Should().ThrowExactly<Exception>("No se permite mas de 10 frames");
+    }
 }

@@ -3,7 +3,7 @@
 public class Frame
 {
     private const int _maximoPinos = 10;
-    private const int _maximoRolls = 10;
+    private const int _maximoRolls = 2;
     private readonly List<Roll> _rolls = new();
     
     public void AgregarRoll(Roll roll)
