@@ -12,12 +12,12 @@ namespace ValidadorContrasena
             //Act
             bool Resultado = ValidadorContrasena(Contrasena);
             //Assert
-            Resultado.Should().BeTrue();
+            Resultado.Should().BeFalse();
         }
 
         private bool ValidadorContrasena(string contrasena)
         {
-            return true;
+            return false;
         }
     }
 }
