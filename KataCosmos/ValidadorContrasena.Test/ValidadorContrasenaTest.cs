@@ -15,6 +15,17 @@ namespace ValidadorContrasena
             Resultado.Should().BeFalse();
         }
 
+        [Fact]
+        public void Si_ContrasenaTieneOchoCaracteres_Debe_RetornarTrue()
+        {
+            //Arrange
+            string Contrasena = "Daniel12";
+            //Act
+            bool Resultado = ValidadorContrasena(Contrasena);
+            //Assert
+            Resultado.Should().BeTrue();
+        }
+
         private bool ValidadorContrasena(string contrasena)
         {
             return false;
