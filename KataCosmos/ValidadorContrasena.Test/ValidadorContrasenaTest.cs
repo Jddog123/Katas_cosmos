@@ -67,7 +67,9 @@ namespace ValidadorContrasena
                 return false;
             else if (contrasena.Any(char.IsLower) == false)
                 return false;
-            
+            if (!contrasena.Any(char.IsDigit))
+                return false;
+
             return true;
         }
     }
