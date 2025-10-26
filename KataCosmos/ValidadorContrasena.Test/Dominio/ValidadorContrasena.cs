@@ -8,12 +8,7 @@ namespace ValidadorContrasena.Test.Dominio
 {
     public class Validador
     {
-        public string Contrasena { get; private set; }
-        public Validador(string contrasena)
-        {
-            Contrasena = contrasena;
-        }
-        public bool EsValida()
+        public bool EsValida(string Contrasena)
         {
             return Contrasena.Length == 8 &&
                    Contrasena.Any(char.IsUpper) &&

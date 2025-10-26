@@ -5,14 +5,19 @@ namespace ValidadorContrasenaTest
 {
     public class ValidadorContrasenaTest
     {
+        Validador validadorContrasena;
+        public ValidadorContrasenaTest()
+        {
+            validadorContrasena = new Validador();
+        }
+
         [Fact]
         public void Si_ContrasenaNoTieneOchoCaracteres_Debe_RetornarFalse()
         {
             //Arrange
             string Contrasena = "Daniel123";
-            Validador validadorContrasena = new Validador(Contrasena);
             //Act
-            bool Resultado = validadorContrasena.EsValida();
+            bool Resultado = validadorContrasena.EsValida(Contrasena);
             //Assert
             Resultado.Should().BeFalse();
         }
@@ -22,9 +27,8 @@ namespace ValidadorContrasenaTest
         {
             //Arrange
             string Contrasena = "daniel12";
-            Validador validadorContrasena = new Validador(Contrasena);
             //Act
-            bool Resultado = validadorContrasena.EsValida();
+            bool Resultado = validadorContrasena.EsValida(Contrasena);
             //Assert
             Resultado.Should().BeFalse();
         }
@@ -34,9 +38,8 @@ namespace ValidadorContrasenaTest
         {
             //Arrange
             string Contrasena = "DANIEL12";
-            Validador validadorContrasena = new Validador(Contrasena);
             //Act
-            bool Resultado = validadorContrasena.EsValida();
+            bool Resultado = validadorContrasena.EsValida(Contrasena);
             //Assert
             Resultado.Should().BeFalse();
         }
@@ -46,9 +49,8 @@ namespace ValidadorContrasenaTest
         {
             //Arrange
             string Contrasena = "Danielll";
-            Validador validadorContrasena = new Validador(Contrasena);
             //Act
-            bool Resultado = validadorContrasena.EsValida();
+            bool Resultado = validadorContrasena.EsValida(Contrasena);
             //Assert
             Resultado.Should().BeFalse();
         }
@@ -58,9 +60,8 @@ namespace ValidadorContrasenaTest
         {
             //Arrange
             string Contrasena = "Daniel1";
-            Validador validadorContrasena = new Validador(Contrasena);
             //Act
-            bool Resultado = validadorContrasena.EsValida();
+            bool Resultado = validadorContrasena.EsValida(Contrasena);
             //Assert
             Resultado.Should().BeFalse();
         }
@@ -72,10 +73,8 @@ namespace ValidadorContrasenaTest
         [InlineData("1Da_niel")]
         public void Si_ContrasenaTieneOchoCaracteresYUnaLetraMayusculaYUnaLetraMinusculaYUnNumeroYUnGuionBajo_Debe_RetornarTrue(string Contrasena)
         {
-            //Arrange
-            Validador validadorContrasena = new Validador(Contrasena);
             //Act
-            bool Resultado = validadorContrasena.EsValida();
+            bool Resultado = validadorContrasena.EsValida(Contrasena);
             //Assert
             Resultado.Should().BeTrue();
         }
