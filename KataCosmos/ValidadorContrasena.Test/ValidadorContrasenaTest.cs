@@ -131,7 +131,7 @@ namespace ValidadorContrasenaTest
     {
         public bool EsValida(string contrasena)
         {
-            throw new NotImplementedException();
+            return new Validador().EsValida(contrasena, TipoValidacion.Tercera);
         }
     }
 }
