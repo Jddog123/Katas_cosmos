@@ -113,5 +113,25 @@ namespace ValidadorContrasenaTest
             //Assert
             Resultado.Should().BeTrue();
         }
+
+        [Fact]
+        public void Si_ContrasenaTieneTercerGrupoReglas_Debe_ValidarSegunTercerGrupoDeReglas()
+        {
+            //Arrange
+            string Contrasena = "Danielabcdefghijeeeeee_";
+            IContrasenaValidador validator = new TercerGrupoReglas();
+            //Act
+            bool Resultado = validator.EsValida(Contrasena);
+            //Assert
+            Resultado.Should().BeTrue();
+        }
+    }
+
+    internal class TercerGrupoReglas : IContrasenaValidador
+    {
+        public bool EsValida(string contrasena)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
