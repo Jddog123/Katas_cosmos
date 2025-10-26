@@ -78,5 +78,16 @@ namespace ValidadorContrasenaTest
             //Assert
             Resultado.Should().BeTrue();
         }
+
+        [Fact]
+        public void Si_ContrasenaTieneMasDeSeisCaracteresYUnaLetraMayusculaYUnaLetraMinusculaYUnNumero_Debe_RetornarTrue()
+        {
+            //Arrange
+            string Contrasena = "Dani123";
+            //Act
+            bool Resultado = validadorContrasena.EsValida(Contrasena);
+            //Assert
+            Resultado.Should().BeTrue();
+        }
     }
 }

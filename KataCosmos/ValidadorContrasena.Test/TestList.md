@@ -7,7 +7,6 @@
 - [X] Si_ContrasenaTieneMasDeOchoCaracteresYUnaLetraMayusculaYUnaLetraMinusculaYUnNumeroYUnGuionBajo_Debe_RetornarTrue
 
 # 2 ITERACIÓN
-- [ ] Si_ContrasenaNoTieneMasDeSeisCaracteres_Debe_RetornarFalse
 - [ ] Si_ContrasenaTieneMasDeSeisCaracteresYUnaLetraMayusculaYUnaLetraMinusculaYUnNumero_Debe_RetornarTrue
-- [ ] Si_ContrasenaNoTieneMasDeDieciseisCaracteres_Debe_RetornarFalse
 - [ ] Si_ContrasenaTieneMasDeDieciseisCaracteresYUnaLetraMayusculaYUnaLetraMinusculaYUnGuionBajo_Debe_RetornarTrue
+- [ ] Si_ContrasenaTieneDiezCaracteresYUnaLetraMayusculaYUnNumeroYUnAsterisco_Debe_RetornarTrue
