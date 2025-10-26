@@ -1,7 +1,7 @@
 - [X] Si_ContrasenaNoTieneOchoCaracteres_Debe_RetornarFalse
-- [ ] Si_ContrasenaTieneOchoCaracteres_Debe_RetornarTrue
-- [ ] Si_ContrasenaNoTieneAlmenosUnaLetraMayuscula_Debe_RetornarFalse
-- [ ] Si_ContrasenaNoTieneAlmenosUnaLetraMinuscula_Debe_RetornarFalse
+- [X] Si_ContrasenaTieneOchoCaracteres_Debe_RetornarTrue
+- [X] Si_ContrasenaNoTieneAlmenosUnaLetraMayuscula_Debe_RetornarFalse
+- [X] Si_ContrasenaNoTieneAlmenosUnaLetraMinuscula_Debe_RetornarFalse
 - [ ] Si_ContrasenaNoTieneAlmenosUnNumero_Debe_RetornarFalse
 - [ ] Si_ContrasenaNoTieneAlmenosUnGuionBajo_Debe_RetornarFalse
-- [ ] Si_ContrasenaTieneOchoCaracteresYLetraMinusculaYLetraMayusculaYUnNumeroYGuionBajo_Debe_RetornarTrue
+- [ ] Si_ContrasenaTieneOchoCaracteresYUnaLetraMayusculaYUnaLetraMinusculaYUnNumeroYUnGuionBajo_Debe_RetornarTrue

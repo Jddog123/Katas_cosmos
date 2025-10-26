@@ -50,12 +50,13 @@ namespace ValidadorContrasena
 
         private bool ValidadorContrasena(string contrasena)
         {
-            if (contrasena.Any(char.IsLower) == false)
+            if (contrasena.Length != 8)
                 return false;
             else if (contrasena.Any(char.IsUpper) == false)
                 return false;
-            else if (contrasena.Length != 8)
+            else if (contrasena.Any(char.IsLower) == false)
                 return false;
+            
             return true;
         }
     }
