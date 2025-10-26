@@ -9,7 +9,7 @@
 # 2 ITERACIÓN
 - [X] Si_ContrasenaTieneMasDeSeisCaracteresYUnaLetraMayusculaYUnaLetraMinusculaYUnNumero_Debe_RetornarTrue
 - [X] Si_ContrasenaTieneMasDeDieciseisCaracteresYUnaLetraMayusculaYUnaLetraMinusculaYUnGuionBajo_Debe_RetornarTrue
-- [ ] Si_ContrasenaTieneSegundoGrupoReglas_Debe_ValidarSegunSegundoGrupoDeReglas
+- [X] Si_ContrasenaTieneSegundoGrupoReglas_Debe_ValidarSegunSegundoGrupoDeReglas
 - [ ] Si_ContrasenaTieneTercerGrupoReglas_Debe_ValidarSegunTercerGrupoDeReglas
 
 # DICCIONARIO

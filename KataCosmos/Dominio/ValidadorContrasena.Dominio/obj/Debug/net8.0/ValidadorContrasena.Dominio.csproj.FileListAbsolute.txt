@@ -1,0 +1,12 @@
+C:\Daniel\Cursos\KATA_Cosmos\Katas_cosmos\KataCosmos\Dominio\ValidadorContrasena.Dominio\bin\Debug\net8.0\ValidadorContrasena.Dominio.deps.json
+C:\Daniel\Cursos\KATA_Cosmos\Katas_cosmos\KataCosmos\Dominio\ValidadorContrasena.Dominio\bin\Debug\net8.0\ValidadorContrasena.Dominio.dll
+C:\Daniel\Cursos\KATA_Cosmos\Katas_cosmos\KataCosmos\Dominio\ValidadorContrasena.Dominio\bin\Debug\net8.0\ValidadorContrasena.Dominio.pdb
+C:\Daniel\Cursos\KATA_Cosmos\Katas_cosmos\KataCosmos\Dominio\ValidadorContrasena.Dominio\obj\Debug\net8.0\ValidadorContrasena.Dominio.GeneratedMSBuildEditorConfig.editorconfig
+C:\Daniel\Cursos\KATA_Cosmos\Katas_cosmos\KataCosmos\Dominio\ValidadorContrasena.Dominio\obj\Debug\net8.0\ValidadorContrasena.Dominio.AssemblyInfoInputs.cache
+C:\Daniel\Cursos\KATA_Cosmos\Katas_cosmos\KataCosmos\Dominio\ValidadorContrasena.Dominio\obj\Debug\net8.0\ValidadorContrasena.Dominio.AssemblyInfo.cs
+C:\Daniel\Cursos\KATA_Cosmos\Katas_cosmos\KataCosmos\Dominio\ValidadorContrasena.Dominio\obj\Debug\net8.0\ValidadorContrasena.Dominio.csproj.CoreCompileInputs.cache
+C:\Daniel\Cursos\KATA_Cosmos\Katas_cosmos\KataCosmos\Dominio\ValidadorContrasena.Dominio\obj\Debug\net8.0\ValidadorContrasena.Dominio.sourcelink.json
+C:\Daniel\Cursos\KATA_Cosmos\Katas_cosmos\KataCosmos\Dominio\ValidadorContrasena.Dominio\obj\Debug\net8.0\ValidadorContrasena.Dominio.dll
+C:\Daniel\Cursos\KATA_Cosmos\Katas_cosmos\KataCosmos\Dominio\ValidadorContrasena.Dominio\obj\Debug\net8.0\refint\ValidadorContrasena.Dominio.dll
+C:\Daniel\Cursos\KATA_Cosmos\Katas_cosmos\KataCosmos\Dominio\ValidadorContrasena.Dominio\obj\Debug\net8.0\ValidadorContrasena.Dominio.pdb
+C:\Daniel\Cursos\KATA_Cosmos\Katas_cosmos\KataCosmos\Dominio\ValidadorContrasena.Dominio\obj\Debug\net8.0\ref\ValidadorContrasena.Dominio.dll

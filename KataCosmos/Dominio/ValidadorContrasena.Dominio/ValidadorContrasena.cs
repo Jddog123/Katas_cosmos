@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using ValidadorContrasena.Test.Enum;
+using ValidadorContrasena.Dominio.Enum;
 
-namespace ValidadorContrasena.Test.Dominio
+namespace ValidadorContrasena.Dominio
 {
     public class Validador
     {

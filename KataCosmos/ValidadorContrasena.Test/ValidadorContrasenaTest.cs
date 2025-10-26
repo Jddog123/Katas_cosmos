@@ -1,6 +1,6 @@
 using FluentAssertions;
-using ValidadorContrasena.Test.Dominio;
-using ValidadorContrasena.Test.Enum;
+using ValidadorContrasena.Dominio;
+using ValidadorContrasena.Dominio.Enum;
 
 namespace ValidadorContrasenaTest
 {
@@ -107,24 +107,11 @@ namespace ValidadorContrasenaTest
         {
             //Arrange
             string Contrasena = "Daniel1";
-            IPasswordValidator validator = new SegundoGrupoReglas();
+            IContrasenaValidador validator = new SegundoGrupoReglas();
             //Act
             bool Resultado = validator.EsValida(Contrasena);
             //Assert
             Resultado.Should().BeTrue();
         }
-    }
-
-    internal class SegundoGrupoReglas : IPasswordValidator
-    {
-        public bool EsValida(string Contrasena)
-        {
-            return new Validador().EsValida(Contrasena, TipoValidacion.Segunda);
-        }
-    }
-
-    internal interface IPasswordValidator
-    {
-        bool EsValida(string password);
     }
 }
