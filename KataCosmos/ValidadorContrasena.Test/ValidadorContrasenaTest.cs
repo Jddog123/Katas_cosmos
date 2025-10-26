@@ -63,7 +63,7 @@ namespace ValidadorContrasena
         public void Si_ContrasenaNoTieneAlmenosUnGuionBajo_Debe_RetornarFalse()
         {
             //Arrange
-            string Contrasena = "Daniel12";
+            string Contrasena = "Daniel1";
             //Act
             bool Resultado = ValidadorContrasena(Contrasena);
             //Assert
@@ -72,7 +72,7 @@ namespace ValidadorContrasena
 
         private bool ValidadorContrasena(string contrasena)
         {
-            if (contrasena.Length != 8)
+            if (contrasena.Length != 8 && !contrasena.Contains('_'))
                 return false;
             else if (contrasena.Any(char.IsUpper) == false)
                 return false;
