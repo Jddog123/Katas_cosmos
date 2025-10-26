@@ -26,6 +26,17 @@ namespace ValidadorContrasena
             Resultado.Should().BeTrue();
         }
 
+        [Fact]
+        public void Si_ContrasenaNoTieneAlmenosUnaLetraMayuscula_Debe_RetornarFalse()
+        {
+            //Arrange
+            string Contrasena = "daniel12";
+            //Act
+            bool Resultado = ValidadorContrasena(Contrasena);
+            //Assert
+            Resultado.Should().BeFalse();
+        }
+
         private bool ValidadorContrasena(string contrasena)
         {
             if (contrasena.Length == 8)
