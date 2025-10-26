@@ -1,0 +1,10 @@
+﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=f9f0464e_002De283_002D412d_002D8c62_002D1ad926c0d848/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="Si_NumeroEsUnoYDos_Debe_RetornarUno" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;Or&gt;&#xD;
+    &lt;ProjectFile&gt;4F5C1BEB-19E0-4282-8FD3-30AA05437033/f:CalculateStatsTest.cs&lt;/ProjectFile&gt;&#xD;
+    &lt;TestAncestor&gt;&#xD;
+      &lt;TestId&gt;xUnit::D73BBFF5-7B93-4CA7-A088-BFBF54028D2B::net9.0::BowlingScore.Test.BowlingTest.Si_IniciaJuego_Debe_PuntajeSerCero&lt;/TestId&gt;&#xD;
+      &lt;TestId&gt;xUnit::D73BBFF5-7B93-4CA7-A088-BFBF54028D2B::net9.0::BowlingScore.Test.BowlingTest&lt;/TestId&gt;&#xD;
+    &lt;/TestAncestor&gt;&#xD;
+  &lt;/Or&gt;&#xD;
+&lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>

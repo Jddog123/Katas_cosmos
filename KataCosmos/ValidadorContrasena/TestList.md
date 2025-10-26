@@ -1,0 +1,6 @@
+- [ ] Si_ContrasenaNoTieneOchoCaracteres_Debe_RetornarFalse
+- [ ] Si_ContrasenaNoTieneAlmenosUnaLetraMayuscula_Debe_RetornarFalse
+- [ ] Si_ContrasenaNoTieneAlmenosUnaLetraMinuscula_Debe_RetornarFalse
+- [ ] Si_ContrasenaNoTieneAlmenosUnNumero_Debe_RetornarFalse
+- [ ] Si_ContrasenaNoTieneAlmenosUnGuionBajo_Debe_RetornarFalse
+- [ ] Si_ContrasenaTieneOchoCaracteresYLetraMinusculaYLetraMayusculaYUnNumeroYGuionBajo_Debe_RetornarTrue

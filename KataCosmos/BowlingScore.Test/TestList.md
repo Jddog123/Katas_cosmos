@@ -17,7 +17,7 @@
 - ROLL: Equivale a un lanzamiento
 - SPARE: Medio chuza (Realizar 10 puntos entre el 1 y 2 roll)
 - STRIKE: Chuza (Realizar 10 puntos en el 1 roll y se pasa al siguiente turno)
-- FRAME: Equivale a 2 rolls
+- FRAME: Equivale a 2 rolls                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          
 
 #EN ESTOS BOLOS NO SE TIENE EN CUENTA EL 3 LANZAMIENTO EN EL ULTIMO FRAME
 #EN ESTOS BOLOS NO SE DA BONIFICACION POR CHUZA O MEDIA CHUZA EN EL ULTIMO FRAME

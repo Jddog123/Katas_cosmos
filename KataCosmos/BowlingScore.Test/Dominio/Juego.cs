@@ -68,4 +68,8 @@ public class Juego
 
     public bool FinJuego() => _frames.Count == MaximoFrames && _frames[MaximoFrames - 1].EstaCompleto;
 
+    public object ObtenerPuntajeFrame(int frame)
+    {
+        throw new NotImplementedException();
+    }
 }
