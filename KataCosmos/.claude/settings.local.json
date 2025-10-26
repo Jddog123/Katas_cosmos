@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(dir ValidadorContrasena)",
+      "Bash(dotnet sln KataCosmos.sln add ValidadorContrasena.Test/ValidadorContrasena.Test.csproj)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}

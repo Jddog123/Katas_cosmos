@@ -5514,11 +5514,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Daniel\\Cursos\\KATA_Cosmos\\Katas_cosmos\\KataCosmos\\ValidadorContrasena\\ValidadorContrasena.Test.csproj",
+      "projectUniqueName": "C:\\Daniel\\Cursos\\KATA_Cosmos\\Katas_cosmos\\KataCosmos\\ValidadorContrasena.Test\\ValidadorContrasena.Test.csproj",
       "projectName": "ValidadorContrasena.Test",
-      "projectPath": "C:\\Daniel\\Cursos\\KATA_Cosmos\\Katas_cosmos\\KataCosmos\\ValidadorContrasena\\ValidadorContrasena.Test.csproj",
+      "projectPath": "C:\\Daniel\\Cursos\\KATA_Cosmos\\Katas_cosmos\\KataCosmos\\ValidadorContrasena.Test\\ValidadorContrasena.Test.csproj",
       "packagesPath": "C:\\Users\\DANIEL.URUEÑA\\.nuget\\packages\\",
-      "outputPath": "C:\\Daniel\\Cursos\\KATA_Cosmos\\Katas_cosmos\\KataCosmos\\ValidadorContrasena\\obj\\",
+      "outputPath": "C:\\Daniel\\Cursos\\KATA_Cosmos\\Katas_cosmos\\KataCosmos\\ValidadorContrasena.Test\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
