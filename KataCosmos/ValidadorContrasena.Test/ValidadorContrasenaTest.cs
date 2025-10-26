@@ -1,4 +1,5 @@
 using FluentAssertions;
+using System.ComponentModel.DataAnnotations;
 using ValidadorContrasena.Dominio;
 using ValidadorContrasena.Dominio.Enum;
 
@@ -132,5 +133,15 @@ namespace ValidadorContrasenaTest
             //Assert
             Resultado.Should().BeTrue();
         }
+
+        [Fact]
+        public void Si_NoSeEncuentraGrupoDeReglas_Debe_RetornarExcepcion()
+        {
+            //Act
+            var resultado = () => ContrasenaValidadorFactory.CrearFactory(TipoValidacion.Otra);
+            //Assert
+            resultado.Should().ThrowExactly<Exception>("No se encontro el grupo de reglas");
+        }
+         
     }
 }
