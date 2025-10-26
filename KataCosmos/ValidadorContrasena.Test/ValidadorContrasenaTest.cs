@@ -74,30 +74,37 @@ namespace ValidadorContrasenaTest
         [InlineData("123Da_niel")]
         public void Si_ContrasenaTieneMasDeOchoCaracteresYUnaLetraMayusculaYUnaLetraMinusculaYUnNumeroYUnGuionBajo_Debe_RetornarTrue(string Contrasena)
         {
-            //Act
-            bool Resultado = validadorContrasena.EsValida(Contrasena);
+            //Arrange
+            IContrasenaValidador validator = ContrasenaValidadorFactory.CrearFactory(TipoValidacion.Primera);
+            bool Resultado = validator.EsValida(Contrasena);
             //Assert
             Resultado.Should().BeTrue();
         }
 
-        [Fact]
-        public void Si_ContrasenaTieneMasDeSeisCaracteresYUnaLetraMayusculaYUnaLetraMinusculaYUnNumero_Debe_RetornarTrue()
+        [Theory]
+        [InlineData("Dani123")]
+        [InlineData("daNi123")]
+        [InlineData("123Dani")]
+        public void Si_ContrasenaTieneMasDeSeisCaracteresYUnaLetraMayusculaYUnaLetraMinusculaYUnNumero_Debe_RetornarTrue(string Contrasena)
         {
             //Arrange
-            string Contrasena = "Dani123";
+            IContrasenaValidador validator = ContrasenaValidadorFactory.CrearFactory(TipoValidacion.Segunda);
             //Act
-            bool Resultado = validadorContrasena.EsValida(Contrasena, TipoValidacion.Segunda);
+            bool Resultado = validator.EsValida(Contrasena);
             //Assert
             Resultado.Should().BeTrue();
         }
 
-        [Fact]
-        public void Si_ContrasenaTieneMasDeDieciseisCaracteresYUnaLetraMayusculaYUnaLetraMinusculaYUnGuionBajo_Debe_RetornarTrue()
+        [Theory]
+        [InlineData("Danielabcdefghijklmn_")]
+        [InlineData("danielAbcd_fghijklmn")]
+        [InlineData("_Danielabcdefghijklmn")]
+        public void Si_ContrasenaTieneMasDeDieciseisCaracteresYUnaLetraMayusculaYUnaLetraMinusculaYUnGuionBajo_Debe_RetornarTrue(string Contrasena)
         {
             //Arrange
-            string Contrasena = "Danielabcdefghijklmn_";
+            IContrasenaValidador validator = ContrasenaValidadorFactory.CrearFactory(TipoValidacion.Tercera);
             //Act
-            bool Resultado = validadorContrasena.EsValida(Contrasena, TipoValidacion.Tercera);
+            bool Resultado = validator.EsValida(Contrasena);
             //Assert
             Resultado.Should().BeTrue();
         }
@@ -107,7 +114,7 @@ namespace ValidadorContrasenaTest
         {
             //Arrange
             string Contrasena = "Daniel1";
-            IContrasenaValidador validator = new SegundoGrupoReglas();
+            IContrasenaValidador validator = ContrasenaValidadorFactory.CrearFactory(TipoValidacion.Segunda);
             //Act
             bool Resultado = validator.EsValida(Contrasena);
             //Assert
@@ -119,19 +126,11 @@ namespace ValidadorContrasenaTest
         {
             //Arrange
             string Contrasena = "Danielabcdefghijeeeeee_";
-            IContrasenaValidador validator = new TercerGrupoReglas();
+            IContrasenaValidador validator = ContrasenaValidadorFactory.CrearFactory(TipoValidacion.Tercera);
             //Act
             bool Resultado = validator.EsValida(Contrasena);
             //Assert
             Resultado.Should().BeTrue();
-        }
-    }
-
-    internal class TercerGrupoReglas : IContrasenaValidador
-    {
-        public bool EsValida(string contrasena)
-        {
-            return new Validador().EsValida(contrasena, TipoValidacion.Tercera);
         }
     }
 }
