@@ -17,7 +17,7 @@ namespace ValidadorContrasena
 
         private bool ValidadorContrasena(string contrasena)
         {
-            throw new NotImplementedException();
+            return true;
         }
     }
 }
