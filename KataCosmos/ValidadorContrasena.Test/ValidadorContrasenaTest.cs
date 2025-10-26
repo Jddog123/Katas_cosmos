@@ -101,5 +101,30 @@ namespace ValidadorContrasenaTest
             //Assert
             Resultado.Should().BeTrue();
         }
+
+        [Fact]
+        public void Si_ContrasenaTieneSegundoGrupoReglas_Debe_ValidarSegunSegundoGrupoDeReglas()
+        {
+            //Arrange
+            string Contrasena = "Daniel1";
+            IPasswordValidator validator = new SegundoGrupoReglas();
+            //Act
+            bool Resultado = validator.EsValida(Contrasena);
+            //Assert
+            Resultado.Should().BeTrue();
+        }
+    }
+
+    internal class SegundoGrupoReglas : IPasswordValidator
+    {
+        public bool EsValida(string Contrasena)
+        {
+            throw new NotImplementedException();
+        }
+    }
+
+    internal interface IPasswordValidator
+    {
+        bool EsValida(string password);
     }
 }
