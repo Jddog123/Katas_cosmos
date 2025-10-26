@@ -1,5 +1,6 @@
 using FluentAssertions;
 using ValidadorContrasena.Test.Dominio;
+using ValidadorContrasena.Test.Enum;
 
 namespace ValidadorContrasenaTest
 {
@@ -85,7 +86,7 @@ namespace ValidadorContrasenaTest
             //Arrange
             string Contrasena = "Dani123";
             //Act
-            bool Resultado = validadorContrasena.EsValida(Contrasena);
+            bool Resultado = validadorContrasena.EsValida(Contrasena, TipoValidacion.Segunda);
             //Assert
             Resultado.Should().BeTrue();
         }
