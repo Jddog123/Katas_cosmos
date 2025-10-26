@@ -1,3 +1,4 @@
+using System.Text.RegularExpressions;
 using ValidadorContrasena.Dominio;
 using ValidadorContrasena.Dominio.Enum;
 using ValidadorContrasena.Dominio.GrupoReglas;
@@ -6,20 +7,15 @@ namespace ValidadorContrasena.Dominio
 {
     public class ContrasenaValidadorFactory
     {
-        public static IContrasenaValidador CrearFactory(TipoValidacion tipoValidacion)
+        public static IContrasenaValidador CrearFactory(TipoValidacion tipoValidacion = TipoValidacion.Otra)
         {
-            if (tipoValidacion == TipoValidacion.Primera)
+            return tipoValidacion switch
             {
-                return new PrimerGrupoReglas();
-            }
-            else if (tipoValidacion == TipoValidacion.Segunda)
-            {
-                return new SegundoGrupoReglas();
-            }
-            else
-            {
-                return new TerceroGrupoReglas();
-            }
+                TipoValidacion.Primera => new PrimerGrupoReglas(),
+                TipoValidacion.Segunda => new SegundoGrupoReglas(),
+                TipoValidacion.Tercera => new TerceroGrupoReglas(),
+                _ => throw new Exception("No se encontro el grupo de reglas")
+            };
         }
     }
 }

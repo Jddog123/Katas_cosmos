@@ -138,7 +138,7 @@ namespace ValidadorContrasenaTest
         public void Si_NoSeEncuentraGrupoDeReglas_Debe_RetornarExcepcion()
         {
             //Act
-            var resultado = () => ContrasenaValidadorFactory.CrearFactory(TipoValidacion.Otra);
+            var resultado = () => ContrasenaValidadorFactory.CrearFactory();
             //Assert
             resultado.Should().ThrowExactly<Exception>("No se encontro el grupo de reglas");
         }
