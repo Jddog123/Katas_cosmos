@@ -48,6 +48,17 @@ namespace ValidadorContrasena
             Resultado.Should().BeFalse();
         }
 
+        [Fact]
+        public void Si_ContrasenaNoTieneAlmenosUnNumero_Debe_RetornarFalse()
+        {
+            //Arrange
+            string Contrasena = "Danielll";
+            //Act
+            bool Resultado = ValidadorContrasena(Contrasena);
+            //Assert
+            Resultado.Should().BeFalse();
+        }
+
         private bool ValidadorContrasena(string contrasena)
         {
             if (contrasena.Length != 8)
