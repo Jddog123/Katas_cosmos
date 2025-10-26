@@ -70,6 +70,17 @@ namespace ValidadorContrasena
             Resultado.Should().BeFalse();
         }
 
+        [Fact]
+        public void Si_ContrasenaTieneOchoCaracteresYUnaLetraMayusculaYUnaLetraMinusculaYUnNumeroYUnGuionBajo_Debe_RetornarTrue()
+        {
+            //Arrange
+            string Contrasena = "Daniel1_";
+            //Act
+            bool Resultado = ValidadorContrasena(Contrasena);
+            //Assert
+            Resultado.Should().BeTrue();
+        }
+
         private bool ValidadorContrasena(string contrasena)
         {
             if (contrasena.Length != 8 && !contrasena.Contains('_'))
