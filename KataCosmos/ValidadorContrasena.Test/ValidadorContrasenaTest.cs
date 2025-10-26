@@ -59,6 +59,17 @@ namespace ValidadorContrasena
             Resultado.Should().BeFalse();
         }
 
+        [Fact]
+        public void Si_ContrasenaNoTieneAlmenosUnGuionBajo_Debe_RetornarFalse()
+        {
+            //Arrange
+            string Contrasena = "Daniel12";
+            //Act
+            bool Resultado = ValidadorContrasena(Contrasena);
+            //Assert
+            Resultado.Should().BeFalse();
+        }
+
         private bool ValidadorContrasena(string contrasena)
         {
             if (contrasena.Length != 8)
