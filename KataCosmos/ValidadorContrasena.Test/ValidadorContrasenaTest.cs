@@ -90,5 +90,16 @@ namespace ValidadorContrasenaTest
             //Assert
             Resultado.Should().BeTrue();
         }
+
+        [Fact]
+        public void Si_ContrasenaTieneMasDeDieciseisCaracteresYUnaLetraMayusculaYUnaLetraMinusculaYUnGuionBajo_Debe_RetornarTrue()
+        {
+            //Arrange
+            string Contrasena = "Danielabcdefghijklmn_";
+            //Act
+            bool Resultado = validadorContrasena.EsValida(Contrasena);
+            //Assert
+            Resultado.Should().BeTrue();
+        }
     }
 }
