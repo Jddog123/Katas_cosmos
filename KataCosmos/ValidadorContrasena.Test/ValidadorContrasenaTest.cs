@@ -97,7 +97,7 @@ namespace ValidadorContrasenaTest
             //Arrange
             string Contrasena = "Danielabcdefghijklmn_";
             //Act
-            bool Resultado = validadorContrasena.EsValida(Contrasena);
+            bool Resultado = validadorContrasena.EsValida(Contrasena, TipoValidacion.Tercera);
             //Assert
             Resultado.Should().BeTrue();
         }

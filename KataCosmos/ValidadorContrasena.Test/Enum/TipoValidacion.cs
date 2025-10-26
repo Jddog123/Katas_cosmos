@@ -10,5 +10,6 @@ namespace ValidadorContrasena.Test.Enum
     {
         Primera
        , Segunda
+       , Tercera
     }
 }
