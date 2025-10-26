@@ -28,6 +28,8 @@ namespace ValidadorContrasena
 
         private bool ValidadorContrasena(string contrasena)
         {
+            if (contrasena.Length == 8)
+                return true;
             return false;
         }
     }
