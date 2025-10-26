@@ -1,13 +1,13 @@
 # 1 ITERACIÓN
-- [X] Si_ContrasenaNoTieneOchoCaracteres_Debe_RetornarFalse
+- [X] Si_ContrasenaNoTieneMasDeOchoCaracteres_Debe_RetornarFalse
 - [X] Si_ContrasenaNoTieneAlmenosUnaLetraMayuscula_Debe_RetornarFalse
 - [X] Si_ContrasenaNoTieneAlmenosUnaLetraMinuscula_Debe_RetornarFalse
 - [X] Si_ContrasenaNoTieneAlmenosUnNumero_Debe_RetornarFalse
 - [X] Si_ContrasenaNoTieneAlmenosUnGuionBajo_Debe_RetornarFalse
-- [X] Si_ContrasenaTieneOchoCaracteresYUnaLetraMayusculaYUnaLetraMinusculaYUnNumeroYUnGuionBajo_Debe_RetornarTrue
+- [X] Si_ContrasenaTieneMasDeOchoCaracteresYUnaLetraMayusculaYUnaLetraMinusculaYUnNumeroYUnGuionBajo_Debe_RetornarTrue
 
 # 2 ITERACIÓN
-- [ ] Si_ContrasenaNoTieneSeisCaracteres_Debe_RetornarFalse
-- [ ] Si_ContrasenaTieneSeisCaracteresYUnaLetraMayusculaYUnaLetraMinusculaYUnNumero_Debe_RetornarTrue
-- [ ] Si_ContrasenaNoTieneDieciseisCaracteres_Debe_RetornarFalse
-- [ ] Si_ContrasenaTieneDieciseisCaracteresYUnaLetraMayusculaYUnaLetraMinusculaYUnGuionBajo_Debe_RetornarTrue
+- [ ] Si_ContrasenaNoTieneMasDeSeisCaracteres_Debe_RetornarFalse
+- [ ] Si_ContrasenaTieneMasDeSeisCaracteresYUnaLetraMayusculaYUnaLetraMinusculaYUnNumero_Debe_RetornarTrue
+- [ ] Si_ContrasenaNoTieneMasDeDieciseisCaracteres_Debe_RetornarFalse
+- [ ] Si_ContrasenaTieneMasDeDieciseisCaracteresYUnaLetraMayusculaYUnaLetraMinusculaYUnGuionBajo_Debe_RetornarTrue
