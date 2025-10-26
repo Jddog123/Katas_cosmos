@@ -41,9 +41,9 @@ namespace ValidadorContrasena
         {
             if(contrasena.Any(char.IsUpper) == false)
                 return false;
-            else if (contrasena.Length == 8)
-                return true;
-            return false;
+            else if (contrasena.Length != 8)
+                return false;
+            return true;
         }
     }
 }
