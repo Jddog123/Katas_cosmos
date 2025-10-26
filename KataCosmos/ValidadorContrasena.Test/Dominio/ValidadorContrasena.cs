@@ -11,6 +11,12 @@ namespace ValidadorContrasena.Test.Dominio
     {
         public bool EsValida(string Contrasena , TipoValidacion tipoValidacion = TipoValidacion.Primera)
         {
+            if (Contrasena.Length > 16
+                && Contrasena.Any(char.IsUpper) &&
+                   Contrasena.Any(char.IsLower) &&
+                   Contrasena.Contains('_'))
+                return true;
+
             if (tipoValidacion == TipoValidacion.Segunda)
                 return Contrasena.Length > 6 &&
                    Contrasena.Any(char.IsUpper) &&
