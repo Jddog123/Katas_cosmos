@@ -1,10 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "QkTLvobQx9g=",
+  "dgSpecHash": "glYJ0JG/fa0=",
   "success": true,
   "projectFilePath": "C:\\Daniel\\Cursos\\KATA_Cosmos\\Katas_cosmos\\KataCosmos\\ValidadorContrasena.Test\\ValidadorContrasena.Test.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\DANIEL.URUEÑA\\.nuget\\packages\\coverlet.collector\\6.0.0\\coverlet.collector.6.0.0.nupkg.sha512",
+    "C:\\Users\\DANIEL.URUEÑA\\.nuget\\packages\\fluentassertions\\8.7.1\\fluentassertions.8.7.1.nupkg.sha512",
     "C:\\Users\\DANIEL.URUEÑA\\.nuget\\packages\\microsoft.codecoverage\\17.8.0\\microsoft.codecoverage.17.8.0.nupkg.sha512",
     "C:\\Users\\DANIEL.URUEÑA\\.nuget\\packages\\microsoft.net.test.sdk\\17.8.0\\microsoft.net.test.sdk.17.8.0.nupkg.sha512",
     "C:\\Users\\DANIEL.URUEÑA\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",

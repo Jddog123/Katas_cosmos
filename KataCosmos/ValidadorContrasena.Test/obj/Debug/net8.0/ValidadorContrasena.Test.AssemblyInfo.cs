@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ValidadorContrasena.Test")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+75b0a3e55785df3977956827e457c3a8a46e615b")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e54840ae9628fc57973f17eb56e0e76beb737141")]
 [assembly: System.Reflection.AssemblyProductAttribute("ValidadorContrasena.Test")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ValidadorContrasena.Test")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
