@@ -16,11 +16,25 @@ namespace ValidadorContrasena.Dominio
             _reglas = reglas.ToList();
         }
 
-        public bool EsValida(string contrasena)
+        public ContrasenaValidadorResultado EsValida(string contrasena)
         {
+            var errores = new List<string>();
             foreach (var regla in _reglas)
-                if (!regla.EsValida(contrasena)) return false;
-            return true;
+                if (!regla.EsValida(contrasena))
+                    errores.Add(regla.ErrorMessage);
+
+            return new ContrasenaValidadorResultado(errores);
+        }
+    }
+
+    public class ContrasenaValidadorResultado
+    {
+        public bool EsValida => !Errores.Any();
+        public List<string> Errores { get; }
+
+        public ContrasenaValidadorResultado(List<string> errores)
+        {
+            Errores = errores;
         }
     }
 }

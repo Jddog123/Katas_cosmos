@@ -8,6 +8,8 @@ namespace ValidadorContrasena.Dominio.Reglas
 {
     public class ContieneMinusculaRegla : IContrasenaValidador
     {
+        public string ErrorMessage => throw new NotImplementedException();
+
         public bool EsValida(string contrasena) => contrasena.Any(char.IsLower);
     }
 }

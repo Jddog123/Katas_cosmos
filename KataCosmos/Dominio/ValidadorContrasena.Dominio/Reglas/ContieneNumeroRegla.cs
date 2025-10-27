@@ -8,6 +8,6 @@ namespace ValidadorContrasena.Dominio.Reglas
 {
     public class ContieneNumeroRegla : IContrasenaValidador
     {
-        public bool EsValida(string contrasena) => contrasena.Any(char.IsDigit);
+        public string ErrorMessage => throw new NotImplementedException(); public bool EsValida(string contrasena) => contrasena.Any(char.IsDigit);
     }
 }
