@@ -117,36 +117,10 @@ namespace ValidadorContrasenaTest
             resultado.Should().ThrowExactly<Exception>("No se encontro el grupo de reglas");
         }
 
-        [Fact]
-        public void Si_ContrasenaNoTieneMasDeOchoCaracteres_Debe_RetornarMensajeCausa()
-        {
-            //Arrange
-            string Contrasena = "Dani123";
-            ContrasenaValidador validator = ContrasenaValidadorFactory.CrearFactory(TipoValidacion.Primera);
-            //Act
-            ContrasenaValidadorResultado Resultado = validator.EsValida(Contrasena);
-            //Assert
-            Resultado.Errores.Should().NotBeNull();
-            Resultado.Errores.Should().NotBeEmpty();
-            Resultado.Errores.Should().Contain("Debe tener mas de 8 caracteres");
-        }
-
-        [Fact]
-        public void Si_ContrasenaNoTieneMasDeSeisCaracteres_Debe_RetornarMensajeCausa()
-        {
-            //Arrange
-            string Contrasena = "Dan12";
-            ContrasenaValidador validator = ContrasenaValidadorFactory.CrearFactory(TipoValidacion.Segunda);
-            //Act
-            ContrasenaValidadorResultado Resultado = validator.EsValida(Contrasena);
-            //Assert
-            Resultado.Errores.Should().NotBeNull();
-            Resultado.Errores.Should().NotBeEmpty();
-            Resultado.Errores.Should().Contain("Debe tener mas de 6 caracteres");
-        }
-
         [Theory]
-        [InlineData(TipoValidacion.Tercera, "Dan12" , 16)]
+        [InlineData(TipoValidacion.Primera, "Dani123", 8)]
+        [InlineData(TipoValidacion.Segunda, "Dan12", 6)]
+        [InlineData(TipoValidacion.Tercera, "Daniel12345", 16)]
         public void Si_ContrasenaNoTieneMasDeNCaracteresSegunTipoValidacion_Debe_RetornarMensajeCausaSegunNCaracteres(TipoValidacion tipoValidacion, string Contrasena, int minimoCaracteres)
         {
             //Arrange
