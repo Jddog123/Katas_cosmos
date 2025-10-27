@@ -132,6 +132,19 @@ namespace ValidadorContrasenaTest
             Resultado.Errores.Should().NotBeEmpty();
             Resultado.Errores.Should().Contain($"Debe tener mas de {minimoCaracteres} caracteres");
         }
-        
+
+        [Fact]
+        public void Si_ContrasenaNoTieneAlmenosUnaLetraMayuscula_Debe_RetornarMensajeCausa()
+        {
+            //Arrange
+            string Contrasena = "daniel123";
+            ContrasenaValidador validator = ContrasenaValidadorFactory.CrearFactory(TipoValidacion.Primera);
+            //Act
+            ContrasenaValidadorResultado Resultado = validator.EsValida(Contrasena);
+            //Assert
+            Resultado.Errores.Should().NotBeNull();
+            Resultado.Errores.Should().NotBeEmpty();
+            Resultado.Errores.Should().Contain($"Debe tener al menos una letra mayuscula");
+        }
     }
 }
