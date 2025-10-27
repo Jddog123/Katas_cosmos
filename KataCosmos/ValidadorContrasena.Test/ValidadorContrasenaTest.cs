@@ -1,4 +1,5 @@
 using FluentAssertions;
+using FluentAssertions.Equivalency.Tracing;
 using ValidadorContrasena.Dominio;
 using ValidadorContrasena.Dominio.Enum;
 using ValidadorContrasena.Dominio.Reglas;
@@ -72,9 +73,9 @@ namespace ValidadorContrasenaTest
         {
             //Arrange
             ContrasenaValidador validator = ContrasenaValidadorFactory.CrearFactory(TipoValidacion.Primera);
-            bool Resultado = validator.EsValida(Contrasena);
+            ContrasenaValidadorResultado Resultado = validator.EsValida(Contrasena);
             //Assert
-            Resultado.Should().BeTrue();
+            Resultado.EsValida.Should().BeTrue();
         }
 
         [Theory]
@@ -87,9 +88,9 @@ namespace ValidadorContrasenaTest
             //Arrange
             ContrasenaValidador validator = ContrasenaValidadorFactory.CrearFactory(TipoValidacion.Segunda);
             //Act
-            bool Resultado = validator.EsValida(Contrasena);
+            ContrasenaValidadorResultado Resultado = validator.EsValida(Contrasena);
             //Assert
-            Resultado.Should().BeTrue();
+            Resultado.EsValida.Should().BeTrue();
         }
 
         [Theory]
@@ -102,9 +103,9 @@ namespace ValidadorContrasenaTest
             //Arrange
             ContrasenaValidador validator = ContrasenaValidadorFactory.CrearFactory(TipoValidacion.Tercera);
             //Act
-            bool Resultado = validator.EsValida(Contrasena);
+            ContrasenaValidadorResultado Resultado = validator.EsValida(Contrasena);
             //Assert
-            Resultado.Should().BeTrue();
+            Resultado.EsValida.Should().BeTrue();
         }
 
         [Fact]
@@ -114,6 +115,20 @@ namespace ValidadorContrasenaTest
             var resultado = () => ContrasenaValidadorFactory.CrearFactory();
             //Assert
             resultado.Should().ThrowExactly<Exception>("No se encontro el grupo de reglas");
+        }
+
+        [Fact]
+        public void Si_ContrasenaNoTieneMasDeOchoCaracteres_Debe_RetornarMensajeCausa()
+        {
+            //Arrange
+            string Contrasena = "Dani123";
+            ContrasenaValidador validator = ContrasenaValidadorFactory.CrearFactory(TipoValidacion.Primera);
+            //Act
+            ContrasenaValidadorResultado Resultado = validator.EsValida(Contrasena);
+            //Assert
+            Resultado.Errores.Should().NotBeNull();
+            Resultado.Errores.Should().NotBeEmpty();
+            Resultado.Errores.Should().Contain("Debe tener mas de 8 caracteres");
         }
     }
 }
