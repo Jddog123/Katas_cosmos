@@ -163,11 +163,14 @@ namespace ValidadorContrasenaTest
             Resultado.EsValida.Should().BeTrue();
         }
 
-        [Fact]
-        public void Si_ContrasenaTieneCuartoGrupoYPasanTodasLasValidaciones_Debe_RetornarTrueYListaErroresVacia()
+        [Theory]
+        [InlineData("Daniel123_")]
+        [InlineData("_Daniel123")]
+        [InlineData("Daniel_123")]
+        [InlineData("Daniel123")]
+        public void Si_ContrasenaEsValidaDeGrupoCuarto_Debe_RetornarTrue(string Contrasena)
         {
             //Arrange
-            string Contrasena = "Daniel123_";
             ContrasenaValidador validator = ContrasenaValidadorFactory.CrearFactory(TipoValidacion.Cuarta);
             //Act
             ContrasenaValidadorResultado Resultado = validator.EsValida(Contrasena);
