@@ -144,5 +144,20 @@ namespace ValidadorContrasenaTest
             Resultado.Errores.Should().NotBeEmpty();
             Resultado.Errores.Should().Contain("Debe tener mas de 6 caracteres");
         }
+
+        [Theory]
+        [InlineData(TipoValidacion.Primera, "Dan12" , 16)]
+        public void Si_ContrasenaNoTieneMasDeNCaracteresSegunTipoValidacion_Debe_RetornarMensajeCausaSegunNCaracteres(TipoValidacion tipoValidacion, string Contrasena, int minimoCaracteres)
+        {
+            //Arrange
+            ContrasenaValidador validator = ContrasenaValidadorFactory.CrearFactory(tipoValidacion);
+            //Act
+            ContrasenaValidadorResultado Resultado = validator.EsValida(Contrasena);
+            //Assert
+            Resultado.Errores.Should().NotBeNull();
+            Resultado.Errores.Should().NotBeEmpty();
+            Resultado.Errores.Should().Contain($"Debe tener mas de {minimoCaracteres} caracteres");
+        }
+        
     }
 }
