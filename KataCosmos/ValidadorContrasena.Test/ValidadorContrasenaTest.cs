@@ -146,7 +146,7 @@ namespace ValidadorContrasenaTest
         }
 
         [Theory]
-        [InlineData(TipoValidacion.Primera, "Dan12" , 16)]
+        [InlineData(TipoValidacion.Tercera, "Dan12" , 16)]
         public void Si_ContrasenaNoTieneMasDeNCaracteresSegunTipoValidacion_Debe_RetornarMensajeCausaSegunNCaracteres(TipoValidacion tipoValidacion, string Contrasena, int minimoCaracteres)
         {
             //Arrange
