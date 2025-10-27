@@ -8,7 +8,7 @@ namespace ValidadorContrasena.Dominio.Reglas
 {
     public class ContieneMinusculaRegla : IContrasenaValidador
     {
-        public string ErrorMessage => string.Empty;
+        public string ErrorMessage => "Debe tener al menos una letra minuscula";
 
         public bool EsValida(string contrasena) => contrasena.Any(char.IsLower);
     }
