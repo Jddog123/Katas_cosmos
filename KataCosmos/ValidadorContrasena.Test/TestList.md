@@ -21,7 +21,7 @@
 - [X] Si_ContrasenaNoTieneAlmenosUnaLetraMinuscula_Debe_RetornarMensajeCausa
 - [X] Si_ContrasenaNoTieneAlmenosUnNumero_Debe_RetornarMensajeCausa
 - [X] Si_ContrasenaNoTieneAlmenosUnGuionBajo_Debe_RetornarMensajeCausa
-- [ ] Si_ContrasenaEsInvalida_Debe_RetornarListaConMensajesDeCausa
+- [X] Si_ContrasenaEsInvalida_Debe_RetornarListaConMensajesDeCausa
 
 # DICCIONARIO
 - Primer grupo de reglas : Contraseña debe tener mas de 8 caracteres, minimo 1 letra mayuscula, minimo 1 letra minuscula, minimo 1 numero y minimo 1 _

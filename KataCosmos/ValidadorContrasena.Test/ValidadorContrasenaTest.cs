@@ -133,64 +133,8 @@ namespace ValidadorContrasenaTest
             Resultado.Errores.Should().Contain($"Debe tener mas de {minimoCaracteres} caracteres");
         }
 
-        [Fact]
-        public void Si_ContrasenaNoTieneAlmenosUnaLetraMayuscula_Debe_RetornarMensajeCausa()
-        {
-            //Arrange
-            string Contrasena = "daniel123";
-            ContrasenaValidador validator = ContrasenaValidadorFactory.CrearFactory(TipoValidacion.Primera);
-            //Act
-            ContrasenaValidadorResultado Resultado = validator.EsValida(Contrasena);
-            //Assert
-            Resultado.Errores.Should().NotBeNull();
-            Resultado.Errores.Should().NotBeEmpty();
-            Resultado.Errores.Should().Contain("Debe tener al menos una letra mayuscula");
-        }
-
-        [Fact]
-        public void Si_ContrasenaNoTieneAlmenosUnaLetraMinuscula_Debe_RetornarMensajeCausa()
-        {
-            //Arrange
-            string Contrasena = "DANIEL123";
-            ContrasenaValidador validator = ContrasenaValidadorFactory.CrearFactory(TipoValidacion.Primera);
-            //Act
-            ContrasenaValidadorResultado Resultado = validator.EsValida(Contrasena);
-            //Assert
-            Resultado.Errores.Should().NotBeNull();
-            Resultado.Errores.Should().NotBeEmpty();
-            Resultado.Errores.Should().Contain("Debe tener al menos una letra minuscula");
-        }
-
-        [Fact]
-        public void Si_ContrasenaNoTieneAlmenosUnNumero_Debe_RetornarMensajeCausa()
-        {
-            //Arrange
-            string Contrasena = "Daniellll";
-            ContrasenaValidador validator = ContrasenaValidadorFactory.CrearFactory(TipoValidacion.Primera);
-            //Act
-            ContrasenaValidadorResultado Resultado = validator.EsValida(Contrasena);
-            //Assert
-            Resultado.Errores.Should().NotBeNull();
-            Resultado.Errores.Should().NotBeEmpty();
-            Resultado.Errores.Should().Contain("Debe tener al menos una número");
-        }
-
-        [Fact]
-        public void Si_ContrasenaNoTieneAlmenosUnGuionBajo_Debe_RetornarMensajeCausa()
-        {
-            //Arrange
-            string Contrasena = "Daniel1234";
-            ContrasenaValidador validator = ContrasenaValidadorFactory.CrearFactory(TipoValidacion.Primera);
-            //Act
-            ContrasenaValidadorResultado Resultado = validator.EsValida(Contrasena);
-            //Assert
-            Resultado.Errores.Should().NotBeNull();
-            Resultado.Errores.Should().NotBeEmpty();
-            Resultado.Errores.Should().Contain("Debe tener al menos un guion bajo");
-        }
-
         [Theory]
-        [InlineData("daniel123", "Debe tener al menos una letra mayuscula", "Debe tener al menos un guion bajo")]
+        [InlineData("daniel1234", "Debe tener al menos una letra mayuscula", "Debe tener al menos un guion bajo")]
         [InlineData("DANIELLL_", "Debe tener al menos una letra minuscula", "Debe tener al menos una número")]
         [InlineData("da", "Debe tener mas de 8 caracteres", "Debe tener al menos una letra mayuscula", "Debe tener al menos una número", "Debe tener al menos un guion bajo")]
         public void Si_ContrasenaEsInvalida_Debe_RetornarListaConMensajesDeCausa(string Contrasena, params string[] validacionesEsparadas)
