@@ -1,25 +1,20 @@
 using FluentAssertions;
-using System.ComponentModel.DataAnnotations;
 using ValidadorContrasena.Dominio;
 using ValidadorContrasena.Dominio.Enum;
+using ValidadorContrasena.Dominio.Reglas;
 
 namespace ValidadorContrasenaTest
 {
     public class ValidadorContrasenaTest
     {
-        Validador validadorContrasena;
-        public ValidadorContrasenaTest()
+        [Theory]
+        [InlineData(6, "Dan12")]
+        [InlineData(8, "Dani123")]
+        [InlineData(16, "Daniel12345")]
+        public void Si_ContrasenaTieneMasNCaracteres_Debe_RetornarFalse(int LongitudValidar, string Contrasena)
         {
-            validadorContrasena = new Validador();
-        }
-
-        [Fact]
-        public void Si_ContrasenaNoTieneMasDeOchoCaracteres_Debe_RetornarFalse()
-        {
-            //Arrange
-            string Contrasena = "Daniel1";
             //Act
-            bool Resultado = validadorContrasena.EsValida(Contrasena);
+            bool Resultado = new LongitudRegla(LongitudValidar).EsValida(Contrasena);
             //Assert
             Resultado.Should().BeFalse();
         }
@@ -28,9 +23,9 @@ namespace ValidadorContrasenaTest
         public void Si_ContrasenaNoTieneAlmenosUnaLetraMayuscula_Debe_RetornarFalse()
         {
             //Arrange
-            string Contrasena = "Daniel123";
+            string Contrasena = "daniel123";
             //Act
-            bool Resultado = validadorContrasena.EsValida(Contrasena);
+            bool Resultado = new ContieneMayusculaRegla().EsValida(Contrasena);
             //Assert
             Resultado.Should().BeFalse();
         }
@@ -41,7 +36,7 @@ namespace ValidadorContrasenaTest
             //Arrange
             string Contrasena = "DANIEL123";
             //Act
-            bool Resultado = validadorContrasena.EsValida(Contrasena);
+            bool Resultado = new ContieneMinusculaRegla().EsValida(Contrasena);
             //Assert
             Resultado.Should().BeFalse();
         }
@@ -52,7 +47,7 @@ namespace ValidadorContrasenaTest
             //Arrange
             string Contrasena = "Daniellll";
             //Act
-            bool Resultado = validadorContrasena.EsValida(Contrasena);
+            bool Resultado = new ContieneNumeroRegla().EsValida(Contrasena);
             //Assert
             Resultado.Should().BeFalse();
         }
@@ -63,7 +58,7 @@ namespace ValidadorContrasenaTest
             //Arrange
             string Contrasena = "Daniel1234";
             //Act
-            bool Resultado = validadorContrasena.EsValida(Contrasena);
+            bool Resultado = new ContieneGuionBajoRegla().EsValida(Contrasena);
             //Assert
             Resultado.Should().BeFalse();
         }
@@ -73,10 +68,10 @@ namespace ValidadorContrasenaTest
         [InlineData("daNiel123_")]
         [InlineData("Dan_iel123")]
         [InlineData("123Da_niel")]
-        public void Si_ContrasenaTieneMasDeOchoCaracteresYUnaLetraMayusculaYUnaLetraMinusculaYUnNumeroYUnGuionBajo_Debe_RetornarTrue(string Contrasena)
+        public void Si_ContrasenaEsValidaDeGrupoPrimero_Debe_RetornarTrue(string Contrasena)
         {
             //Arrange
-            IContrasenaValidador validator = ContrasenaValidadorFactory.CrearFactory(TipoValidacion.Primera);
+            ContrasenaValidador validator = ContrasenaValidadorFactory.CrearFactory(TipoValidacion.Primera);
             bool Resultado = validator.EsValida(Contrasena);
             //Assert
             Resultado.Should().BeTrue();
@@ -86,10 +81,11 @@ namespace ValidadorContrasenaTest
         [InlineData("Dani123")]
         [InlineData("daNi123")]
         [InlineData("123Dani")]
-        public void Si_ContrasenaTieneMasDeSeisCaracteresYUnaLetraMayusculaYUnaLetraMinusculaYUnNumero_Debe_RetornarTrue(string Contrasena)
+        [InlineData("Daniel1")]
+        public void Si_ContrasenaEsValidaDeGrupoSegundo_Debe_RetornarTrue(string Contrasena)
         {
             //Arrange
-            IContrasenaValidador validator = ContrasenaValidadorFactory.CrearFactory(TipoValidacion.Segunda);
+            ContrasenaValidador validator = ContrasenaValidadorFactory.CrearFactory(TipoValidacion.Segunda);
             //Act
             bool Resultado = validator.EsValida(Contrasena);
             //Assert
@@ -100,34 +96,11 @@ namespace ValidadorContrasenaTest
         [InlineData("Danielabcdefghijklmn_")]
         [InlineData("danielAbcd_fghijklmn")]
         [InlineData("_Danielabcdefghijklmn")]
-        public void Si_ContrasenaTieneMasDeDieciseisCaracteresYUnaLetraMayusculaYUnaLetraMinusculaYUnGuionBajo_Debe_RetornarTrue(string Contrasena)
+        [InlineData("Danielabcdefghijeeeeee_")]
+        public void Si_ContrasenaEsValidaDeGrupoTercero_Debe_RetornarTrue(string Contrasena)
         {
             //Arrange
-            IContrasenaValidador validator = ContrasenaValidadorFactory.CrearFactory(TipoValidacion.Tercera);
-            //Act
-            bool Resultado = validator.EsValida(Contrasena);
-            //Assert
-            Resultado.Should().BeTrue();
-        }
-
-        [Fact]
-        public void Si_ContrasenaTieneSegundoGrupoReglas_Debe_ValidarSegunSegundoGrupoDeReglas()
-        {
-            //Arrange
-            string Contrasena = "Daniel1";
-            IContrasenaValidador validator = ContrasenaValidadorFactory.CrearFactory(TipoValidacion.Segunda);
-            //Act
-            bool Resultado = validator.EsValida(Contrasena);
-            //Assert
-            Resultado.Should().BeTrue();
-        }
-
-        [Fact]
-        public void Si_ContrasenaTieneTercerGrupoReglas_Debe_ValidarSegunTercerGrupoDeReglas()
-        {
-            //Arrange
-            string Contrasena = "Danielabcdefghijeeeeee_";
-            IContrasenaValidador validator = ContrasenaValidadorFactory.CrearFactory(TipoValidacion.Tercera);
+            ContrasenaValidador validator = ContrasenaValidadorFactory.CrearFactory(TipoValidacion.Tercera);
             //Act
             bool Resultado = validator.EsValida(Contrasena);
             //Assert
@@ -142,6 +115,5 @@ namespace ValidadorContrasenaTest
             //Assert
             resultado.Should().ThrowExactly<Exception>("No se encontro el grupo de reglas");
         }
-         
     }
 }

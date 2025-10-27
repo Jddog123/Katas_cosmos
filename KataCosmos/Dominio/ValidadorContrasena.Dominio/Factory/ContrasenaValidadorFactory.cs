@@ -1,20 +1,39 @@
 using System.Text.RegularExpressions;
 using ValidadorContrasena.Dominio;
+using ValidadorContrasena.Dominio.Builder;
 using ValidadorContrasena.Dominio.Enum;
-using ValidadorContrasena.Dominio.GrupoReglas;
+using ValidadorContrasena.Dominio.Reglas;
 
 namespace ValidadorContrasena.Dominio
 {
     public class ContrasenaValidadorFactory
     {
-        public static IContrasenaValidador CrearFactory(TipoValidacion tipoValidacion = TipoValidacion.Otra)
+        public static ContrasenaValidador CrearFactory(TipoValidacion tipoValidacion = TipoValidacion.Otra)
         {
-            return tipoValidacion switch
+            var builder = new ContrasenaValidadorBuilder();
+            switch (tipoValidacion)
             {
-                TipoValidacion.Primera => new PrimerGrupoReglas(),
-                TipoValidacion.Segunda => new SegundoGrupoReglas(),
-                TipoValidacion.Tercera => new TerceroGrupoReglas(),
-                _ => throw new Exception("No se encontro el grupo de reglas")
+                case TipoValidacion.Primera:
+                    return builder.AgregarRegla(new LongitudRegla(8))
+                        .AgregarRegla(new ContieneMayusculaRegla())
+                        .AgregarRegla(new ContieneMinusculaRegla())
+                        .AgregarRegla(new ContieneNumeroRegla())
+                        .AgregarRegla(new ContieneGuionBajoRegla())
+                        .Build();
+                case TipoValidacion.Segunda:
+                    return builder.AgregarRegla(new LongitudRegla(6))
+                        .AgregarRegla(new ContieneMayusculaRegla())
+                        .AgregarRegla(new ContieneMinusculaRegla())
+                        .AgregarRegla(new ContieneNumeroRegla())
+                        .Build();
+                case TipoValidacion.Tercera:
+                    return builder.AgregarRegla(new LongitudRegla(16))
+                        .AgregarRegla(new ContieneMayusculaRegla())
+                        .AgregarRegla(new ContieneMinusculaRegla())
+                        .AgregarRegla(new ContieneGuionBajoRegla())
+                        .Build();
+                default:
+                    throw new Exception("No se encontro el grupo de reglas");
             };
         }
     }

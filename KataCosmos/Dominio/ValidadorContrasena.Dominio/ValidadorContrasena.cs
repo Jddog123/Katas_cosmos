@@ -7,29 +7,20 @@ using ValidadorContrasena.Dominio.Enum;
 
 namespace ValidadorContrasena.Dominio
 {
-    public class Validador
+    public class ContrasenaValidador
     {
-        public bool EsValida(string Contrasena , TipoValidacion tipoValidacion = TipoValidacion.Primera)
+        private readonly List<IContrasenaValidador> _reglas;
+
+        public ContrasenaValidador(IEnumerable<IContrasenaValidador> reglas)
         {
-            if (tipoValidacion == TipoValidacion.Tercera)
-            {
-                return Contrasena.Length > 16
-                && Contrasena.Any(char.IsUpper) &&
-                   Contrasena.Any(char.IsLower) &&
-                   Contrasena.Contains('_');
-            }
+            _reglas = reglas.ToList();
+        }
 
-            if (tipoValidacion == TipoValidacion.Segunda)
-                return Contrasena.Length > 6 &&
-                   Contrasena.Any(char.IsUpper) &&
-                   Contrasena.Any(char.IsLower) &&
-                   Contrasena.Any(char.IsDigit);
-
-            return Contrasena.Length > 8 &&
-                   Contrasena.Any(char.IsUpper) &&
-                   Contrasena.Any(char.IsLower) &&
-                   Contrasena.Any(char.IsDigit) &&
-                   Contrasena.Contains('_');
-        }          
+        public bool EsValida(string contrasena)
+        {
+            foreach (var regla in _reglas)
+                if (!regla.EsValida(contrasena)) return false;
+            return true;
+        }
     }
 }
