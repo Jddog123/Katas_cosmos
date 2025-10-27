@@ -14,7 +14,7 @@ namespace ValidadorContrasena.Dominio.Reglas
             _minimoLongitud = minimoLongitud;
         }
 
-        public string ErrorMessage => throw new NotImplementedException();
+        public string ErrorMessage => "Debe tener mas de 8 caracteres";
 
         public bool EsValida(string contrasena) => contrasena.Length > _minimoLongitud;
     }
