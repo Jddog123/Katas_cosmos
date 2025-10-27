@@ -25,8 +25,8 @@
 
 # 4 ITERACIÓN 
 - [X] Si_ContrasenaTieneCuartoGrupoYFallaUnaValidacion_Debe_RetornarTrueYListaErroresVacia
-- [ ] Si_ContrasenaTieneCuartoGrupoYPasanTodasLasValidaciones_Debe_RetornarTrueYListaErroresVacia
-- [ ] Si_ContrasenaTieneCuartoGrupoYFallaDosValidacion_Debe_RetornarFalseYListaErroresConValidaciones
+- [X] Si_ContrasenaTieneCuartoGrupoYPasanTodasLasValidaciones_Debe_RetornarTrueYListaErroresVacia
+- [X] Si_ContrasenaTieneCuartoGrupoYFallaDosValidaciones_Debe_RetornarFalseYListaErroresConValidaciones
 
 
 # DICCIONARIO
