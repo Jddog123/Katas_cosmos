@@ -74,6 +74,7 @@ namespace ValidadorContrasenaTest
         {
             //Arrange
             ContrasenaValidador validator = ContrasenaValidadorFactory.CrearFactory(TipoValidacion.Primera);
+            //Act
             ContrasenaValidadorResultado Resultado = validator.EsValida(Contrasena);
             //Assert
             Resultado.EsValida.Should().BeTrue();
@@ -113,7 +114,7 @@ namespace ValidadorContrasenaTest
         public void Si_NoSeEncuentraGrupoDeReglas_Debe_RetornarExcepcion()
         {
             //Act
-            var resultado = () => ContrasenaValidadorFactory.CrearFactory();
+            var resultado = () => ContrasenaValidadorFactory.CrearFactory(TipoValidacion.Otra);
             //Assert
             resultado.Should().ThrowExactly<Exception>("No se encontro el grupo de reglas");
         }

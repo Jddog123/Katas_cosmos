@@ -11,22 +11,17 @@ namespace ValidadorContrasena.Dominio
     public class ContrasenaValidador
     {
         private readonly List<IContrasenaValidador> _reglas;
-        private TipoValidacion _tipoValidacion;
+        private readonly IValidacionStrategy _strategy;
 
-        public ContrasenaValidador(IEnumerable<IContrasenaValidador> reglas, TipoValidacion tipoValidacion)
+        public ContrasenaValidador(IEnumerable<IContrasenaValidador> reglas, IValidacionStrategy strategy)
         {
             _reglas = reglas.ToList();
-            _tipoValidacion = tipoValidacion;
+            _strategy = strategy;
         }
 
         public ContrasenaValidadorResultado EsValida(string contrasena)
         {
-            var errores = new List<string>();
-            foreach (var regla in _reglas)
-                if (!regla.EsValida(contrasena) && (_tipoValidacion != TipoValidacion.Cuarta || (_tipoValidacion == TipoValidacion.Cuarta && regla.ErrorMessage != "Debe tener al menos un guion bajo")))
-                    errores.Add(regla.ErrorMessage);
-
-            return new ContrasenaValidadorResultado(errores);
+            return _strategy.Validar(_reglas, contrasena);
         }
     }
 }

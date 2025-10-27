@@ -24,7 +24,8 @@
 - [X] Si_ContrasenaEsInvalida_Debe_RetornarListaConMensajesDeCausa
 
 # 4 ITERACIÓN 
-- [ ] Si_ContrasenaTieneCuartoGrupoYFallaUnaValidacion_Debe_RetornarTrueYListaErroresVacia
+- [X] Si_ContrasenaTieneCuartoGrupoYFallaUnaValidacion_Debe_RetornarTrueYListaErroresVacia
+- [ ] Si_ContrasenaTieneCuartoGrupoYPasanTodasLasValidaciones_Debe_RetornarTrueYListaErroresVacia
 - [ ] Si_ContrasenaTieneCuartoGrupoYFallaDosValidacion_Debe_RetornarFalseYListaErroresConValidaciones
 
 

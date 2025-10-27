@@ -3,12 +3,13 @@ using ValidadorContrasena.Dominio;
 using ValidadorContrasena.Dominio.Builder;
 using ValidadorContrasena.Dominio.Enum;
 using ValidadorContrasena.Dominio.Reglas;
+using ValidadorContrasena.Dominio.Strategy;
 
 namespace ValidadorContrasena.Dominio
 {
     public class ContrasenaValidadorFactory
     {
-        public static ContrasenaValidador CrearFactory(TipoValidacion tipoValidacion = TipoValidacion.Otra)
+        public static ContrasenaValidador CrearFactory(TipoValidacion tipoValidacion)
         {
             var builder = new ContrasenaValidadorBuilder();
             switch (tipoValidacion)
@@ -37,7 +38,8 @@ namespace ValidadorContrasena.Dominio
                         .AgregarRegla(new ContieneMayusculaRegla())
                         .AgregarRegla(new ContieneNumeroRegla())
                         .AgregarRegla(new ContieneGuionBajoRegla())
-                        .Build(tipoValidacion);
+                        .AgregarStrategy(new UnaPuedeFallarStrategy())
+                        .Build();
                 default:
                     throw new Exception("No se encontro el grupo de reglas");
             };
