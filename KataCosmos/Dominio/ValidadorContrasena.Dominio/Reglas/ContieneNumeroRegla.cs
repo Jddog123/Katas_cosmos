@@ -8,7 +8,7 @@ namespace ValidadorContrasena.Dominio.Reglas
 {
     public class ContieneNumeroRegla : IContrasenaValidador
     {
-        public string ErrorMessage => string.Empty;
+        public string ErrorMessage => "Debe tener al menos una número";
         public bool EsValida(string contrasena) => contrasena.Any(char.IsDigit);
     }
 }
