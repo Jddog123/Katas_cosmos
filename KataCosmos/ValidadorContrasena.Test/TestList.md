@@ -23,7 +23,13 @@
 - [X] Si_ContrasenaNoTieneAlmenosUnGuionBajo_Debe_RetornarMensajeCausa
 - [X] Si_ContrasenaEsInvalida_Debe_RetornarListaConMensajesDeCausa
 
+# 4 ITERACIÓN 
+- [ ] Si_ContrasenaTieneCuartoGrupoYFallaUnaValidacion_Debe_RetornarTrueYListaErroresVacia
+- [ ] Si_ContrasenaTieneCuartoGrupoYFallaDosValidacion_Debe_RetornarFalseYListaErroresConValidaciones
+
+
 # DICCIONARIO
 - Primer grupo de reglas : Contraseña debe tener mas de 8 caracteres, minimo 1 letra mayuscula, minimo 1 letra minuscula, minimo 1 numero y minimo 1 _
 - Segundo grupo de reglas : Contraseña debe tener mas de 6 caracteres, minimo 1 letra mayuscula, minimo 1 letra minuscula y minimo 1 numero
 - Tercer grupo de reglas : Contraseña debe tener mas de 8 caracteres, minimo 1 letra mayuscula, minimo 1 letra minuscula y minimo 1 _
+- Cuarto grupo de reglas : Contraseña debe tener mas de 8 caracteres, minimo 1 letra mayuscula, minimo 1 numero y minimo 1 _

@@ -149,5 +149,17 @@ namespace ValidadorContrasenaTest
             Resultado.Errores.Should().NotBeEmpty();
             Resultado.Errores.Should().BeEquivalentTo(validacionesEsparadas);
         }
+
+        [Fact]
+        public void Si_ContrasenaTieneCuartoGrupoYFallaUnaValidacion_Debe_RetornarTrueYListaErroresVacia()
+        {
+            //Arrange
+            string Contrasena = "Daniel123";
+            ContrasenaValidador validator = ContrasenaValidadorFactory.CrearFactory(TipoValidacion.Cuarta);
+            //Act
+            ContrasenaValidadorResultado Resultado = validator.EsValida(Contrasena);
+            //Assert
+            Resultado.EsValida.Should().BeTrue();
+        }
     }
 }
