@@ -188,5 +188,21 @@ namespace ValidadorContrasenaTest
             Resultado.Errores.Should().NotBeEmpty();
             Resultado.Errores.Should().Contain("Debe tener al menos un guion bajo");
         }
+
+        [Theory]
+        [InlineData("daniel123", "Debe tener al menos una letra mayuscula", "Debe tener al menos un guion bajo")]
+        [InlineData("DANIELLL_", "Debe tener al menos una letra minuscula", "Debe tener al menos una número")]
+        [InlineData("da", "Debe tener mas de 8 caracteres", "Debe tener al menos una letra mayuscula", "Debe tener al menos una número", "Debe tener al menos un guion bajo")]
+        public void Si_ContrasenaEsInvalida_Debe_RetornarListaConMensajesDeCausa(string Contrasena, params string[] validacionesEsparadas)
+        {
+            //Arrange
+            ContrasenaValidador validator = ContrasenaValidadorFactory.CrearFactory(TipoValidacion.Primera);
+            //Act
+            ContrasenaValidadorResultado Resultado = validator.EsValida(Contrasena);
+            //Assert
+            Resultado.Errores.Should().NotBeNull();
+            Resultado.Errores.Should().NotBeEmpty();
+            Resultado.Errores.Should().BeEquivalentTo(validacionesEsparadas);
+        }
     }
 }
