@@ -18,7 +18,7 @@
 - [X] Si_ContrasenaNoTieneMasDeSeisCaracteres_Debe_RetornarMensajeCausa
 - [X] Si_ContrasenaNoTieneMasDeNCaracteresSegunTipoValidacion_Debe_RetornarMensajeCausaSegunNCaracteres
 - [X] Si_ContrasenaNoTieneAlmenosUnaLetraMayuscula_Debe_RetornarMensajeCausa
-- [ ] Si_ContrasenaNoTieneAlmenosUnaLetraMinuscula_Debe_RetornarMensajeCausa
+- [X] Si_ContrasenaNoTieneAlmenosUnaLetraMinuscula_Debe_RetornarMensajeCausa
 - [ ] Si_ContrasenaNoTieneAlmenosUnNumero_Debe_RetornarMensajeCausa
 - [ ] Si_ContrasenaNoTieneAlmenosUnGuionBajo_Debe_RetornarMensajeCausa
 - [ ] Si_ContrasenaEsInvalida_Debe_RetornarListaConMensajesDeCausa

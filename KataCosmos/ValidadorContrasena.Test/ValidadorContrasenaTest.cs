@@ -160,5 +160,19 @@ namespace ValidadorContrasenaTest
             Resultado.Errores.Should().NotBeEmpty();
             Resultado.Errores.Should().Contain("Debe tener al menos una letra minuscula");
         }
+
+        [Fact]
+        public void Si_ContrasenaNoTieneAlmenosUnNumero_Debe_RetornarMensajeCausa()
+        {
+            //Arrange
+            string Contrasena = "Daniellll";
+            ContrasenaValidador validator = ContrasenaValidadorFactory.CrearFactory(TipoValidacion.Primera);
+            //Act
+            ContrasenaValidadorResultado Resultado = validator.EsValida(Contrasena);
+            //Assert
+            Resultado.Errores.Should().NotBeNull();
+            Resultado.Errores.Should().NotBeEmpty();
+            Resultado.Errores.Should().Contain("Debe tener al menos una número");
+        }
     }
 }
