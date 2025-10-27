@@ -16,8 +16,8 @@
 # 3 ITERACIÓN
 - [X] Si_ContrasenaNoTieneMasDeOchoCaracteres_Debe_RetornarMensajeCausa
 - [X] Si_ContrasenaNoTieneMasDeSeisCaracteres_Debe_RetornarMensajeCausa
-- [ ] Si_ContrasenaNoTieneMasDeNCaracteresSegunTipoValidacion_Debe_RetornarMensajeCausaSegunNCaracteres
-- [ ] Si_ContrasenaNoTieneAlmenosUnaLetraMayuscula_Debe_RetornarMensajeCausa
+- [X] Si_ContrasenaNoTieneMasDeNCaracteresSegunTipoValidacion_Debe_RetornarMensajeCausaSegunNCaracteres
+- [X] Si_ContrasenaNoTieneAlmenosUnaLetraMayuscula_Debe_RetornarMensajeCausa
 - [ ] Si_ContrasenaNoTieneAlmenosUnaLetraMinuscula_Debe_RetornarMensajeCausa
 - [ ] Si_ContrasenaNoTieneAlmenosUnNumero_Debe_RetornarMensajeCausa
 - [ ] Si_ContrasenaNoTieneAlmenosUnGuionBajo_Debe_RetornarMensajeCausa
