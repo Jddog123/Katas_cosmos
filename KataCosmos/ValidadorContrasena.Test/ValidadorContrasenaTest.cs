@@ -130,5 +130,19 @@ namespace ValidadorContrasenaTest
             Resultado.Errores.Should().NotBeEmpty();
             Resultado.Errores.Should().Contain("Debe tener mas de 8 caracteres");
         }
+
+        [Fact]
+        public void Si_ContrasenaNoTieneMasDeSeisCaracteres_Debe_RetornarMensajeCausa()
+        {
+            //Arrange
+            string Contrasena = "Dan12";
+            ContrasenaValidador validator = ContrasenaValidadorFactory.CrearFactory(TipoValidacion.Segunda);
+            //Act
+            ContrasenaValidadorResultado Resultado = validator.EsValida(Contrasena);
+            //Assert
+            Resultado.Errores.Should().NotBeNull();
+            Resultado.Errores.Should().NotBeEmpty();
+            Resultado.Errores.Should().Contain("Debe tener mas de 6 caracteres");
+        }
     }
 }

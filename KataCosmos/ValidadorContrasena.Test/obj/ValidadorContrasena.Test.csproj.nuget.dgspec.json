@@ -4,6 +4,71 @@
     "C:\\Daniel\\Cursos\\KATA_Cosmos\\Katas_cosmos\\KataCosmos\\ValidadorContrasena.Test\\ValidadorContrasena.Test.csproj": {}
   },
   "projects": {
+    "C:\\Daniel\\Cursos\\KATA_Cosmos\\Katas_cosmos\\KataCosmos\\Dominio\\ValidadorContrasena.Dominio\\ValidadorContrasena.Dominio.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Daniel\\Cursos\\KATA_Cosmos\\Katas_cosmos\\KataCosmos\\Dominio\\ValidadorContrasena.Dominio\\ValidadorContrasena.Dominio.csproj",
+        "projectName": "ValidadorContrasena.Dominio",
+        "projectPath": "C:\\Daniel\\Cursos\\KATA_Cosmos\\Katas_cosmos\\KataCosmos\\Dominio\\ValidadorContrasena.Dominio\\ValidadorContrasena.Dominio.csproj",
+        "packagesPath": "C:\\Users\\DANIEL.URUEÑA\\.nuget\\packages\\",
+        "outputPath": "C:\\Daniel\\Cursos\\KATA_Cosmos\\Katas_cosmos\\KataCosmos\\Dominio\\ValidadorContrasena.Dominio\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\DANIEL.URUEÑA\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.300"
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.305/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
     "C:\\Daniel\\Cursos\\KATA_Cosmos\\Katas_cosmos\\KataCosmos\\ValidadorContrasena.Test\\ValidadorContrasena.Test.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -31,7 +96,11 @@
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "C:\\Daniel\\Cursos\\KATA_Cosmos\\Katas_cosmos\\KataCosmos\\Dominio\\ValidadorContrasena.Dominio\\ValidadorContrasena.Dominio.csproj": {
+                "projectPath": "C:\\Daniel\\Cursos\\KATA_Cosmos\\Katas_cosmos\\KataCosmos\\Dominio\\ValidadorContrasena.Dominio\\ValidadorContrasena.Dominio.csproj"
+              }
+            }
           }
         },
         "warningProperties": {

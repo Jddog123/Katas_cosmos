@@ -14,7 +14,7 @@
 - [X] Si_NoSeEncuentraGrupoDeReglas_Debe_RetornarExcepcion
 
 # 3 ITERACIÓN
-- [ ] Si_ContrasenaNoTieneMasDeOchoCaracteres_Debe_RetornarMensajeCausa
+- [X] Si_ContrasenaNoTieneMasDeOchoCaracteres_Debe_RetornarMensajeCausa
 - [ ] Si_ContrasenaNoTieneMasDeSeisCaracteres_Debe_RetornarMensajeCausa
 - [ ] Si_ContrasenaNoTieneAlmenosUnaLetraMayuscula_Debe_RetornarMensajeCausa
 - [ ] Si_ContrasenaNoTieneAlmenosUnaLetraMinuscula_Debe_RetornarMensajeCausa
