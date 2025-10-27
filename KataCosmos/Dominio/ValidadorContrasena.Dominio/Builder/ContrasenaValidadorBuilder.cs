@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using ValidadorContrasena.Dominio.Enum;
 using ValidadorContrasena.Dominio.Reglas;
 
 namespace ValidadorContrasena.Dominio.Builder
@@ -17,6 +18,6 @@ namespace ValidadorContrasena.Dominio.Builder
             return this;
         }
 
-        public ContrasenaValidador Build() => new ContrasenaValidador(_reglas);
+        public ContrasenaValidador Build(TipoValidacion tipoValidacion = TipoValidacion.Otra) => new ContrasenaValidador(_reglas, tipoValidacion);
     }
 }

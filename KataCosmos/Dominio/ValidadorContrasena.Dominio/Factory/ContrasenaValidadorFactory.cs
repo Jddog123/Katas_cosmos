@@ -32,6 +32,12 @@ namespace ValidadorContrasena.Dominio
                         .AgregarRegla(new ContieneMinusculaRegla())
                         .AgregarRegla(new ContieneGuionBajoRegla())
                         .Build();
+                case TipoValidacion.Cuarta:
+                    return builder.AgregarRegla(new LongitudRegla(8))
+                        .AgregarRegla(new ContieneMayusculaRegla())
+                        .AgregarRegla(new ContieneNumeroRegla())
+                        .AgregarRegla(new ContieneGuionBajoRegla())
+                        .Build(tipoValidacion);
                 default:
                     throw new Exception("No se encontro el grupo de reglas");
             };
