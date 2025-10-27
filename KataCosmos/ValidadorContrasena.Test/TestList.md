@@ -20,7 +20,7 @@
 - [X] Si_ContrasenaNoTieneAlmenosUnaLetraMayuscula_Debe_RetornarMensajeCausa
 - [X] Si_ContrasenaNoTieneAlmenosUnaLetraMinuscula_Debe_RetornarMensajeCausa
 - [X] Si_ContrasenaNoTieneAlmenosUnNumero_Debe_RetornarMensajeCausa
-- [ ] Si_ContrasenaNoTieneAlmenosUnGuionBajo_Debe_RetornarMensajeCausa
+- [X] Si_ContrasenaNoTieneAlmenosUnGuionBajo_Debe_RetornarMensajeCausa
 - [ ] Si_ContrasenaEsInvalida_Debe_RetornarListaConMensajesDeCausa
 
 # DICCIONARIO

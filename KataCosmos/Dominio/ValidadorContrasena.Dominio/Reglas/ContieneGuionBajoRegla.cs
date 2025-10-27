@@ -8,7 +8,7 @@ namespace ValidadorContrasena.Dominio.Reglas
 {
     public class ContieneGuionBajoRegla : IContrasenaValidador
     {
-        public string ErrorMessage => string.Empty;
+        public string ErrorMessage => "Debe tener al menos un guion bajo";
 
         public bool EsValida(string contrasena) => contrasena.Contains('_');
     }
