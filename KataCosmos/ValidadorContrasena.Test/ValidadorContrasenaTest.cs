@@ -144,7 +144,7 @@ namespace ValidadorContrasenaTest
             //Assert
             Resultado.Errores.Should().NotBeNull();
             Resultado.Errores.Should().NotBeEmpty();
-            Resultado.Errores.Should().Contain($"Debe tener al menos una letra mayuscula");
+            Resultado.Errores.Should().Contain("Debe tener al menos una letra mayuscula");
         }
 
         [Fact]
@@ -158,7 +158,7 @@ namespace ValidadorContrasenaTest
             //Assert
             Resultado.Errores.Should().NotBeNull();
             Resultado.Errores.Should().NotBeEmpty();
-            Resultado.Errores.Should().Contain($"Debe tener al menos una letra minuscula");
+            Resultado.Errores.Should().Contain("Debe tener al menos una letra minuscula");
         }
     }
 }
