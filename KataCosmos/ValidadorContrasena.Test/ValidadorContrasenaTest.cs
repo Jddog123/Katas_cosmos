@@ -3,6 +3,7 @@ using FluentAssertions.Equivalency.Tracing;
 using ValidadorContrasena.Dominio;
 using ValidadorContrasena.Dominio.Enum;
 using ValidadorContrasena.Dominio.Reglas;
+using ValidadorContrasena.Dominio.Result;
 
 namespace ValidadorContrasenaTest
 {
