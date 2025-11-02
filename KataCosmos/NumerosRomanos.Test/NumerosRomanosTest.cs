@@ -66,6 +66,15 @@ namespace NumerosRomanos.Test
             //Assert
             numerosRomanos.ObtenerNumeroRomano().Should().BeEquivalentTo("VIII");
         }
+
+        [Fact]
+        public void Si_NumeroEsNueve_Debe_RetornarIX()
+        {
+            //Act
+            numerosRomanos.Convertir(9);
+            //Assert
+            numerosRomanos.ObtenerNumeroRomano().Should().BeEquivalentTo("IX");
+        }
     }
 
     public class NumerosRomanos()
