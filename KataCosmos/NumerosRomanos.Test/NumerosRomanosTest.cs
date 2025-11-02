@@ -120,6 +120,15 @@ namespace NumerosRomanos.Test
             numerosRomanos.ObtenerNumeroRomano().Should().BeEquivalentTo("L");
         }
 
+        [Fact]
+        public void Si_NumeroEsCincuentayuno_Debe_RetornarLI()
+        {
+            //Act
+            numerosRomanos.Convertir(51);
+            //Assert
+            numerosRomanos.ObtenerNumeroRomano().Should().BeEquivalentTo("LI");
+        }
+
     }
 
     public class NumerosRomanos()

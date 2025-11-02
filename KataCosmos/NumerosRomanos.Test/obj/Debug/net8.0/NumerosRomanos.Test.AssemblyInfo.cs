@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("NumerosRomanos.Test")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+24b930c4dd4384393b852d7f0930060595818190")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6809a521aa50c68759f23f436b4170181b7ca37d")]
 [assembly: System.Reflection.AssemblyProductAttribute("NumerosRomanos.Test")]
 [assembly: System.Reflection.AssemblyTitleAttribute("NumerosRomanos.Test")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
