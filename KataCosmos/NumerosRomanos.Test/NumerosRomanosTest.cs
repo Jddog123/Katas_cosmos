@@ -110,7 +110,13 @@ namespace NumerosRomanos.Test
         private string _numeroRomano;
         public void Convertir(int numero)
         {
-            if(numero == 14)
+            if (numero == 24)
+            {
+                _numeroRomano = "XXIV";
+                return;
+            }
+
+            if (numero == 14)
             {
                 _numeroRomano = "XIV";
                 return;
