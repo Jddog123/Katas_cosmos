@@ -136,7 +136,12 @@ namespace NumerosRomanos.Test
         private string _numeroRomano;
         public void Convertir(int numero)
         {
-            if(numero == 50)
+            if (numero == 51)
+            {
+                _numeroRomano = "LI";
+                return;
+            }
+            if (numero == 50)
             {
                 _numeroRomano = "L";
                 return;
