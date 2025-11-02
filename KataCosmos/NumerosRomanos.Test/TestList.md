@@ -23,7 +23,7 @@
 - [X] Si_NumeroEsCuarentayuno_Debe_RetornarXLI
 - [X] Si_NumeroEsCuarentaydos_Debe_RetornarXLII
 - [X] Si_NumeroEsCincuenta_Debe_RetornarL
-- [ ] Si_NumeroEsCincuentayuno_Debe_RetornarLI
+- [X] Si_NumeroEsCincuentayuno_Debe_RetornarLI
 - [ ] Si_NumeroEsNoventa_Debe_RetornarXC
 - [ ] Si_NumeroEsNoventayuno_Debe_RetornarXCI
 - [ ] Si_NumeroEsCien_Debe_RetornarC

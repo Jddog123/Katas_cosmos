@@ -111,22 +111,18 @@ namespace NumerosRomanos.Test
             numerosRomanos.ObtenerNumeroRomano().Should().BeEquivalentTo(numeroRomanoEsperado);
         }
 
-        [Fact]
-        public void Si_NumeroEsCincuenta_Debe_RetornarL()
+        [Theory]
+        [InlineData(50, "L")]
+        [InlineData(51, "LI")]
+        [InlineData(52, "LII")]
+        [InlineData(57, "LVII")]
+        [InlineData(59, "LIX")]
+        public void Si_NumeroContieneCincuenta_Debe_RetornarLParaRepresentarlo(int numero, string numeroRomanoEsperado)
         {
             //Act
-            numerosRomanos.Convertir(50);
+            numerosRomanos.Convertir(numero);
             //Assert
-            numerosRomanos.ObtenerNumeroRomano().Should().BeEquivalentTo("L");
-        }
-
-        [Fact]
-        public void Si_NumeroEsCincuentayuno_Debe_RetornarLI()
-        {
-            //Act
-            numerosRomanos.Convertir(51);
-            //Assert
-            numerosRomanos.ObtenerNumeroRomano().Should().BeEquivalentTo("LI");
+            numerosRomanos.ObtenerNumeroRomano().Should().BeEquivalentTo(numeroRomanoEsperado);
         }
 
     }
@@ -136,15 +132,10 @@ namespace NumerosRomanos.Test
         private string _numeroRomano;
         public void Convertir(int numero)
         {
-            if (numero == 51)
+            while (numero >= 50)
             {
-                _numeroRomano = "LI";
-                return;
-            }
-            if (numero == 50)
-            {
-                _numeroRomano = "L";
-                return;
+                _numeroRomano += "L";
+                numero -= 50;
             }
 
             while (numero >= 40)
