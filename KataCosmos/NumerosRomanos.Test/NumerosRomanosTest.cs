@@ -105,6 +105,15 @@ namespace NumerosRomanos.Test
             //Assert
             numerosRomanos.ObtenerNumeroRomano().Should().BeEquivalentTo("XL");
         }
+
+        [Fact]
+        public void Si_NumeroEsCuarentayuno_Debe_RetornarXLI()
+        {
+            //Act
+            numerosRomanos.Convertir(41);
+            //Assert
+            numerosRomanos.ObtenerNumeroRomano().Should().BeEquivalentTo("XLI");
+        }
     }
 
     public class NumerosRomanos()
