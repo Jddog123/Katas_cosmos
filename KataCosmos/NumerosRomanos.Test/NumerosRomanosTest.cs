@@ -73,6 +73,12 @@ namespace NumerosRomanos.Test
         private string _numeroRomano;
         public void Convertir(int numero)
         {
+            if (numero == 8)
+            {
+                _numeroRomano = "VIII";
+                return;
+
+            }
             if (numero == 7)
             {
                 _numeroRomano = "VII";
