@@ -130,5 +130,14 @@ namespace NumerosRomanos.Test
             //Assert
             numerosRomanos.ObtenerNumeroRomano().Should().BeEquivalentTo("C");
         }
+
+        [Fact]
+        public void Si_NumeroEsCientouno_Debe_RetornarCI()
+        {
+            //Act
+            numerosRomanos.Convertir(101);
+            //Assert
+            numerosRomanos.ObtenerNumeroRomano().Should().BeEquivalentTo("CI");
+        }
     }
 }
