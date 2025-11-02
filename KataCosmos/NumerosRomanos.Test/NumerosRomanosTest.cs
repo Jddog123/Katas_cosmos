@@ -97,6 +97,15 @@ namespace NumerosRomanos.Test
             //Assert
             numerosRomanos.ObtenerNumeroRomano().Should().BeEquivalentTo("XV");
         }
+
+        [Fact]
+        public void Si_NumeroEsVeinticinco_Debe_RetornarXXV()
+        {
+            //Act
+            numerosRomanos.Convertir(25);
+            //Assert
+            numerosRomanos.ObtenerNumeroRomano().Should().BeEquivalentTo("XXV");
+        }
     }
 
     public class NumerosRomanos()
