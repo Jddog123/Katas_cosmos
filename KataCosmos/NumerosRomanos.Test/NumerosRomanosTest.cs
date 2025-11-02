@@ -110,6 +110,16 @@ namespace NumerosRomanos.Test
             //Assert
             numerosRomanos.ObtenerNumeroRomano().Should().BeEquivalentTo(numeroRomanoEsperado);
         }
+
+        [Fact]
+        public void Si_NumeroEsCincuenta_Debe_RetornarL()
+        {
+            //Act
+            numerosRomanos.Convertir(50);
+            //Assert
+            numerosRomanos.ObtenerNumeroRomano().Should().BeEquivalentTo("L");
+        }
+
     }
 
     public class NumerosRomanos()
