@@ -8,6 +8,6 @@
 - [X] Si_NumeroEsOcho_Debe_RetornarVIII
 - [X] Si_NumeroEsNueve_Debe_RetornarIX
 - [X] Si_NumeroEsDiez_Debe_RetornarX
-- [ ] Si_NumeroEsOnce_Debe_RetornarXI
+- [X] Si_NumeroEsOnce_Debe_RetornarXI
 - [ ] Si_NumeroEsDoce_Debe_RetornarXII
 - [ ] Si_NumeroEsTrece_Debe_RetornarXIII

@@ -79,6 +79,15 @@ namespace NumerosRomanos.Test
             //Assert
             numerosRomanos.ObtenerNumeroRomano().Should().BeEquivalentTo("XI");
         }
+
+        [Fact]
+        public void Si_NumeroEsDoce_Debe_RetornarXII()
+        {
+            //Act
+            numerosRomanos.Convertir(12);
+            //Assert
+            numerosRomanos.ObtenerNumeroRomano().Should().BeEquivalentTo("XII");
+        }
     }
 
     public class NumerosRomanos()
