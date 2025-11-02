@@ -5,14 +5,16 @@ namespace NumerosRomanos.Test
 {
     public class NumerosRomanosTest
     {
+        NumerosRomanos numerosRomanos;
+        public NumerosRomanosTest()
+        {
+            numerosRomanos = new NumerosRomanos();
+        }
         [Fact]
         public void Si_NumeroEsUno_Debe_RetornarI()
         {
-            //Arrange
-            int numero = 1;
-            var numerosRomanos = new NumerosRomanos();
             //Act
-            numerosRomanos.Convertir(numero);
+            numerosRomanos.Convertir(1);
             //Assert
             numerosRomanos.ObtenerNumeroRomano().Should().BeEquivalentTo("I");
         }
@@ -20,11 +22,8 @@ namespace NumerosRomanos.Test
         [Fact]
         public void Si_NumeroEsDos_Debe_RetornarII()
         {
-            //Arrange
-            int numero = 2;
-            var numerosRomanos = new NumerosRomanos();
             //Act
-            numerosRomanos.Convertir(numero);
+            numerosRomanos.Convertir(2);
             //Assert
             numerosRomanos.ObtenerNumeroRomano().Should().BeEquivalentTo("II");
         }
@@ -40,7 +39,7 @@ namespace NumerosRomanos.Test
 
         public string ObtenerNumeroRomano()
         {
-            if (_numeroRecibido == 2)
+            if(_numeroRecibido == 2)
                 return "II";
             return "I";
         }
