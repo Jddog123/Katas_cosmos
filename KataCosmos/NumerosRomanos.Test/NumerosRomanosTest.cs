@@ -70,6 +70,15 @@ namespace NumerosRomanos.Test
             //Assert
             numerosRomanos.ObtenerNumeroRomano().Should().BeEquivalentTo("X");
         }
+
+        [Fact]
+        public void Si_NumeroEsOnce_Debe_RetornarXI()
+        {
+            //Act
+            numerosRomanos.Convertir(11);
+            //Assert
+            numerosRomanos.ObtenerNumeroRomano().Should().BeEquivalentTo("XI");
+        }
     }
 
     public class NumerosRomanos()
