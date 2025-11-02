@@ -11,7 +11,12 @@ namespace NumerosRomanos.Dominio
         private string _numeroRomano;
         public void Convertir(int numero)
         {
-            if(numero == 500)
+            if (numero == 501)
+            {
+                _numeroRomano = "DI";
+                return;
+            }
+            if (numero == 500)
             {
                 _numeroRomano = "D";
                 return;
