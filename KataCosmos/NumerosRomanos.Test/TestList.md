@@ -24,7 +24,7 @@
 - [X] Si_NumeroEsCuarentaydos_Debe_RetornarXLII
 - [X] Si_NumeroEsCincuenta_Debe_RetornarL
 - [X] Si_NumeroEsCincuentayuno_Debe_RetornarLI
-- [ ] Si_NumeroEsNoventa_Debe_RetornarXC
+- [X] Si_NumeroEsNoventa_Debe_RetornarXC
 - [ ] Si_NumeroEsNoventayuno_Debe_RetornarXCI
 - [ ] Si_NumeroEsCien_Debe_RetornarC
 - [ ] Si_NumeroEsCientouno_Debe_RetornarCI

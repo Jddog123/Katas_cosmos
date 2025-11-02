@@ -133,6 +133,15 @@ namespace NumerosRomanos.Test
             //Assert
             numerosRomanos.ObtenerNumeroRomano().Should().BeEquivalentTo("XC");
         }
+
+        [Fact]
+        public void Si_NumeroEsNoventayuno_Debe_RetornarXCI()
+        {
+            //Act
+            numerosRomanos.Convertir(91);
+            //Assert
+            numerosRomanos.ObtenerNumeroRomano().Should().BeEquivalentTo("XCI");
+        }
     }
 
     public class NumerosRomanos()
