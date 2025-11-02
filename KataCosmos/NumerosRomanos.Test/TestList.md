@@ -2,7 +2,7 @@
 - [X] Si_NumeroEsDos_Debe_RetornarII
 - [X] Si_NumeroEsTres_Debe_RetornarIII
 - [X] Si_NumeroEsCuatro_Debe_RetornarIV
-- [ ] Si_NumeroEsCinco_Debe_RetornarV
+- [X] Si_NumeroEsCinco_Debe_RetornarV
 - [ ] Si_NumeroEsSeis_Debe_RetornarVI
 - [ ] Si_NumeroEsSiete_Debe_RetornarVII
 - [ ] Si_NumeroEsOcho_Debe_RetornarVIII

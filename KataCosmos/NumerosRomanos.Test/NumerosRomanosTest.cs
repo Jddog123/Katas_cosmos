@@ -39,6 +39,15 @@ namespace NumerosRomanos.Test
             //Assert
             numerosRomanos.ObtenerNumeroRomano().Should().BeEquivalentTo("V");
         }
+
+        [Fact]
+        public void Si_NumeroEsSeis_Debe_RetornarVI()
+        {
+            //Act
+            numerosRomanos.Convertir(6);
+            //Assert
+            numerosRomanos.ObtenerNumeroRomano().Should().BeEquivalentTo("VI");
+        }
     }
 
     public class NumerosRomanos()
