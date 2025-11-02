@@ -125,22 +125,18 @@ namespace NumerosRomanos.Test
             numerosRomanos.ObtenerNumeroRomano().Should().BeEquivalentTo(numeroRomanoEsperado);
         }
 
-        [Fact]
-        public void Si_NumeroEsNoventa_Debe_RetornarXC()
+        [Theory]
+        [InlineData(90, "XC")]
+        [InlineData(91, "XCI")]
+        [InlineData(92, "XCII")]
+        [InlineData(97, "XCVII")]
+        [InlineData(99, "XCIX")]
+        public void Si_NumeroContieneNoventa_Debe_RetornarXCParaRepresentarlo(int numero, string numeroRomanoEsperado)
         {
             //Act
-            numerosRomanos.Convertir(90);
+            numerosRomanos.Convertir(numero);
             //Assert
-            numerosRomanos.ObtenerNumeroRomano().Should().BeEquivalentTo("XC");
-        }
-
-        [Fact]
-        public void Si_NumeroEsNoventayuno_Debe_RetornarXCI()
-        {
-            //Act
-            numerosRomanos.Convertir(91);
-            //Assert
-            numerosRomanos.ObtenerNumeroRomano().Should().BeEquivalentTo("XCI");
+            numerosRomanos.ObtenerNumeroRomano().Should().BeEquivalentTo(numeroRomanoEsperado);
         }
     }
 
@@ -149,16 +145,12 @@ namespace NumerosRomanos.Test
         private string _numeroRomano;
         public void Convertir(int numero)
         {
-            if (numero == 91)
+            while (numero >= 90)
             {
-                _numeroRomano = "XCI";
-                return;
+                _numeroRomano += "XC";
+                numero -= 90;
             }
-            if (numero == 90)
-            {
-                _numeroRomano = "XC";
-                return;
-            }
+
             while (numero >= 50)
             {
                 _numeroRomano += "L";

@@ -25,7 +25,7 @@
 - [X] Si_NumeroEsCincuenta_Debe_RetornarL
 - [X] Si_NumeroEsCincuentayuno_Debe_RetornarLI
 - [X] Si_NumeroEsNoventa_Debe_RetornarXC
-- [ ] Si_NumeroEsNoventayuno_Debe_RetornarXCI
+- [X] Si_NumeroEsNoventayuno_Debe_RetornarXCI
 - [ ] Si_NumeroEsCien_Debe_RetornarC
 - [ ] Si_NumeroEsCientouno_Debe_RetornarCI
 - [ ] Si_NumeroEsQuinientos_Debe_RetornarD
