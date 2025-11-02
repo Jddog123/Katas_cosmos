@@ -61,6 +61,15 @@ namespace NumerosRomanos.Test
             //Assert
             numerosRomanos.ObtenerNumeroRomano().Should().BeEquivalentTo("IX");
         }
+
+        [Fact]
+        public void Si_NumeroEsDiez_Debe_RetornarX()
+        {
+            //Act
+            numerosRomanos.Convertir(10);
+            //Assert
+            numerosRomanos.ObtenerNumeroRomano().Should().BeEquivalentTo("X");
+        }
     }
 
     public class NumerosRomanos()
