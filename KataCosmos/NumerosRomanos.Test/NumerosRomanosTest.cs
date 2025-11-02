@@ -114,6 +114,15 @@ namespace NumerosRomanos.Test
             //Assert
             numerosRomanos.ObtenerNumeroRomano().Should().BeEquivalentTo("XLI");
         }
+
+        [Fact]
+        public void Si_NumeroEsCuarentaydos_Debe_RetornarXLII()
+        {
+            //Act
+            numerosRomanos.Convertir(42);
+            //Assert
+            numerosRomanos.ObtenerNumeroRomano().Should().BeEquivalentTo("XLII");
+        }
     }
 
     public class NumerosRomanos()
