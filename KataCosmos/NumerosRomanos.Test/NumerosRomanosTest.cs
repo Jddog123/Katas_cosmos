@@ -97,31 +97,18 @@ namespace NumerosRomanos.Test
             numerosRomanos.ObtenerNumeroRomano().Should().BeEquivalentTo(numeroRomanoEsperado);
         }
 
-        [Fact]
-        public void Si_NumeroEsCuarenta_Debe_RetornarXL()
+        [Theory]
+        [InlineData(40, "XL")]
+        [InlineData(41, "XLI")]
+        [InlineData(42, "XLII")]
+        [InlineData(47, "XLVII")]
+        [InlineData(49, "XLIX")]
+        public void Si_NumeroContieneCuarente_Debe_RetornarXLParaRepresentarlo(int numero, string numeroRomanoEsperado)
         {
             //Act
-            numerosRomanos.Convertir(40);
+            numerosRomanos.Convertir(numero);
             //Assert
-            numerosRomanos.ObtenerNumeroRomano().Should().BeEquivalentTo("XL");
-        }
-
-        [Fact]
-        public void Si_NumeroEsCuarentayuno_Debe_RetornarXLI()
-        {
-            //Act
-            numerosRomanos.Convertir(41);
-            //Assert
-            numerosRomanos.ObtenerNumeroRomano().Should().BeEquivalentTo("XLI");
-        }
-
-        [Fact]
-        public void Si_NumeroEsCuarentaydos_Debe_RetornarXLII()
-        {
-            //Act
-            numerosRomanos.Convertir(42);
-            //Assert
-            numerosRomanos.ObtenerNumeroRomano().Should().BeEquivalentTo("XLII");
+            numerosRomanos.ObtenerNumeroRomano().Should().BeEquivalentTo(numeroRomanoEsperado);
         }
     }
 
@@ -130,7 +117,7 @@ namespace NumerosRomanos.Test
         private string _numeroRomano;
         public void Convertir(int numero)
         {
-            if (numero >= 40)
+            while (numero >= 40)
             {
                 _numeroRomano += "XL";
                 numero -= 40;
@@ -142,10 +129,10 @@ namespace NumerosRomanos.Test
                 numero -= 10;
             }
 
-            if (numero == 9)
+            while (numero >= 9)
             {
                 _numeroRomano += "IX";
-                return;
+                numero -= 9;
             }
 
             while (numero >= 5)
@@ -154,10 +141,10 @@ namespace NumerosRomanos.Test
                 numero -= 5;
             }
 
-            if (numero == 4)
+            while (numero >= 4)
             {
                 _numeroRomano += "IV";
-                return;
+                numero -= 4;
             }
 
             while (numero >= 1)

@@ -22,3 +22,21 @@
 - [X] Si_NumeroEsCuarenta_Debe_RetornarXL
 - [X] Si_NumeroEsCuarentayuno_Debe_RetornarXLI
 - [X] Si_NumeroEsCuarentaydos_Debe_RetornarXLII
+- [ ] Si_NumeroEsCincuenta_Debe_RetornarL
+- [ ] Si_NumeroEsCincuentayuno_Debe_RetornarLI
+- [ ] Si_NumeroEsCincuentaydos_Debe_RetornarLII
+- [ ] Si_NumeroEsNoventa_Debe_RetornarXC
+- [ ] Si_NumeroEsNoventayuno_Debe_RetornarXCI
+- [ ] Si_NumeroEsNoventaydos_Debe_RetornarXCII
+- [ ] Si_NumeroEsCien_Debe_RetornarC
+- [ ] Si_NumeroEsCientouno_Debe_RetornarCI
+- [ ] Si_NumeroEsCientodos_Debe_RetornarCII
+- [ ] Si_NumeroEsQuinientos_Debe_RetornarD
+- [ ] Si_NumeroEsQuinientosuno_Debe_RetornarDI
+- [ ] Si_NumeroEsQuinientosdos_Debe_RetornarDII
+- [ ] Si_NumeroEsNovecientos_Debe_RetornarCM
+- [ ] Si_NumeroEsNovecientosuno_Debe_RetornarCMI
+- [	] Si_NumeroEsNovecientosdos_Debe_RetornarCMII
+- [ ] Si_NumeroEsMil_Debe_RetornarM
+- [ ] Si_NumeroEsMiluno_Debe_RetornarMI
+- [	] Si_NumeroEsMildos_Debe_RetornarMII
