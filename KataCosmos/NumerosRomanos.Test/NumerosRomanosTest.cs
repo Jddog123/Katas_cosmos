@@ -130,22 +130,10 @@ namespace NumerosRomanos.Test
         private string _numeroRomano;
         public void Convertir(int numero)
         {
-            if (numero == 42)
+            if (numero >= 40)
             {
-                _numeroRomano = "XLII";
-                return;
-
-            }
-            if (numero == 41)
-            {
-                _numeroRomano = "XLI";
-                return;
-
-            }
-            if (numero == 40)
-            {
-                _numeroRomano = "XL";
-                return;
+                _numeroRomano += "XL";
+                numero -= 40;
             }
 
             while (numero >= 10)
