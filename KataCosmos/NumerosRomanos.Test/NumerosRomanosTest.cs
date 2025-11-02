@@ -59,13 +59,16 @@ namespace NumerosRomanos.Test
             numerosRomanos.ObtenerNumeroRomano().Should().BeEquivalentTo(numeroRomanoEsperado);
         }
 
-        [Fact]
-        public void Si_NumeroEsCuatro_Debe_RetornarIV()
+        [Theory]
+        [InlineData(4, "IV")]
+        [InlineData(14, "XIV")]
+        [InlineData(24, "XXIV")]
+        public void Si_NumeroEsCuatroCatorceOVeinticuatro_Debe_RetornarElTotalDeDiezPorCadaXYCuatroPorCadaIV(int numero, string numeroRomanoEsperado)
         {
             //Act
-            numerosRomanos.Convertir(4);
+            numerosRomanos.Convertir(numero);
             //Assert
-            numerosRomanos.ObtenerNumeroRomano().Should().BeEquivalentTo("IV");
+            numerosRomanos.ObtenerNumeroRomano().Should().BeEquivalentTo(numeroRomanoEsperado);
         }
 
         [Fact]
@@ -85,24 +88,6 @@ namespace NumerosRomanos.Test
             //Assert
             numerosRomanos.ObtenerNumeroRomano().Should().BeEquivalentTo("IX");
         }
-
-        [Fact]
-        public void Si_NumeroEsCatorce_Debe_RetornarXIV()
-        {
-            //Act
-            numerosRomanos.Convertir(14);
-            //Assert
-            numerosRomanos.ObtenerNumeroRomano().Should().BeEquivalentTo("XIV");
-        }
-
-        [Fact]
-        public void Si_NumeroEsVeinticuatro_Debe_RetornarXXIV()
-        {
-            //Act
-            numerosRomanos.Convertir(24);
-            //Assert
-            numerosRomanos.ObtenerNumeroRomano().Should().BeEquivalentTo("XXIV");
-        }
     }
 
     public class NumerosRomanos()
@@ -110,18 +95,6 @@ namespace NumerosRomanos.Test
         private string _numeroRomano;
         public void Convertir(int numero)
         {
-            if (numero == 24)
-            {
-                _numeroRomano = "XXIV";
-                return;
-            }
-
-            if (numero == 14)
-            {
-                _numeroRomano = "XIV";
-                return;
-            }
-
             while (numero >= 10)
             {
                 _numeroRomano += "X";
@@ -142,7 +115,7 @@ namespace NumerosRomanos.Test
 
             if (numero == 4)
             {
-                _numeroRomano = "IV";
+                _numeroRomano += "IV";
                 return;
             }
 
