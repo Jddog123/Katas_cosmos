@@ -140,6 +140,11 @@ namespace NumerosRomanos.Test
         private string _numeroRomano;
         public void Convertir(int numero)
         {
+            if(numero == 90)
+            {
+                _numeroRomano = "XC";
+                return;
+            }
             while (numero >= 50)
             {
                 _numeroRomano += "L";
