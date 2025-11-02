@@ -6,5 +6,5 @@
 - [X] Si_NumeroEsSeis_Debe_RetornarVI
 - [X] Si_NumeroEsSiete_Debe_RetornarVII
 - [X] Si_NumeroEsOcho_Debe_RetornarVIII
-- [ ] Si_NumeroEsNueve_Debe_RetornarIX
+- [X] Si_NumeroEsNueve_Debe_RetornarIX
 - [ ] Si_NumeroEsDiez_Debe_RetornarX

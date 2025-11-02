@@ -10,11 +10,24 @@ namespace NumerosRomanos.Test
         {
             numerosRomanos = new NumerosRomanos();
         }
+
         [Theory]
         [InlineData(1,"I")]
         [InlineData(2, "II")]
         [InlineData(3, "III")]
         public void Si_NumeroEsUnoDosOTres_Debe_RetornarIPorCantidadDeNumero(int numero, string numeroRomanoEsperado)
+        {
+            //Act
+            numerosRomanos.Convertir(numero);
+            //Assert
+            numerosRomanos.ObtenerNumeroRomano().Should().BeEquivalentTo(numeroRomanoEsperado);
+        }
+
+        [Theory]
+        [InlineData(6, "VI")]
+        [InlineData(7, "VII")]
+        [InlineData(8, "VIII")]
+        public void Si_NumeroSeisSienteUOcho_Debe_RetornarVMasIPorCantidadDeNumeroMenosCinco(int numero, string numeroRomanoEsperado)
         {
             //Act
             numerosRomanos.Convertir(numero);
@@ -38,33 +51,6 @@ namespace NumerosRomanos.Test
             numerosRomanos.Convertir(5);
             //Assert
             numerosRomanos.ObtenerNumeroRomano().Should().BeEquivalentTo("V");
-        }
-
-        [Fact]
-        public void Si_NumeroEsSeis_Debe_RetornarVI()
-        {
-            //Act
-            numerosRomanos.Convertir(6);
-            //Assert
-            numerosRomanos.ObtenerNumeroRomano().Should().BeEquivalentTo("VI");
-        }
-
-        [Fact]
-        public void Si_NumeroEsSiete_Debe_RetornarVII()
-        {
-            //Act
-            numerosRomanos.Convertir(7);
-            //Assert
-            numerosRomanos.ObtenerNumeroRomano().Should().BeEquivalentTo("VII");
-        }
-
-        [Fact]
-        public void Si_NumeroEsOcho_Debe_RetornarVIII()
-        {
-            //Act
-            numerosRomanos.Convertir(8);
-            //Assert
-            numerosRomanos.ObtenerNumeroRomano().Should().BeEquivalentTo("VIII");
         }
 
         [Fact]
