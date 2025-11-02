@@ -158,5 +158,14 @@ namespace NumerosRomanos.Test
             //Assert
             numerosRomanos.ObtenerNumeroRomano().Should().BeEquivalentTo("CM");
         }
+
+        [Fact]
+        public void Si_NumeroEsNovecientosuno_Debe_RetornarCMI()
+        {
+            //Act
+            numerosRomanos.Convertir(901);
+            //Assert
+            numerosRomanos.ObtenerNumeroRomano().Should().BeEquivalentTo("CMI");
+        }
     }
 }
