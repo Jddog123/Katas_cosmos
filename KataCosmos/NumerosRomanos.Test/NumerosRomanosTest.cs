@@ -36,6 +36,18 @@ namespace NumerosRomanos.Test
         }
 
         [Theory]
+        [InlineData(10, "X")]
+        [InlineData(20, "XX")]
+        [InlineData(30, "XXX")]
+        public void Si_NumeroDiexVeinteYTreinta_Debe_RetornarXPorCantidadDeNumeroMenosDiez(int numero, string numeroRomanoEsperado)
+        {
+            //Act
+            numerosRomanos.Convertir(numero);
+            //Assert
+            numerosRomanos.ObtenerNumeroRomano().Should().BeEquivalentTo(numeroRomanoEsperado);
+        }
+
+        [Theory]
         [InlineData(11, "XI")]
         [InlineData(12, "XII")]
         [InlineData(13, "XIII")]
@@ -73,33 +85,6 @@ namespace NumerosRomanos.Test
             //Assert
             numerosRomanos.ObtenerNumeroRomano().Should().BeEquivalentTo("IX");
         }
-
-        [Fact]
-        public void Si_NumeroEsDiez_Debe_RetornarX()
-        {
-            //Act
-            numerosRomanos.Convertir(10);
-            //Assert
-            numerosRomanos.ObtenerNumeroRomano().Should().BeEquivalentTo("X");
-        }
-
-        [Fact]
-        public void Si_NumeroEsVeinte_Debe_RetornarXX()
-        {
-            //Act
-            numerosRomanos.Convertir(20);
-            //Assert
-            numerosRomanos.ObtenerNumeroRomano().Should().BeEquivalentTo("XX");
-        }
-
-        [Fact]
-        public void Si_NumeroEsTreinta_Debe_RetornarXXX()
-        {
-            //Act
-            numerosRomanos.Convertir(30);
-            //Assert
-            numerosRomanos.ObtenerNumeroRomano().Should().BeEquivalentTo("XXX");
-        }
     }
 
     public class NumerosRomanos()
@@ -107,21 +92,9 @@ namespace NumerosRomanos.Test
         private string _numeroRomano;
         public void Convertir(int numero)
         {
-            if (numero >= 10)
+            while (numero >= 10)
             {
-                if(numero == 20)
-                {
-                    _numeroRomano = "XX";
-                    return;
-                }
-
-                if (numero == 30)
-                {
-                    _numeroRomano = "XXX";
-                    return;
-                }
-
-                _numeroRomano = "X";
+                _numeroRomano += "X";
                 numero -= 10;
             }
 

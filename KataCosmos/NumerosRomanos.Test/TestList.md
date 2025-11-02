@@ -12,7 +12,7 @@
 - [X] Si_NumeroEsDoce_Debe_RetornarXII
 - [X] Si_NumeroEsTrece_Debe_RetornarXIII
 - [X] Si_NumeroEsVeinte_Debe_RetornarXX
-- [ ] Si_NumeroEsTreinta_Debe_RetornarXXX
+- [X] Si_NumeroEsTreinta_Debe_RetornarXXX
 - [ ] Si_NumeroEsCatorce_Debe_RetornarXIV
 - [ ] Si_NumeroEsQuince_Debe_RetornarXV
 - [ ] Si_NumeroEsVeinticuatro_Debe_RetornarXXIV
