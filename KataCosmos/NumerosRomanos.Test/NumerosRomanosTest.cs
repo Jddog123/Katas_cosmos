@@ -115,6 +115,12 @@ namespace NumerosRomanos.Test
                     return;
                 }
 
+                if (numero == 30)
+                {
+                    _numeroRomano = "XXX";
+                    return;
+                }
+
                 _numeroRomano = "X";
                 numero -= 10;
             }
