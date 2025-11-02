@@ -164,22 +164,18 @@ namespace NumerosRomanos.Test
             numerosRomanos.ObtenerNumeroRomano().Should().BeEquivalentTo(numeroRomanoEsperado);
         }
 
-        [Fact]
-        public void Si_NumeroEsMil_Debe_RetornarM()
+        [Theory]
+        [InlineData(1000, "M")]
+        [InlineData(1001, "MI")]
+        [InlineData(1002, "MII")]
+        [InlineData(1007, "MVII")]
+        [InlineData(1009, "MIX")]
+        public void Si_NumeroContieneMil_Debe_RetornarMParaRepresentarlo(int numero, string numeroRomanoEsperado)
         {
             //Act
-            numerosRomanos.Convertir(1000);
+            numerosRomanos.Convertir(numero);
             //Assert
-            numerosRomanos.ObtenerNumeroRomano().Should().BeEquivalentTo("M");
-        }
-
-        [Fact]
-        public void Si_NumeroEsMiluno_Debe_RetornarMI()
-        {
-            //Act
-            numerosRomanos.Convertir(1001);
-            //Assert
-            numerosRomanos.ObtenerNumeroRomano().Should().BeEquivalentTo("MI");
+            numerosRomanos.ObtenerNumeroRomano().Should().BeEquivalentTo(numeroRomanoEsperado);
         }
     }
 }
