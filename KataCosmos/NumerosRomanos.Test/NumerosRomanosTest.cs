@@ -177,5 +177,20 @@ namespace NumerosRomanos.Test
             //Assert
             numerosRomanos.ObtenerNumeroRomano().Should().BeEquivalentTo(numeroRomanoEsperado);
         }
+
+        [Theory]
+        [InlineData(4, "IV")]
+        [InlineData(9, "IX")]
+        [InlineData(29, "XXIX")]
+        [InlineData(80, "LXXX")]
+        [InlineData(294, "CCXCIV")]
+        [InlineData(2019, "MMXIX")]
+        public void Si_NumeroSeRecibe_Debe_RetornarNumeroRomano(int numero, string numeroRomanoEsperado)
+        {
+            //Act
+            numerosRomanos.Convertir(numero);
+            //Assert
+            numerosRomanos.ObtenerNumeroRomano().Should().BeEquivalentTo(numeroRomanoEsperado);
+        }
     }
 }
