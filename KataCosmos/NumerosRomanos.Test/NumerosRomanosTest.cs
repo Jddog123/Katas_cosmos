@@ -46,6 +46,12 @@ namespace NumerosRomanos.Test
         private string _numeroRomano;
         public void Convertir(int numero)
         {
+            if (numero == 5)
+            {
+                _numeroRomano = "V";
+                return;
+
+            }
             if (numero == 4)
             {
                 _numeroRomano = "IV";
