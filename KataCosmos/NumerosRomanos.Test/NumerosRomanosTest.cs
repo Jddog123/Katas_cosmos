@@ -91,6 +91,15 @@ namespace NumerosRomanos.Test
             //Assert
             numerosRomanos.ObtenerNumeroRomano().Should().BeEquivalentTo("XX");
         }
+
+        [Fact]
+        public void Si_NumeroEsTreinta_Debe_RetornarXXX()
+        {
+            //Act
+            numerosRomanos.Convertir(30);
+            //Assert
+            numerosRomanos.ObtenerNumeroRomano().Should().BeEquivalentTo("XXX");
+        }
     }
 
     public class NumerosRomanos()
