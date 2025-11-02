@@ -149,5 +149,14 @@ namespace NumerosRomanos.Test
             //Assert
             numerosRomanos.ObtenerNumeroRomano().Should().BeEquivalentTo(numeroRomanoEsperado);
         }
+
+        [Fact]
+        public void Si_NumeroEsNovecientos_Debe_RetornarCM()
+        {
+            //Act
+            numerosRomanos.Convertir(900);
+            //Assert
+            numerosRomanos.ObtenerNumeroRomano().Should().BeEquivalentTo("CM");
+        }
     }
 }
