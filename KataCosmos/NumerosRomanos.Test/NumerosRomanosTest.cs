@@ -127,6 +127,15 @@ namespace NumerosRomanos.Test
             //Assert
             numerosRomanos.ObtenerNumeroRomano().Should().BeEquivalentTo("IXX");
         }
+
+        [Fact]
+        public void Si_NumeroEsVeintinueve_Debe_RetornarIXXX()
+        {
+            //Act
+            numerosRomanos.Convertir(29);
+            //Assert
+            numerosRomanos.ObtenerNumeroRomano().Should().BeEquivalentTo("IXXX");
+        }
     }
 
     public class NumerosRomanos()
