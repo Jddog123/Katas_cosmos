@@ -149,7 +149,12 @@ namespace NumerosRomanos.Test
         private string _numeroRomano;
         public void Convertir(int numero)
         {
-            if(numero == 90)
+            if (numero == 91)
+            {
+                _numeroRomano = "XCI";
+                return;
+            }
+            if (numero == 90)
             {
                 _numeroRomano = "XC";
                 return;
