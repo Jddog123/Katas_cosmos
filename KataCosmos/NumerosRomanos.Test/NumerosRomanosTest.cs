@@ -100,6 +100,12 @@ namespace NumerosRomanos.Test
         {
             if (numero >= 10)
             {
+                if(numero == 20)
+                {
+                    _numeroRomano = "XX";
+                    return;
+                }
+
                 _numeroRomano = "X";
                 numero -= 10;
             }
