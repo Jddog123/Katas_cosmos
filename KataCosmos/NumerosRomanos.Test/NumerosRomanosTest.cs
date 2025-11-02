@@ -125,6 +125,14 @@ namespace NumerosRomanos.Test
             numerosRomanos.ObtenerNumeroRomano().Should().BeEquivalentTo(numeroRomanoEsperado);
         }
 
+        [Fact]
+        public void Si_NumeroEsNoventa_Debe_RetornarXC()
+        {
+            //Act
+            numerosRomanos.Convertir(90);
+            //Assert
+            numerosRomanos.ObtenerNumeroRomano().Should().BeEquivalentTo("XC");
+        }
     }
 
     public class NumerosRomanos()
