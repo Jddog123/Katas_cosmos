@@ -136,22 +136,18 @@ namespace NumerosRomanos.Test
             numerosRomanos.ObtenerNumeroRomano().Should().BeEquivalentTo(numeroRomanoEsperado);
         }
 
-        [Fact]
-        public void Si_NumeroEsQuinientos_Debe_RetornarD()
+        [Theory]
+        [InlineData(500, "D")]
+        [InlineData(501, "DI")]
+        [InlineData(502, "DII")]
+        [InlineData(507, "DVII")]
+        [InlineData(509, "DIX")]
+        public void Si_NumeroContieneQuinientos_Debe_RetornarDParaRepresentarlo(int numero, string numeroRomanoEsperado)
         {
             //Act
-            numerosRomanos.Convertir(500);
+            numerosRomanos.Convertir(numero);
             //Assert
-            numerosRomanos.ObtenerNumeroRomano().Should().BeEquivalentTo("D");
-        }
-
-        [Fact]
-        public void Si_NumeroEsQuinientosuno_Debe_RetornarDI()
-        {
-            //Act
-            numerosRomanos.Convertir(501);
-            //Assert
-            numerosRomanos.ObtenerNumeroRomano().Should().BeEquivalentTo("DI");
+            numerosRomanos.ObtenerNumeroRomano().Should().BeEquivalentTo(numeroRomanoEsperado);
         }
     }
 }
