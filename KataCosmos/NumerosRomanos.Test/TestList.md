@@ -17,5 +17,8 @@
 - [X] Si_NumeroEsQuince_Debe_RetornarXV
 - [X] Si_NumeroEsVeinticuatro_Debe_RetornarXXIV
 - [X] Si_NumeroEsVeinticinco_Debe_RetornarXXV
-- [X] Si_NumeroEsDiecinueve_Debe_RetornarIXX
-- [ ] Si_NumeroEsVeintinueve_Debe_RetornarIXXX
+- [X] Si_NumeroEsDiecinueve_Debe_RetornarXIX
+- [X] Si_NumeroEsVeintinueve_Debe_RetornarXXIX
+- [ ] Si_NumeroEsCuarenta_Debe_RetornarXL
+- [ ] Si_NumeroEsCuarentayuno_Debe_RetornarXLI
+- [ ] Si_NumeroEsCuarentaydos_Debe_RetornarXLII
