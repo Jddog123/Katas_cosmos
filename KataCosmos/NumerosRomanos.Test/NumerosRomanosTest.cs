@@ -60,10 +60,22 @@ namespace NumerosRomanos.Test
         }
 
         [Theory]
-        [InlineData(4, "IV")]
         [InlineData(14, "XIV")]
         [InlineData(24, "XXIV")]
-        public void Si_NumeroEsCuatroCatorceOVeinticuatro_Debe_RetornarElTotalDeDiezPorCadaXYCuatroPorCadaIV(int numero, string numeroRomanoEsperado)
+        [InlineData(34, "XXXIV")]
+        public void Si_NumeroEsCatorceVeinticuatroOTreintaycuatro_Debe_RetornarElTotalDeDiezPorCadaXYCuatroPorCadaIV(int numero, string numeroRomanoEsperado)
+        {
+            //Act
+            numerosRomanos.Convertir(numero);
+            //Assert
+            numerosRomanos.ObtenerNumeroRomano().Should().BeEquivalentTo(numeroRomanoEsperado);
+        }
+
+        [Theory]
+        [InlineData(15, "XV")]
+        [InlineData(25, "XXV")]
+        [InlineData(35, "XXXV")]
+        public void Si_NumeroEsQuinceVeinticincoOTreintaCinco_Debe_RetornarElTotalDeDiezPorCadaXYCincoPorCadaV(int numero, string numeroRomanoEsperado)
         {
             //Act
             numerosRomanos.Convertir(numero);
@@ -113,16 +125,7 @@ namespace NumerosRomanos.Test
         private string _numeroRomano;
         public void Convertir(int numero)
         {
-            if (numero == 25)
-            {
-                _numeroRomano = "XXV";
-                return;
-            }
-            if (numero == 15)
-            {
-                _numeroRomano = "XV";
-                return;
-            }
+            
             while (numero >= 10)
             {
                 _numeroRomano += "X";
@@ -135,9 +138,9 @@ namespace NumerosRomanos.Test
                 return;
             }
 
-            if (numero >= 5)
+            while (numero >= 5)
             {
-                _numeroRomano = "V";
+                _numeroRomano += "V";
                 numero -= 5;
             }
 
@@ -147,9 +150,10 @@ namespace NumerosRomanos.Test
                 return;
             }
 
-            for (int i = 1; i <= numero; i++)
+            while (numero >= 1)
             {
                 _numeroRomano += "I";
+                numero -= 1;
             }
         }
 
