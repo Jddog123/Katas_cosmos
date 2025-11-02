@@ -27,6 +27,15 @@ namespace NumerosRomanos.Test
             //Assert
             numerosRomanos.ObtenerNumeroRomano().Should().BeEquivalentTo("II");
         }
+
+        [Fact]
+        public void Si_NumeroEsTres_Debe_RetornarIII()
+        {
+            //Act
+            numerosRomanos.Convertir(3);
+            //Assert
+            numerosRomanos.ObtenerNumeroRomano().Should().BeEquivalentTo("III");
+        }
     }
 
     public class NumerosRomanos()
