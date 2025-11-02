@@ -11,6 +11,12 @@ namespace NumerosRomanos.Dominio
         private string _numeroRomano;
         public void Convertir(int numero)
         {
+            if(numero == 100)
+            {
+                _numeroRomano = "C";
+                return;
+            }
+
             while (numero >= 90)
             {
                 _numeroRomano += "XC";
