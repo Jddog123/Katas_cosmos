@@ -150,22 +150,18 @@ namespace NumerosRomanos.Test
             numerosRomanos.ObtenerNumeroRomano().Should().BeEquivalentTo(numeroRomanoEsperado);
         }
 
-        [Fact]
-        public void Si_NumeroEsNovecientos_Debe_RetornarCM()
+        [Theory]
+        [InlineData(900, "CM")]
+        [InlineData(901, "CMI")]
+        [InlineData(902, "CMII")]
+        [InlineData(907, "CMVII")]
+        [InlineData(909, "CMIX")]
+        public void Si_NumeroContieneNovecientos_Debe_RetornarCMParaRepresentarlo(int numero, string numeroRomanoEsperado)
         {
             //Act
-            numerosRomanos.Convertir(900);
+            numerosRomanos.Convertir(numero);
             //Assert
-            numerosRomanos.ObtenerNumeroRomano().Should().BeEquivalentTo("CM");
-        }
-
-        [Fact]
-        public void Si_NumeroEsNovecientosuno_Debe_RetornarCMI()
-        {
-            //Act
-            numerosRomanos.Convertir(901);
-            //Assert
-            numerosRomanos.ObtenerNumeroRomano().Should().BeEquivalentTo("CMI");
+            numerosRomanos.ObtenerNumeroRomano().Should().BeEquivalentTo(numeroRomanoEsperado);
         }
     }
 }
