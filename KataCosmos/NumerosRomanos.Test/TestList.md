@@ -28,7 +28,7 @@
 - [X] Si_NumeroEsNoventayuno_Debe_RetornarXCI
 - [X] Si_NumeroEsCien_Debe_RetornarC
 - [X] Si_NumeroEsCientouno_Debe_RetornarCI
-- [ ] Si_NumeroEsQuinientos_Debe_RetornarD
+- [X] Si_NumeroEsQuinientos_Debe_RetornarD
 - [ ] Si_NumeroEsQuinientosuno_Debe_RetornarDI
 - [ ] Si_NumeroEsNovecientos_Debe_RetornarCM
 - [ ] Si_NumeroEsNovecientosuno_Debe_RetornarCMI

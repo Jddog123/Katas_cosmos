@@ -144,5 +144,14 @@ namespace NumerosRomanos.Test
             //Assert
             numerosRomanos.ObtenerNumeroRomano().Should().BeEquivalentTo("D");
         }
+
+        [Fact]
+        public void Si_NumeroEsQuinientosuno_Debe_RetornarDI()
+        {
+            //Act
+            numerosRomanos.Convertir(501);
+            //Assert
+            numerosRomanos.ObtenerNumeroRomano().Should().BeEquivalentTo("DI");
+        }
     }
 }
