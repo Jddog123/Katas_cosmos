@@ -82,6 +82,12 @@ namespace NumerosRomanos.Test
         private string _numeroRomano;
         public void Convertir(int numero)
         {
+            if (numero == 9)
+            {
+                _numeroRomano = "IX";
+                return;
+            }
+
             if (numero == 4)
             {
                 _numeroRomano = "IV";
