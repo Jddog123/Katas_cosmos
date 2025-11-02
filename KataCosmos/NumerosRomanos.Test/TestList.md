@@ -4,7 +4,7 @@
 - [X] Si_NumeroEsCuatro_Debe_RetornarIV
 - [X] Si_NumeroEsCinco_Debe_RetornarV
 - [X] Si_NumeroEsSeis_Debe_RetornarVI
-- [ ] Si_NumeroEsSiete_Debe_RetornarVII
+- [X] Si_NumeroEsSiete_Debe_RetornarVII
 - [ ] Si_NumeroEsOcho_Debe_RetornarVIII
 - [ ] Si_NumeroEsNueve_Debe_RetornarIX
 - [ ] Si_NumeroEsDiez_Debe_RetornarX
