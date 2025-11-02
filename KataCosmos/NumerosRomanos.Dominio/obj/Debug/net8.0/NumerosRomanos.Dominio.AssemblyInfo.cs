@@ -11,12 +11,12 @@
 using System;
 using System.Reflection;
 
-[assembly: System.Reflection.AssemblyCompanyAttribute("NumerosRomanos.Test")]
+[assembly: System.Reflection.AssemblyCompanyAttribute("NumerosRomanos.Dominio")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
 [assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8721af94bd2d3802c13467ab1478f3cf3e127e09")]
-[assembly: System.Reflection.AssemblyProductAttribute("NumerosRomanos.Test")]
-[assembly: System.Reflection.AssemblyTitleAttribute("NumerosRomanos.Test")]
+[assembly: System.Reflection.AssemblyProductAttribute("NumerosRomanos.Dominio")]
+[assembly: System.Reflection.AssemblyTitleAttribute("NumerosRomanos.Dominio")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
 
 // Generado por la clase WriteCodeFragment de MSBuild.

@@ -99,3 +99,6 @@ C:\Daniel\Cursos\KATA_Cosmos\Katas_cosmos\KataCosmos\NumerosRomanos.Test\obj\Deb
 C:\Daniel\Cursos\KATA_Cosmos\Katas_cosmos\KataCosmos\NumerosRomanos.Test\obj\Debug\net8.0\NumerosRomanos.Test.pdb
 C:\Daniel\Cursos\KATA_Cosmos\Katas_cosmos\KataCosmos\NumerosRomanos.Test\obj\Debug\net8.0\NumerosRomanos.Test.genruntimeconfig.cache
 C:\Daniel\Cursos\KATA_Cosmos\Katas_cosmos\KataCosmos\NumerosRomanos.Test\obj\Debug\net8.0\ref\NumerosRomanos.Test.dll
+C:\Daniel\Cursos\KATA_Cosmos\Katas_cosmos\KataCosmos\NumerosRomanos.Test\bin\Debug\net8.0\CoverletSourceRootsMapping_NumerosRomanos.Test
+C:\Daniel\Cursos\KATA_Cosmos\Katas_cosmos\KataCosmos\NumerosRomanos.Test\bin\Debug\net8.0\NumerosRomanos.Dominio.dll
+C:\Daniel\Cursos\KATA_Cosmos\Katas_cosmos\KataCosmos\NumerosRomanos.Test\bin\Debug\net8.0\NumerosRomanos.Dominio.pdb

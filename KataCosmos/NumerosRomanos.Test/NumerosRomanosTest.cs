@@ -1,21 +1,28 @@
 
 using FluentAssertions;
+using NumerosRomanos.Dominio;
 
 namespace NumerosRomanos.Test
 {
     public class NumerosRomanosTest
     {
-        NumerosRomanos numerosRomanos;
+        NumerosRomanosDominio numerosRomanos;
         public NumerosRomanosTest()
         {
-            numerosRomanos = new NumerosRomanos();
+            numerosRomanos = new NumerosRomanosDominio();
         }
 
         [Theory]
         [InlineData(1,"I")]
         [InlineData(2, "II")]
         [InlineData(3, "III")]
-        public void Si_NumeroEsUnoDosOTres_Debe_RetornarIPorCantidadDeNumero(int numero, string numeroRomanoEsperado)
+        [InlineData(6, "VI")]
+        [InlineData(7, "VII")]
+        [InlineData(8, "VIII")]
+        [InlineData(11, "XI")]
+        [InlineData(12, "XII")]
+        [InlineData(13, "XIII")]
+        public void Si_NumeroContieneUnoDosOTres_Debe_RetornarIParaRepresentarCadaUnidad(int numero, string numeroRomanoEsperado)
         {
             //Act
             numerosRomanos.Convertir(numero);
@@ -28,7 +35,7 @@ namespace NumerosRomanos.Test
         [InlineData(14, "XIV")]
         [InlineData(24, "XXIV")]
         [InlineData(34, "XXXIV")]
-        public void Si_NumeroEsCatorceVeinticuatroOTreintaycuatro_Debe_RetornarElTotalDeDiezPorCadaXYCuatroPorCadaIV(int numero, string numeroRomanoEsperado)
+        public void Si_NumeroContieneCuatro_Debe_RetornarIVParaRepresentarlo(int numero, string numeroRomanoEsperado)
         {
             //Act
             numerosRomanos.Convertir(numero);
@@ -41,19 +48,7 @@ namespace NumerosRomanos.Test
         [InlineData(15, "XV")]
         [InlineData(25, "XXV")]
         [InlineData(35, "XXXV")]
-        public void Si_NumeroEsCincoQuinceVeinticincoOTreintaCinco_Debe_RetornarElTotalDeDiezPorCadaXYCincoPorCadaV(int numero, string numeroRomanoEsperado)
-        {
-            //Act
-            numerosRomanos.Convertir(numero);
-            //Assert
-            numerosRomanos.ObtenerNumeroRomano().Should().BeEquivalentTo(numeroRomanoEsperado);
-        }
-
-        [Theory]
-        [InlineData(6, "VI")]
-        [InlineData(7, "VII")]
-        [InlineData(8, "VIII")]
-        public void Si_NumeroSeisSienteUOcho_Debe_RetornarVMasIPorCantidadDeNumeroMenosCinco(int numero, string numeroRomanoEsperado)
+        public void Si_NumeroContieneCinco_Debe_RetornarVParaRepresentarlo(int numero, string numeroRomanoEsperado)
         {
             //Act
             numerosRomanos.Convertir(numero);
@@ -65,7 +60,7 @@ namespace NumerosRomanos.Test
         [InlineData(9, "IX")]
         [InlineData(19, "XIX")]
         [InlineData(29, "XXIX")]
-        public void Si_NumeroEsNueveDiecinueveOVeintinueve_Debe_RetornarElTotalDeDiezPorCadaXYNuevePorCadaIX(int numero, string numeroRomanoEsperado)
+        public void Si_NumeroContieneNueve_Debe_RetornarIXParaRepresentarlo(int numero, string numeroRomanoEsperado)
         {
             //Act
             numerosRomanos.Convertir(numero);
@@ -77,19 +72,7 @@ namespace NumerosRomanos.Test
         [InlineData(10, "X")]
         [InlineData(20, "XX")]
         [InlineData(30, "XXX")]
-        public void Si_NumeroDiexVeinteYTreinta_Debe_RetornarXPorCantidadDeNumeroMenosDiez(int numero, string numeroRomanoEsperado)
-        {
-            //Act
-            numerosRomanos.Convertir(numero);
-            //Assert
-            numerosRomanos.ObtenerNumeroRomano().Should().BeEquivalentTo(numeroRomanoEsperado);
-        }
-
-        [Theory]
-        [InlineData(11, "XI")]
-        [InlineData(12, "XII")]
-        [InlineData(13, "XIII")]
-        public void Si_NumeroOnceDoceOTrece_Debe_RetornarXMasIPorCantidadDeNumeroMenosDiez(int numero, string numeroRomanoEsperado)
+        public void Si_NumeroDiexVeinteYTreinta_Debe_RetornarXParaRepresentarlo(int numero, string numeroRomanoEsperado)
         {
             //Act
             numerosRomanos.Convertir(numero);
@@ -137,66 +120,6 @@ namespace NumerosRomanos.Test
             numerosRomanos.Convertir(numero);
             //Assert
             numerosRomanos.ObtenerNumeroRomano().Should().BeEquivalentTo(numeroRomanoEsperado);
-        }
-    }
-
-    public class NumerosRomanos()
-    {
-        private string _numeroRomano;
-        public void Convertir(int numero)
-        {
-            while (numero >= 90)
-            {
-                _numeroRomano += "XC";
-                numero -= 90;
-            }
-
-            while (numero >= 50)
-            {
-                _numeroRomano += "L";
-                numero -= 50;
-            }
-
-            while (numero >= 40)
-            {
-                _numeroRomano += "XL";
-                numero -= 40;
-            }
-
-            while (numero >= 10)
-            {
-                _numeroRomano += "X";
-                numero -= 10;
-            }
-
-            while (numero >= 9)
-            {
-                _numeroRomano += "IX";
-                numero -= 9;
-            }
-
-            while (numero >= 5)
-            {
-                _numeroRomano += "V";
-                numero -= 5;
-            }
-
-            while (numero >= 4)
-            {
-                _numeroRomano += "IV";
-                numero -= 4;
-            }
-
-            while (numero >= 1)
-            {
-                _numeroRomano += "I";
-                numero -= 1;
-            }
-        }
-
-        public string ObtenerNumeroRomano()
-        {
-            return _numeroRomano;
         }
     }
 }

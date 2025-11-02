@@ -1,0 +1,12 @@
+C:\Daniel\Cursos\KATA_Cosmos\Katas_cosmos\KataCosmos\NumerosRomanos.Dominio\bin\Debug\net8.0\NumerosRomanos.Dominio.deps.json
+C:\Daniel\Cursos\KATA_Cosmos\Katas_cosmos\KataCosmos\NumerosRomanos.Dominio\bin\Debug\net8.0\NumerosRomanos.Dominio.dll
+C:\Daniel\Cursos\KATA_Cosmos\Katas_cosmos\KataCosmos\NumerosRomanos.Dominio\bin\Debug\net8.0\NumerosRomanos.Dominio.pdb
+C:\Daniel\Cursos\KATA_Cosmos\Katas_cosmos\KataCosmos\NumerosRomanos.Dominio\obj\Debug\net8.0\NumerosRomanos.Dominio.GeneratedMSBuildEditorConfig.editorconfig
+C:\Daniel\Cursos\KATA_Cosmos\Katas_cosmos\KataCosmos\NumerosRomanos.Dominio\obj\Debug\net8.0\NumerosRomanos.Dominio.AssemblyInfoInputs.cache
+C:\Daniel\Cursos\KATA_Cosmos\Katas_cosmos\KataCosmos\NumerosRomanos.Dominio\obj\Debug\net8.0\NumerosRomanos.Dominio.AssemblyInfo.cs
+C:\Daniel\Cursos\KATA_Cosmos\Katas_cosmos\KataCosmos\NumerosRomanos.Dominio\obj\Debug\net8.0\NumerosRomanos.Dominio.csproj.CoreCompileInputs.cache
+C:\Daniel\Cursos\KATA_Cosmos\Katas_cosmos\KataCosmos\NumerosRomanos.Dominio\obj\Debug\net8.0\NumerosRomanos.Dominio.sourcelink.json
+C:\Daniel\Cursos\KATA_Cosmos\Katas_cosmos\KataCosmos\NumerosRomanos.Dominio\obj\Debug\net8.0\NumerosRomanos.Dominio.dll
+C:\Daniel\Cursos\KATA_Cosmos\Katas_cosmos\KataCosmos\NumerosRomanos.Dominio\obj\Debug\net8.0\refint\NumerosRomanos.Dominio.dll
+C:\Daniel\Cursos\KATA_Cosmos\Katas_cosmos\KataCosmos\NumerosRomanos.Dominio\obj\Debug\net8.0\NumerosRomanos.Dominio.pdb
+C:\Daniel\Cursos\KATA_Cosmos\Katas_cosmos\KataCosmos\NumerosRomanos.Dominio\obj\Debug\net8.0\ref\NumerosRomanos.Dominio.dll
