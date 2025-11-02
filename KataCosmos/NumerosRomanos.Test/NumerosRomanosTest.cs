@@ -36,6 +36,15 @@ namespace NumerosRomanos.Test
             //Assert
             numerosRomanos.ObtenerNumeroRomano().Should().BeEquivalentTo("III");
         }
+
+        [Fact]
+        public void Si_NumeroEsCuatro_Debe_RetornarIV()
+        {
+            //Act
+            numerosRomanos.Convertir(4);
+            //Assert
+            numerosRomanos.ObtenerNumeroRomano().Should().BeEquivalentTo("IV");
+        }
     }
 
     public class NumerosRomanos()
