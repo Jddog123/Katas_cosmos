@@ -3,40 +3,12 @@
   "WorkspaceRootPath": "C:\\Daniel\\Cursos\\KATA_Cosmos\\Katas_cosmos\\KataCosmos\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2948396-A988-4A33-9227-76E9813AE54F}|ValidadorContrasena.Test\\ValidadorContrasena.Test.csproj|c:\\daniel\\cursos\\kata_cosmos\\katas_cosmos\\katacosmos\\validadorcontrasena.test\\validadorcontrasenatest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2948396-A988-4A33-9227-76E9813AE54F}|ValidadorContrasena.Test\\ValidadorContrasena.Test.csproj|solutionrelative:validadorcontrasena.test\\validadorcontrasenatest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{FFF163A5-DFD0-4B08-B62F-834D1DC3999E}|NumerosRomanos.Test\\NumerosRomanos.Test.csproj|c:\\daniel\\cursos\\kata_cosmos\\katas_cosmos\\katacosmos\\numerosromanos.test\\numerosromanostest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FFF163A5-DFD0-4B08-B62F-834D1DC3999E}|NumerosRomanos.Test\\NumerosRomanos.Test.csproj|solutionrelative:numerosromanos.test\\numerosromanostest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2948396-A988-4A33-9227-76E9813AE54F}|ValidadorContrasena.Test\\ValidadorContrasena.Test.csproj|c:\\daniel\\cursos\\kata_cosmos\\katas_cosmos\\katacosmos\\validadorcontrasena.test\\testlist.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
-      "RelativeMoniker": "D:0:0:{A2948396-A988-4A33-9227-76E9813AE54F}|ValidadorContrasena.Test\\ValidadorContrasena.Test.csproj|solutionrelative:validadorcontrasena.test\\testlist.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8A9831C2-E840-45E4-857C-E4BEA1A66C85}|Dominio\\ValidadorContrasena.Dominio\\ValidadorContrasena.Dominio.csproj|c:\\daniel\\cursos\\kata_cosmos\\katas_cosmos\\katacosmos\\dominio\\validadorcontrasena.dominio\\reglas\\contieneminuscularegla.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8A9831C2-E840-45E4-857C-E4BEA1A66C85}|Dominio\\ValidadorContrasena.Dominio\\ValidadorContrasena.Dominio.csproj|solutionrelative:dominio\\validadorcontrasena.dominio\\reglas\\contieneminuscularegla.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8A9831C2-E840-45E4-857C-E4BEA1A66C85}|Dominio\\ValidadorContrasena.Dominio\\ValidadorContrasena.Dominio.csproj|c:\\daniel\\cursos\\kata_cosmos\\katas_cosmos\\katacosmos\\dominio\\validadorcontrasena.dominio\\reglas\\contienemayuscularegla.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8A9831C2-E840-45E4-857C-E4BEA1A66C85}|Dominio\\ValidadorContrasena.Dominio\\ValidadorContrasena.Dominio.csproj|solutionrelative:dominio\\validadorcontrasena.dominio\\reglas\\contienemayuscularegla.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8A9831C2-E840-45E4-857C-E4BEA1A66C85}|Dominio\\ValidadorContrasena.Dominio\\ValidadorContrasena.Dominio.csproj|c:\\daniel\\cursos\\kata_cosmos\\katas_cosmos\\katacosmos\\dominio\\validadorcontrasena.dominio\\reglas\\contieneguionbajoregla.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8A9831C2-E840-45E4-857C-E4BEA1A66C85}|Dominio\\ValidadorContrasena.Dominio\\ValidadorContrasena.Dominio.csproj|solutionrelative:dominio\\validadorcontrasena.dominio\\reglas\\contieneguionbajoregla.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8A9831C2-E840-45E4-857C-E4BEA1A66C85}|Dominio\\ValidadorContrasena.Dominio\\ValidadorContrasena.Dominio.csproj|c:\\daniel\\cursos\\kata_cosmos\\katas_cosmos\\katacosmos\\dominio\\validadorcontrasena.dominio\\reglas\\longitudregla.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8A9831C2-E840-45E4-857C-E4BEA1A66C85}|Dominio\\ValidadorContrasena.Dominio\\ValidadorContrasena.Dominio.csproj|solutionrelative:dominio\\validadorcontrasena.dominio\\reglas\\longitudregla.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8A9831C2-E840-45E4-857C-E4BEA1A66C85}|Dominio\\ValidadorContrasena.Dominio\\ValidadorContrasena.Dominio.csproj|c:\\daniel\\cursos\\kata_cosmos\\katas_cosmos\\katacosmos\\dominio\\validadorcontrasena.dominio\\validadorcontrasena.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8A9831C2-E840-45E4-857C-E4BEA1A66C85}|Dominio\\ValidadorContrasena.Dominio\\ValidadorContrasena.Dominio.csproj|solutionrelative:dominio\\validadorcontrasena.dominio\\validadorcontrasena.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8A9831C2-E840-45E4-857C-E4BEA1A66C85}|Dominio\\ValidadorContrasena.Dominio\\ValidadorContrasena.Dominio.csproj|c:\\daniel\\cursos\\kata_cosmos\\katas_cosmos\\katacosmos\\dominio\\validadorcontrasena.dominio\\factory\\contrasenavalidadorfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8A9831C2-E840-45E4-857C-E4BEA1A66C85}|Dominio\\ValidadorContrasena.Dominio\\ValidadorContrasena.Dominio.csproj|solutionrelative:dominio\\validadorcontrasena.dominio\\factory\\contrasenavalidadorfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8A9831C2-E840-45E4-857C-E4BEA1A66C85}|Dominio\\ValidadorContrasena.Dominio\\ValidadorContrasena.Dominio.csproj|c:\\daniel\\cursos\\kata_cosmos\\katas_cosmos\\katacosmos\\dominio\\validadorcontrasena.dominio\\enum\\tipovalidacion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8A9831C2-E840-45E4-857C-E4BEA1A66C85}|Dominio\\ValidadorContrasena.Dominio\\ValidadorContrasena.Dominio.csproj|solutionrelative:dominio\\validadorcontrasena.dominio\\enum\\tipovalidacion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{FFF163A5-DFD0-4B08-B62F-834D1DC3999E}|NumerosRomanos.Test\\NumerosRomanos.Test.csproj|c:\\daniel\\cursos\\kata_cosmos\\katas_cosmos\\katacosmos\\numerosromanos.test\\testlist.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
+      "RelativeMoniker": "D:0:0:{FFF163A5-DFD0-4B08-B62F-834D1DC3999E}|NumerosRomanos.Test\\NumerosRomanos.Test.csproj|solutionrelative:numerosromanos.test\\testlist.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
     }
   ],
   "DocumentGroupContainers": [
@@ -46,127 +18,36 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 8,
+          "SelectedChildIndex": 2,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "LongitudRegla.cs",
-              "DocumentMoniker": "C:\\Daniel\\Cursos\\KATA_Cosmos\\Katas_cosmos\\KataCosmos\\Dominio\\ValidadorContrasena.Dominio\\Reglas\\LongitudRegla.cs",
-              "RelativeDocumentMoniker": "Dominio\\ValidadorContrasena.Dominio\\Reglas\\LongitudRegla.cs",
-              "ToolTip": "C:\\Daniel\\Cursos\\KATA_Cosmos\\Katas_cosmos\\KataCosmos\\Dominio\\ValidadorContrasena.Dominio\\Reglas\\LongitudRegla.cs",
-              "RelativeToolTip": "Dominio\\ValidadorContrasena.Dominio\\Reglas\\LongitudRegla.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAmAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-27T15:37:35.058Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "ValidadorContrasena.cs",
-              "DocumentMoniker": "C:\\Daniel\\Cursos\\KATA_Cosmos\\Katas_cosmos\\KataCosmos\\Dominio\\ValidadorContrasena.Dominio\\ValidadorContrasena.cs",
-              "RelativeDocumentMoniker": "Dominio\\ValidadorContrasena.Dominio\\ValidadorContrasena.cs",
-              "ToolTip": "C:\\Daniel\\Cursos\\KATA_Cosmos\\Katas_cosmos\\KataCosmos\\Dominio\\ValidadorContrasena.Dominio\\ValidadorContrasena.cs",
-              "RelativeToolTip": "Dominio\\ValidadorContrasena.Dominio\\ValidadorContrasena.cs",
-              "ViewState": "AgIAAAcAAAAAAAAAAAAqwBcAAAA0AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-27T02:21:02.992Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "TipoValidacion.cs",
-              "DocumentMoniker": "C:\\Daniel\\Cursos\\KATA_Cosmos\\Katas_cosmos\\KataCosmos\\Dominio\\ValidadorContrasena.Dominio\\Enum\\TipoValidacion.cs",
-              "RelativeDocumentMoniker": "Dominio\\ValidadorContrasena.Dominio\\Enum\\TipoValidacion.cs",
-              "ToolTip": "C:\\Daniel\\Cursos\\KATA_Cosmos\\Katas_cosmos\\KataCosmos\\Dominio\\ValidadorContrasena.Dominio\\Enum\\TipoValidacion.cs",
-              "RelativeToolTip": "Dominio\\ValidadorContrasena.Dominio\\Enum\\TipoValidacion.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-27T02:08:30.021Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "ContrasenaValidadorFactory.cs",
-              "DocumentMoniker": "C:\\Daniel\\Cursos\\KATA_Cosmos\\Katas_cosmos\\KataCosmos\\Dominio\\ValidadorContrasena.Dominio\\Factory\\ContrasenaValidadorFactory.cs",
-              "RelativeDocumentMoniker": "Dominio\\ValidadorContrasena.Dominio\\Factory\\ContrasenaValidadorFactory.cs",
-              "ToolTip": "C:\\Daniel\\Cursos\\KATA_Cosmos\\Katas_cosmos\\KataCosmos\\Dominio\\ValidadorContrasena.Dominio\\Factory\\ContrasenaValidadorFactory.cs",
-              "RelativeToolTip": "Dominio\\ValidadorContrasena.Dominio\\Factory\\ContrasenaValidadorFactory.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAABMAAAA0AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-27T00:51:25.486Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "ContieneMayusculaRegla.cs",
-              "DocumentMoniker": "C:\\Daniel\\Cursos\\KATA_Cosmos\\Katas_cosmos\\KataCosmos\\Dominio\\ValidadorContrasena.Dominio\\Reglas\\ContieneMayusculaRegla.cs",
-              "RelativeDocumentMoniker": "Dominio\\ValidadorContrasena.Dominio\\Reglas\\ContieneMayusculaRegla.cs",
-              "ToolTip": "C:\\Daniel\\Cursos\\KATA_Cosmos\\Katas_cosmos\\KataCosmos\\Dominio\\ValidadorContrasena.Dominio\\Reglas\\ContieneMayusculaRegla.cs",
-              "RelativeToolTip": "Dominio\\ValidadorContrasena.Dominio\\Reglas\\ContieneMayusculaRegla.cs",
-              "ViewState": "AgIAAAEAAAAAAAAAAAAqwAoAAAAzAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-26T20:41:18.622Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "ContieneGuionBajoRegla.cs",
-              "DocumentMoniker": "C:\\Daniel\\Cursos\\KATA_Cosmos\\Katas_cosmos\\KataCosmos\\Dominio\\ValidadorContrasena.Dominio\\Reglas\\ContieneGuionBajoRegla.cs",
-              "RelativeDocumentMoniker": "Dominio\\ValidadorContrasena.Dominio\\Reglas\\ContieneGuionBajoRegla.cs",
-              "ToolTip": "C:\\Daniel\\Cursos\\KATA_Cosmos\\Katas_cosmos\\KataCosmos\\Dominio\\ValidadorContrasena.Dominio\\Reglas\\ContieneGuionBajoRegla.cs",
-              "RelativeToolTip": "Dominio\\ValidadorContrasena.Dominio\\Reglas\\ContieneGuionBajoRegla.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAmAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-26T20:40:49.269Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "ContieneMinusculaRegla.cs",
-              "DocumentMoniker": "C:\\Daniel\\Cursos\\KATA_Cosmos\\Katas_cosmos\\KataCosmos\\Dominio\\ValidadorContrasena.Dominio\\Reglas\\ContieneMinusculaRegla.cs",
-              "RelativeDocumentMoniker": "Dominio\\ValidadorContrasena.Dominio\\Reglas\\ContieneMinusculaRegla.cs",
-              "ToolTip": "C:\\Daniel\\Cursos\\KATA_Cosmos\\Katas_cosmos\\KataCosmos\\Dominio\\ValidadorContrasena.Dominio\\Reglas\\ContieneMinusculaRegla.cs",
-              "RelativeToolTip": "Dominio\\ValidadorContrasena.Dominio\\Reglas\\ContieneMinusculaRegla.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-26T20:40:25.155Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "ValidadorContrasenaTest.cs",
-              "DocumentMoniker": "C:\\Daniel\\Cursos\\KATA_Cosmos\\Katas_cosmos\\KataCosmos\\ValidadorContrasena.Test\\ValidadorContrasenaTest.cs",
-              "RelativeDocumentMoniker": "ValidadorContrasena.Test\\ValidadorContrasenaTest.cs",
-              "ToolTip": "C:\\Daniel\\Cursos\\KATA_Cosmos\\Katas_cosmos\\KataCosmos\\ValidadorContrasena.Test\\ValidadorContrasenaTest.cs",
-              "RelativeToolTip": "ValidadorContrasena.Test\\ValidadorContrasenaTest.cs",
-              "ViewState": "AgIAAH4AAAAAAAAAAAAkwJAAAABDAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-26T15:57:37.172Z",
+              "DocumentIndex": 1,
+              "Title": "TestList.md",
+              "DocumentMoniker": "C:\\Daniel\\Cursos\\KATA_Cosmos\\Katas_cosmos\\KataCosmos\\NumerosRomanos.Test\\TestList.md",
+              "RelativeDocumentMoniker": "NumerosRomanos.Test\\TestList.md",
+              "ToolTip": "C:\\Daniel\\Cursos\\KATA_Cosmos\\Katas_cosmos\\KataCosmos\\NumerosRomanos.Test\\TestList.md",
+              "RelativeToolTip": "NumerosRomanos.Test\\TestList.md",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
+              "WhenOpened": "2025-11-02T02:18:21.243Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "TestList.md",
-              "DocumentMoniker": "C:\\Daniel\\Cursos\\KATA_Cosmos\\Katas_cosmos\\KataCosmos\\ValidadorContrasena.Test\\TestList.md",
-              "RelativeDocumentMoniker": "ValidadorContrasena.Test\\TestList.md",
-              "ToolTip": "C:\\Daniel\\Cursos\\KATA_Cosmos\\Katas_cosmos\\KataCosmos\\ValidadorContrasena.Test\\TestList.md",
-              "RelativeToolTip": "ValidadorContrasena.Test\\TestList.md",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAABEAAABHAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
-              "WhenOpened": "2025-10-26T16:01:43.266Z",
+              "DocumentIndex": 0,
+              "Title": "NumerosRomanosTest.cs",
+              "DocumentMoniker": "C:\\Daniel\\Cursos\\KATA_Cosmos\\Katas_cosmos\\KataCosmos\\NumerosRomanos.Test\\NumerosRomanosTest.cs",
+              "RelativeDocumentMoniker": "NumerosRomanos.Test\\NumerosRomanosTest.cs",
+              "ToolTip": "C:\\Daniel\\Cursos\\KATA_Cosmos\\Katas_cosmos\\KataCosmos\\NumerosRomanos.Test\\NumerosRomanosTest.cs*",
+              "RelativeToolTip": "NumerosRomanos.Test\\NumerosRomanosTest.cs*",
+              "ViewState": "AgIAAC8AAAAAAAAAAAAowDkAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-02T02:17:38.685Z",
               "EditorCaption": ""
             }
           ]

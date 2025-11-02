@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ValidadorContrasena.Dominio")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+de481a9ad7ae4f9ee76b933f1f85147a724d79ec")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6d39127fc49188ce1c27cdfa0cf9187943814605")]
 [assembly: System.Reflection.AssemblyProductAttribute("ValidadorContrasena.Dominio")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ValidadorContrasena.Dominio")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
