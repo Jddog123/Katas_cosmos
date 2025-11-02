@@ -9,78 +9,31 @@ namespace NumerosRomanos.Dominio
     public class NumerosRomanosDominio
     {
         private string _numeroRomano;
+        public static readonly IDictionary<int, string> LetrasRomanas = new Dictionary<int, string>
+        {
+             {1000, "M"},
+             {900, "CM"},
+             {500, "D"},
+             {400, "CD"},
+             {100, "C"},
+             {90, "XC"},
+             {50, "L"},
+             {40, "XL"},
+             {10, "X"},
+             {9, "IX"},
+             {5, "V"},
+             {4, "IV"},
+             {1, "I"},
+        };
         public void Convertir(int numero)
         {
-            while (numero >= 1000)
+            foreach (var letraRomana in LetrasRomanas)
             {
-                _numeroRomano += "M";
-                numero -= 1000;
-            }
-
-            while (numero >= 900)
-            {
-                _numeroRomano += "CM";
-                numero -= 900;
-            }
-
-            while (numero >= 500)
-            {
-                _numeroRomano += "D";
-                numero -= 500;
-            }
-
-            while (numero >= 100)
-            {
-                _numeroRomano += "C";
-                numero -= 100;
-            }
-
-            while (numero >= 90)
-            {
-                _numeroRomano += "XC";
-                numero -= 90;
-            }
-
-            while (numero >= 50)
-            {
-                _numeroRomano += "L";
-                numero -= 50;
-            }
-
-            while (numero >= 40)
-            {
-                _numeroRomano += "XL";
-                numero -= 40;
-            }
-
-            while (numero >= 10)
-            {
-                _numeroRomano += "X";
-                numero -= 10;
-            }
-
-            while (numero >= 9)
-            {
-                _numeroRomano += "IX";
-                numero -= 9;
-            }
-
-            while (numero >= 5)
-            {
-                _numeroRomano += "V";
-                numero -= 5;
-            }
-
-            while (numero >= 4)
-            {
-                _numeroRomano += "IV";
-                numero -= 4;
-            }
-
-            while (numero >= 1)
-            {
-                _numeroRomano += "I";
-                numero -= 1;
+                while (numero >= letraRomana.Key)
+                {
+                    _numeroRomano += letraRomana.Value;
+                    numero -= letraRomana.Key;
+                }
             }
         }
 
