@@ -11,6 +11,12 @@ namespace NumerosRomanos.Dominio
         private string _numeroRomano;
         public void Convertir(int numero)
         {
+            if(numero == 1000)
+            {
+                _numeroRomano = "M";
+                return;
+            }
+
             while (numero >= 900)
             {
                 _numeroRomano += "CM";
