@@ -111,6 +111,12 @@ namespace NumerosRomanos.Test
                 return;
             }
 
+            if (numero == 11)
+            {
+                _numeroRomano = "XI";
+                return;
+            }
+
             if (numero > 5)
             {
                 _numeroRomano = "V";
