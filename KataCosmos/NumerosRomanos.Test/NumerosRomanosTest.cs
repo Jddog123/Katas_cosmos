@@ -48,6 +48,15 @@ namespace NumerosRomanos.Test
             //Assert
             numerosRomanos.ObtenerNumeroRomano().Should().BeEquivalentTo("VI");
         }
+
+        [Fact]
+        public void Si_NumeroEsSiete_Debe_RetornarVII()
+        {
+            //Act
+            numerosRomanos.Convertir(7);
+            //Assert
+            numerosRomanos.ObtenerNumeroRomano().Should().BeEquivalentTo("VII");
+        }
     }
 
     public class NumerosRomanos()
