@@ -122,22 +122,18 @@ namespace NumerosRomanos.Test
             numerosRomanos.ObtenerNumeroRomano().Should().BeEquivalentTo(numeroRomanoEsperado);
         }
 
-        [Fact]
-        public void Si_NumeroEsCien_Debe_RetornarC()
+        [Theory]
+        [InlineData(100, "C")]
+        [InlineData(101, "CI")]
+        [InlineData(102, "CII")]
+        [InlineData(107, "CVII")]
+        [InlineData(109, "CIX")]
+        public void Si_NumeroContieneCien_Debe_RetornarCParaRepresentarlo(int numero, string numeroRomanoEsperado)
         {
             //Act
-            numerosRomanos.Convertir(100);
+            numerosRomanos.Convertir(numero);
             //Assert
-            numerosRomanos.ObtenerNumeroRomano().Should().BeEquivalentTo("C");
-        }
-
-        [Fact]
-        public void Si_NumeroEsCientouno_Debe_RetornarCI()
-        {
-            //Act
-            numerosRomanos.Convertir(101);
-            //Assert
-            numerosRomanos.ObtenerNumeroRomano().Should().BeEquivalentTo("CI");
+            numerosRomanos.ObtenerNumeroRomano().Should().BeEquivalentTo(numeroRomanoEsperado);
         }
     }
 }
