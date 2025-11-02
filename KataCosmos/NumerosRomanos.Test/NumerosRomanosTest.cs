@@ -48,7 +48,9 @@ namespace NumerosRomanos.Test
 
         public string ObtenerNumeroRomano()
         {
-            if(_numeroRecibido == 2)
+            if (_numeroRecibido == 3)
+                return "III";
+            if (_numeroRecibido == 2)
                 return "II";
             return "I";
         }
