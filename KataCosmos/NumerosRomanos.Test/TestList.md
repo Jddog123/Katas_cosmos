@@ -32,5 +32,5 @@
 - [X] Si_NumeroEsQuinientosuno_Debe_RetornarDI
 - [X] Si_NumeroEsNovecientos_Debe_RetornarCM
 - [X] Si_NumeroEsNovecientosuno_Debe_RetornarCMI
-- [ ] Si_NumeroEsMil_Debe_RetornarM
+- [X] Si_NumeroEsMil_Debe_RetornarM
 - [ ] Si_NumeroEsMiluno_Debe_RetornarMI

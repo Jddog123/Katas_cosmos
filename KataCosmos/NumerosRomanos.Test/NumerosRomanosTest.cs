@@ -172,5 +172,14 @@ namespace NumerosRomanos.Test
             //Assert
             numerosRomanos.ObtenerNumeroRomano().Should().BeEquivalentTo("M");
         }
+
+        [Fact]
+        public void Si_NumeroEsMiluno_Debe_RetornarMI()
+        {
+            //Act
+            numerosRomanos.Convertir(1001);
+            //Assert
+            numerosRomanos.ObtenerNumeroRomano().Should().BeEquivalentTo("MI");
+        }
     }
 }
