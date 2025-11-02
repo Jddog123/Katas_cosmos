@@ -113,7 +113,12 @@ namespace NumerosRomanos.Test
         private string _numeroRomano;
         public void Convertir(int numero)
         {
-            if(numero == 15)
+            if (numero == 25)
+            {
+                _numeroRomano = "XXV";
+                return;
+            }
+            if (numero == 15)
             {
                 _numeroRomano = "XV";
                 return;
