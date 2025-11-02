@@ -1,6 +1,6 @@
 - [X] Si_NumeroEsUno_Debe_RetornarI
 - [X] Si_NumeroEsDos_Debe_RetornarII
-- [ ] Si_NumeroEsTres_Debe_RetornarIII
+- [X] Si_NumeroEsTres_Debe_RetornarIII
 - [ ] Si_NumeroEsCuatro_Debe_RetornarIV
 - [ ] Si_NumeroEsCinco_Debe_RetornarV
 - [ ] Si_NumeroEsSeis_Debe_RetornarVI

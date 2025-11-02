@@ -40,19 +40,18 @@ namespace NumerosRomanos.Test
 
     public class NumerosRomanos()
     {
-        private int _numeroRecibido;
+        private string _numeroRomano;
         public void Convertir(int numero)
         {
-            _numeroRecibido = numero;
+            for (int i = 1; i <= numero; i++)
+            {
+                _numeroRomano += "I";
+            }
         }
 
         public string ObtenerNumeroRomano()
         {
-            if (_numeroRecibido == 3)
-                return "III";
-            if (_numeroRecibido == 2)
-                return "II";
-            return "I";
+            return _numeroRomano;
         }
     }
 }
