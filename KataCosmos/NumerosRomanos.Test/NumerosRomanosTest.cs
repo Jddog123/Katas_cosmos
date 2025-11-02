@@ -121,5 +121,14 @@ namespace NumerosRomanos.Test
             //Assert
             numerosRomanos.ObtenerNumeroRomano().Should().BeEquivalentTo(numeroRomanoEsperado);
         }
+
+        [Fact]
+        public void Si_NumeroEsCien_Debe_RetornarC()
+        {
+            //Act
+            numerosRomanos.Convertir(100);
+            //Assert
+            numerosRomanos.ObtenerNumeroRomano().Should().BeEquivalentTo("C");
+        }
     }
 }
