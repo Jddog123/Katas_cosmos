@@ -9,5 +9,11 @@
 - [X] Si_NumeroEsNueve_Debe_RetornarIX
 - [X] Si_NumeroEsDiez_Debe_RetornarX
 - [X] Si_NumeroEsOnce_Debe_RetornarXI
-- [ ] Si_NumeroEsDoce_Debe_RetornarXII
-- [ ] Si_NumeroEsTrece_Debe_RetornarXIII
+- [X] Si_NumeroEsDoce_Debe_RetornarXII
+- [X] Si_NumeroEsTrece_Debe_RetornarXIII
+- [ ] Si_NumeroEsVeinte_Debe_RetornarXX
+- [ ] Si_NumeroEsTreinta_Debe_RetornarXXX
+- [ ] Si_NumeroEsCatorce_Debe_RetornarXIV
+- [ ] Si_NumeroEsQuince_Debe_RetornarXV
+- [ ] Si_NumeroEsVeinticuatro_Debe_RetornarXXIV
+- [ ] Si_NumeroEsVeinticinco_Debe_RetornarXXV

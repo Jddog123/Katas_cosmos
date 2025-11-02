@@ -35,6 +35,18 @@ namespace NumerosRomanos.Test
             numerosRomanos.ObtenerNumeroRomano().Should().BeEquivalentTo(numeroRomanoEsperado);
         }
 
+        [Theory]
+        [InlineData(11, "XI")]
+        [InlineData(12, "XII")]
+        [InlineData(13, "XIII")]
+        public void Si_NumeroOnceDoceOTrece_Debe_RetornarXMasIPorCantidadDeNumeroMenosDiez(int numero, string numeroRomanoEsperado)
+        {
+            //Act
+            numerosRomanos.Convertir(numero);
+            //Assert
+            numerosRomanos.ObtenerNumeroRomano().Should().BeEquivalentTo(numeroRomanoEsperado);
+        }
+
         [Fact]
         public void Si_NumeroEsCuatro_Debe_RetornarIV()
         {
@@ -70,24 +82,6 @@ namespace NumerosRomanos.Test
             //Assert
             numerosRomanos.ObtenerNumeroRomano().Should().BeEquivalentTo("X");
         }
-
-        [Fact]
-        public void Si_NumeroEsOnce_Debe_RetornarXI()
-        {
-            //Act
-            numerosRomanos.Convertir(11);
-            //Assert
-            numerosRomanos.ObtenerNumeroRomano().Should().BeEquivalentTo("XI");
-        }
-
-        [Fact]
-        public void Si_NumeroEsDoce_Debe_RetornarXII()
-        {
-            //Act
-            numerosRomanos.Convertir(12);
-            //Assert
-            numerosRomanos.ObtenerNumeroRomano().Should().BeEquivalentTo("XII");
-        }
     }
 
     public class NumerosRomanos()
@@ -95,17 +89,10 @@ namespace NumerosRomanos.Test
         private string _numeroRomano;
         public void Convertir(int numero)
         {
-            if (numero == 4)
+            if (numero >= 10)
             {
-                _numeroRomano = "IV";
-                return;
-            }
-
-            if (numero == 5)
-            {
-                _numeroRomano = "V";
-                return;
-
+                _numeroRomano = "X";
+                numero -= 10;
             }
 
             if (numero == 9)
@@ -114,28 +101,16 @@ namespace NumerosRomanos.Test
                 return;
             }
 
-            if (numero == 10)
-            {
-                _numeroRomano = "X";
-                return;
-            }
-
-            if (numero == 11)
-            {
-                _numeroRomano = "XI";
-                return;
-            }
-
-            if (numero == 12)
-            {
-                _numeroRomano = "XII";
-                return;
-            }
-
-            if (numero > 5)
+            if (numero >= 5)
             {
                 _numeroRomano = "V";
                 numero -= 5;
+            }
+
+            if (numero == 4)
+            {
+                _numeroRomano = "IV";
+                return;
             }
 
             for (int i = 1; i <= numero; i++)
