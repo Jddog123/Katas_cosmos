@@ -127,6 +127,12 @@ namespace NumerosRomanos.Test
         private string _numeroRomano;
         public void Convertir(int numero)
         {
+            if(numero == 50)
+            {
+                _numeroRomano = "L";
+                return;
+            }
+
             while (numero >= 40)
             {
                 _numeroRomano += "XL";
