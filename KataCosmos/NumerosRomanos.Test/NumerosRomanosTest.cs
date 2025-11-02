@@ -30,6 +30,15 @@ namespace NumerosRomanos.Test
             //Assert
             numerosRomanos.ObtenerNumeroRomano().Should().BeEquivalentTo("IV");
         }
+
+        [Fact]
+        public void Si_NumeroEsCinco_Debe_RetornarV()
+        {
+            //Act
+            numerosRomanos.Convertir(5);
+            //Assert
+            numerosRomanos.ObtenerNumeroRomano().Should().BeEquivalentTo("V");
+        }
     }
 
     public class NumerosRomanos()
