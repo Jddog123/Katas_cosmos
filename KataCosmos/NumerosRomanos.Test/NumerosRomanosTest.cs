@@ -163,5 +163,14 @@ namespace NumerosRomanos.Test
             //Assert
             numerosRomanos.ObtenerNumeroRomano().Should().BeEquivalentTo(numeroRomanoEsperado);
         }
+
+        [Fact]
+        public void Si_NumeroEsMil_Debe_RetornarM()
+        {
+            //Act
+            numerosRomanos.Convertir(1000);
+            //Assert
+            numerosRomanos.ObtenerNumeroRomano().Should().BeEquivalentTo("M");
+        }
     }
 }
