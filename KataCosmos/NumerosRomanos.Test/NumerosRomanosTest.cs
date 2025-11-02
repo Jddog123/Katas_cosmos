@@ -14,7 +14,7 @@ namespace NumerosRomanos.Test
             //Act
             numerosRomanos.Convertir(numero);
             //Assert
-            numerosRomanos.ObtenerNumeroRomano().Should().Equals("I");
+            numerosRomanos.ObtenerNumeroRomano().Should().BeEquivalentTo("I");
         }
     }
 
@@ -22,12 +22,12 @@ namespace NumerosRomanos.Test
     {
         public void Convertir(int numero)
         {
-            throw new NotImplementedException();
+
         }
 
         public string ObtenerNumeroRomano()
         {
-            throw new NotImplementedException();
+            return "I";
         }
     }
 }
