@@ -10,31 +10,16 @@ namespace NumerosRomanos.Test
         {
             numerosRomanos = new NumerosRomanos();
         }
-        [Fact]
-        public void Si_NumeroEsUno_Debe_RetornarI()
+        [Theory]
+        [InlineData(1,"I")]
+        [InlineData(2, "II")]
+        [InlineData(3, "III")]
+        public void Si_NumeroEsUnoDosOTres_Debe_RetornarIPorCantidadDeNumero(int numero, string numeroRomanoEsperado)
         {
             //Act
-            numerosRomanos.Convertir(1);
+            numerosRomanos.Convertir(numero);
             //Assert
-            numerosRomanos.ObtenerNumeroRomano().Should().BeEquivalentTo("I");
-        }
-
-        [Fact]
-        public void Si_NumeroEsDos_Debe_RetornarII()
-        {
-            //Act
-            numerosRomanos.Convertir(2);
-            //Assert
-            numerosRomanos.ObtenerNumeroRomano().Should().BeEquivalentTo("II");
-        }
-
-        [Fact]
-        public void Si_NumeroEsTres_Debe_RetornarIII()
-        {
-            //Act
-            numerosRomanos.Convertir(3);
-            //Assert
-            numerosRomanos.ObtenerNumeroRomano().Should().BeEquivalentTo("III");
+            numerosRomanos.ObtenerNumeroRomano().Should().BeEquivalentTo(numeroRomanoEsperado);
         }
 
         [Fact]
