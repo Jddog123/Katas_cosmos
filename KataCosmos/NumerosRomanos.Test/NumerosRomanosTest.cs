@@ -88,6 +88,15 @@ namespace NumerosRomanos.Test
             //Assert
             numerosRomanos.ObtenerNumeroRomano().Should().BeEquivalentTo("IX");
         }
+
+        [Fact]
+        public void Si_NumeroEsQuince_Debe_RetornarXV()
+        {
+            //Act
+            numerosRomanos.Convertir(15);
+            //Assert
+            numerosRomanos.ObtenerNumeroRomano().Should().BeEquivalentTo("XV");
+        }
     }
 
     public class NumerosRomanos()
