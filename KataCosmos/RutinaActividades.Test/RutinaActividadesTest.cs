@@ -1,4 +1,5 @@
 using FluentAssertions;
+using RutinaActividades.Dominio;
 
 namespace RutinaActividades.Test
 {
@@ -78,7 +79,7 @@ namespace RutinaActividades.Test
             //Act
             string Actividad = rutina.ActividadRealizar(new TimeSpan(5, 59, 59));
             //Assert
-            Actividad.Should().BeEquivalentTo("Sin Actividad");
+            Actividad.Should().BeEquivalentTo(RutinaPersonalizada.SIN_ACTIVIDAD);
         }
 
         [Fact]
@@ -89,55 +90,7 @@ namespace RutinaActividades.Test
             //Act
             string Actividad = rutina.ActividadRealizar(new TimeSpan(9, 0, 0));
             //Assert
-            Actividad.Should().BeEquivalentTo("Sin Actividad");
-        }
-    }
-
-    internal class RutinaPersonalizada
-    {
-        private readonly List<Actividad> _listaActividades;
-        public RutinaPersonalizada()
-        {
-            _listaActividades = new List<Actividad> {
-                new Actividad("Hacer Ejercicio", new TimeSpan(6, 0, 0), new TimeSpan(6, 59, 59)),
-                new Actividad("Leer y estudiar", new TimeSpan(7, 0, 0), new TimeSpan(7, 59, 59)),
-                new Actividad("Desayunar", new TimeSpan(8, 0, 0), new TimeSpan(8, 59, 59))
-            };
-        }
-        public string ActividadRealizar(TimeSpan horaActual)
-        {
-            if (horaActual == new TimeSpan(9,0,0))
-                return "Sin actividad";
-
-            if (horaActual == new TimeSpan(5, 59, 59))
-                return "Sin actividad";
-
-            Actividad actividadRealizar = _listaActividades.FirstOrDefault(act => act.ActividadEnHorario(horaActual));
-
-            return actividadRealizar.ObtenerNombreActividadEnHorario();
-        }
-    }
-
-    internal class Actividad
-    {
-        private string _nombreActividad;
-        private TimeSpan _horaInicial;
-        private TimeSpan _horaFinal;
-        public Actividad(string NombreActividad, TimeSpan HoraInicial, TimeSpan HoraFinal) 
-        {
-            _nombreActividad = NombreActividad;
-            _horaInicial = HoraInicial;
-            _horaFinal = HoraFinal;
-        }
-
-        public bool ActividadEnHorario(TimeSpan HoraActual)
-        {
-            return HoraActual >= _horaInicial && HoraActual <= _horaFinal;
-        }
-
-        public string ObtenerNombreActividadEnHorario()
-        {
-            return _nombreActividad;
+            Actividad.Should().BeEquivalentTo(RutinaPersonalizada.SIN_ACTIVIDAD);
         }
     }
 }
