@@ -21,7 +21,7 @@ namespace RutinaActividades.Dominio
 
         public void AgregarActividad(Actividad actividad)
         {
-            throw new NotImplementedException();
+            throw new ArgumentException("Ya existe una actividad programada en ese horario");
         }
 
         public void EliminarActividad(string Actividad)
