@@ -40,15 +40,36 @@ namespace RutinaActividades.Test
 
     internal class RutinaPersonalizada
     {
-        public string ActividadRealizar(TimeSpan timeSpan)
+        private readonly List<Actividad> _listaActividades;
+        public RutinaPersonalizada()
         {
-            if (timeSpan.Hours == 8)
-                return "Desayunar";
+            _listaActividades = new List<Actividad> {
+                new Actividad("Hacer Ejercicio", new TimeSpan(6, 0, 0)),
+                new Actividad("Leer y estudiar", new TimeSpan(7, 0, 0)),
+                new Actividad("Desayunar", new TimeSpan(8, 0, 0))
+            };
+        }
+        public string ActividadRealizar(TimeSpan horaActual)
+        {
+            Actividad actividadRealizar = _listaActividades.FirstOrDefault(act => act.ActividadEnHorario(horaActual));
 
-            if (timeSpan.Hours == 7)
-                return "Leer y estudiar";
+            return actividadRealizar._nombreActividad;
+        }
+    }
 
-            return "Hacer Ejercicio";
+    internal class Actividad
+    {
+        public string _nombreActividad { get; private set; }
+        private TimeSpan _horaInicial;
+        public Actividad(string NombreActividad, TimeSpan HoraInicial) 
+        {
+            _nombreActividad = NombreActividad;
+            _horaInicial = HoraInicial;
+        }
+
+        public bool ActividadEnHorario(TimeSpan HoraActual)
+        {
+            return HoraActual == _horaInicial;
         }
     }
 }
