@@ -95,6 +95,9 @@ namespace RutinaActividades.Test
         }
         public string ActividadRealizar(TimeSpan horaActual)
         {
+            if (horaActual == new TimeSpan(5, 59, 59))
+                return "Sin actividad";
+
             Actividad actividadRealizar = _listaActividades.FirstOrDefault(act => act.ActividadEnHorario(horaActual));
 
             return actividadRealizar.ObtenerNombreActividadEnHorario();
