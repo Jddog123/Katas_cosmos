@@ -21,5 +21,15 @@ namespace RutinaActividades.Dominio
         {
             return _nombreActividad;
         }
+
+        public TimeSpan ObtenerHoraInicialActividad()
+        {
+            return _horaInicial;
+        }
+
+        public TimeSpan ObtenerHoraFinalActividad()
+        {
+            return _horaFinal;
+        }
     }
 }

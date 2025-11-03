@@ -21,7 +21,12 @@ namespace RutinaActividades.Dominio
 
         public void AgregarActividad(Actividad actividad)
         {
-            throw new ArgumentException("Ya existe una actividad programada en ese horario");
+            bool existeActividad = _listaActividades.Any(act => act.ActividadEnHorario(actividad.ObtenerHoraInicialActividad()) || act.ActividadEnHorario(actividad.ObtenerHoraFinalActividad()));
+
+            if(existeActividad)
+                throw new ArgumentException("Ya existe una actividad programada en ese horario");
+
+            _listaActividades.Add(new Actividad("Ducharse", new TimeSpan(9, 0, 0), new TimeSpan(9, 30, 0)));
         }
 
         public void EliminarActividad(string Actividad)
