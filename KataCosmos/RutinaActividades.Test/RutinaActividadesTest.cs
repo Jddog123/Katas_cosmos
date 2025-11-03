@@ -80,6 +80,17 @@ namespace RutinaActividades.Test
             //Assert
             Actividad.Should().BeEquivalentTo("Sin Actividad");
         }
+
+        [Fact]
+        public void Si_SolicitaActividadRealizarYLaHoraActualEstaDespuesDeLasOchoYcincuentanueveMinutosConCincuentayNueveSegundosAM_Debe_RetornarSinActividad()
+        {
+            //Arrange
+            RutinaPersonalizada rutina = new RutinaPersonalizada();
+            //Act
+            string Actividad = rutina.ActividadRealizar(new TimeSpan(9, 0, 0));
+            //Assert
+            Actividad.Should().BeEquivalentTo("Sin Actividad");
+        }
     }
 
     internal class RutinaPersonalizada
