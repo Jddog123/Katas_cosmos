@@ -92,5 +92,16 @@ namespace RutinaActividades.Test
             //Assert
             Actividad.Should().BeEquivalentTo(RutinaPersonalizada.SIN_ACTIVIDAD);
         }
+
+        [Fact]
+        public void Si_SolicitaEliminarActividadDucharse_Debe_RetornarExcepcion()
+        {
+            //Arrange
+            RutinaPersonalizada rutina = new RutinaPersonalizada();
+            //Act
+            var resultado =  () => rutina.EliminarActividad("Ducharse");
+            //Assert
+            resultado.Should().ThrowExactly<ArgumentException>("Actividad no programada");
+        }
     }
 }
