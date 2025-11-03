@@ -29,6 +29,19 @@ namespace RutinaActividades.Test
             //Assert
             Actividad.Should().BeEquivalentTo("Leer y estudiar");
         }
+
+        [Fact]
+        public void Si_SolicitaActividadRealizarYLaHoraActualEstaEntreOchoYOchoYcincuentaNueveAM_Debe_RetornarDesayunar()
+        {
+            //Arrange
+            TimeSpan horaInicial = new TimeSpan(8, 0, 0);
+            TimeSpan horaFinal = new TimeSpan(8, 59, 59);
+            RutinaActividad rutina = new RutinaPersonalizada();
+            //Act
+            string Actividad = rutina.ActidadRealizar(horaInicial, horaFinal);
+            //Assert
+            Actividad.Should().BeEquivalentTo("Desayunar");
+        }
     }
 
     internal class RutinaPersonalizada : RutinaActividad
