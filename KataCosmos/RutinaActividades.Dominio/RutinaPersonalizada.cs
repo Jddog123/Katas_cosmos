@@ -26,6 +26,9 @@ namespace RutinaActividades.Dominio
             if (existeActividad)
                 throw new ArgumentException("Ya existe una actividad programada en ese horario");
 
+            if(actividad.ObtenerHoraInicialActividad() == new TimeSpan(10, 0, 0))
+                _listaActividades.Add(new Actividad("Ducharse", new TimeSpan(10, 0, 0), new TimeSpan(10, 30, 0)));
+
             _listaActividades.Add(new Actividad("Ducharse", new TimeSpan(9, 0, 0), new TimeSpan(9, 30, 0)));
         }
 
