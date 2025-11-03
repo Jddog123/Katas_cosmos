@@ -25,6 +25,17 @@ namespace RutinaActividades.Test
             //Assert
             Actividad.Should().BeEquivalentTo("Leer y estudiar");
         }
+
+        [Fact]
+        public void Si_SolicitaActividadRealizarYLaHoraActualSonLasOchoAM_Debe_RetornarDesayunar()
+        {
+            //Arrange
+            RutinaPersonalizada rutina = new RutinaPersonalizada();
+            //Act
+            string Actividad = rutina.ActividadRealizar(new TimeSpan(8, 0, 0));
+            //Assert
+            Actividad.Should().BeEquivalentTo("Desayunar");
+        }
     }
 
     internal class RutinaPersonalizada
