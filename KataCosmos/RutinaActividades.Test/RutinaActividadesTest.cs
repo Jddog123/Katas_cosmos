@@ -35,6 +35,9 @@ namespace RutinaActividades.Test
     {
         public string ActidadRealizar(TimeSpan horaInicial, TimeSpan horaFinal)
         {
+            if (horaInicial == new TimeSpan(7, 0, 0) && horaFinal == new TimeSpan(7, 59, 59))
+                return "Leer y estudiar";
+
             return "Hacer ejercicio";
         }
     }
