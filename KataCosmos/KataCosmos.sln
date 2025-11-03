@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NumerosRomanos.Test", "Nume
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NumerosRomanos.Dominio", "NumerosRomanos.Dominio\NumerosRomanos.Dominio.csproj", "{7D5145F6-BC62-4D45-BC6D-9A26A8AC089D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RutinaActividades.Test", "RutinaActividades.Test\RutinaActividades.Test.csproj", "{3D71F7EE-C049-48A6-8087-BD948704B130}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -99,6 +101,18 @@ Global
 		{7D5145F6-BC62-4D45-BC6D-9A26A8AC089D}.Release|x64.Build.0 = Release|Any CPU
 		{7D5145F6-BC62-4D45-BC6D-9A26A8AC089D}.Release|x86.ActiveCfg = Release|Any CPU
 		{7D5145F6-BC62-4D45-BC6D-9A26A8AC089D}.Release|x86.Build.0 = Release|Any CPU
+		{3D71F7EE-C049-48A6-8087-BD948704B130}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3D71F7EE-C049-48A6-8087-BD948704B130}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3D71F7EE-C049-48A6-8087-BD948704B130}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{3D71F7EE-C049-48A6-8087-BD948704B130}.Debug|x64.Build.0 = Debug|Any CPU
+		{3D71F7EE-C049-48A6-8087-BD948704B130}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{3D71F7EE-C049-48A6-8087-BD948704B130}.Debug|x86.Build.0 = Debug|Any CPU
+		{3D71F7EE-C049-48A6-8087-BD948704B130}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3D71F7EE-C049-48A6-8087-BD948704B130}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3D71F7EE-C049-48A6-8087-BD948704B130}.Release|x64.ActiveCfg = Release|Any CPU
+		{3D71F7EE-C049-48A6-8087-BD948704B130}.Release|x64.Build.0 = Release|Any CPU
+		{3D71F7EE-C049-48A6-8087-BD948704B130}.Release|x86.ActiveCfg = Release|Any CPU
+		{3D71F7EE-C049-48A6-8087-BD948704B130}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
