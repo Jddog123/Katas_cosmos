@@ -77,41 +77,39 @@ namespace RutinaActividades.Test
         public RutinaPersonalizada()
         {
             _listaActividades = new List<Actividad> {
-                new Actividad("Hacer Ejercicio", new TimeSpan(6, 0, 0)),
-                new Actividad("Leer y estudiar", new TimeSpan(7, 0, 0)),
-                new Actividad("Desayunar", new TimeSpan(8, 0, 0))
+                new Actividad("Hacer Ejercicio", new TimeSpan(6, 0, 0), new TimeSpan(6, 59, 59)),
+                new Actividad("Leer y estudiar", new TimeSpan(7, 0, 0), new TimeSpan(7, 59, 59)),
+                new Actividad("Desayunar", new TimeSpan(8, 0, 0), new TimeSpan(8, 59, 59))
             };
         }
         public string ActividadRealizar(TimeSpan horaActual)
         {
-            if (horaActual == new TimeSpan(8, 59, 59))
-                return "Desayunar";
-
-            if (horaActual == new TimeSpan(7, 59, 59))
-                return "Leer y estudiar";
-
-            if (horaActual == new TimeSpan(6, 59, 59))
-                return "Hacer Ejercicio";
-
             Actividad actividadRealizar = _listaActividades.FirstOrDefault(act => act.ActividadEnHorario(horaActual));
 
-            return actividadRealizar._nombreActividad;
+            return actividadRealizar.ObtenerNombreActividadEnHorario();
         }
     }
 
     internal class Actividad
     {
-        public string _nombreActividad { get; private set; }
+        private string _nombreActividad;
         private TimeSpan _horaInicial;
-        public Actividad(string NombreActividad, TimeSpan HoraInicial) 
+        private TimeSpan _horaFinal;
+        public Actividad(string NombreActividad, TimeSpan HoraInicial, TimeSpan HoraFinal) 
         {
             _nombreActividad = NombreActividad;
             _horaInicial = HoraInicial;
+            _horaFinal = HoraFinal;
         }
 
         public bool ActividadEnHorario(TimeSpan HoraActual)
         {
-            return HoraActual == _horaInicial;
+            return HoraActual >= _horaInicial && HoraActual <= _horaFinal;
+        }
+
+        public string ObtenerNombreActividadEnHorario()
+        {
+            return _nombreActividad;
         }
     }
 }
