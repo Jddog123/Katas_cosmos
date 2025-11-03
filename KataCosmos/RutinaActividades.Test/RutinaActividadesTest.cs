@@ -152,5 +152,18 @@ namespace RutinaActividades.Test
             //Assert
             Actividad.Should().BeEquivalentTo("Ducharse");
         }
+
+        [Fact]
+        public void Si_SolicitanAgregarActividadDucharseAlasDiezAMYSolicitanActividadRealizarSiendoLasDiezAM_Debe_Ducharse()
+        {
+            //Arrange
+            RutinaPersonalizada rutina = new RutinaPersonalizada();
+            Actividad ducharse = new Actividad("Ducharse", new TimeSpan(10, 0, 0), new TimeSpan(10, 30, 0));
+            rutina.AgregarActividad(ducharse);
+            //Act
+            string Actividad = rutina.ActividadRealizar(new TimeSpan(10, 0, 0));
+            //Assert
+            Actividad.Should().BeEquivalentTo("Ducharse");
+        }
     }
 }
