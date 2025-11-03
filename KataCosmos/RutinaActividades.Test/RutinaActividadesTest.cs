@@ -115,5 +115,18 @@ namespace RutinaActividades.Test
             //Assert
             Actividad.Should().BeEquivalentTo(RutinaPersonalizada.SIN_ACTIVIDAD);
         }
+
+        [Fact]
+        public void Si_SolicitaEliminarActividadLeerYEstudiarYSolicitanActividadRealizarSiendoLasSieteAM_Debe_RetornarSinActividad()
+        {
+            //Arrange
+            RutinaPersonalizada rutina = new RutinaPersonalizada();
+            rutina.EliminarActividad("Leer y estudiar");
+            //Act
+            string Actividad = rutina.ActividadRealizar(new TimeSpan(7, 0, 0));
+            //Assert
+            Actividad.Should().BeEquivalentTo(RutinaPersonalizada.SIN_ACTIVIDAD);
+        }
+
     }
 }
