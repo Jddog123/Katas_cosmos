@@ -109,7 +109,7 @@ namespace RutinaActividades.Test
         {
             //Arrange
             RutinaPersonalizada rutina = new RutinaPersonalizada();
-            rutina.EliminarActividad("Hacer ejercicio");
+            rutina.EliminarActividad("Hacer Ejercicio");
             //Act
             string Actividad = rutina.ActividadRealizar(new TimeSpan(6, 0, 0));
             //Assert
