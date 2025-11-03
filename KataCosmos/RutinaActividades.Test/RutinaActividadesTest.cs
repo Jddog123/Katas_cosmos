@@ -106,6 +106,9 @@ namespace RutinaActividades.Test
         }
         public string ActividadRealizar(TimeSpan horaActual)
         {
+            if (horaActual == new TimeSpan(9,0,0))
+                return "Sin actividad";
+
             if (horaActual == new TimeSpan(5, 59, 59))
                 return "Sin actividad";
 
