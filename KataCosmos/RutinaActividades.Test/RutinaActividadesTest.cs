@@ -22,7 +22,7 @@ namespace RutinaActividades.Test
     {
         public string ActidadRealizar(TimeSpan horaInicial, TimeSpan horaFinal)
         {
-            throw new NotImplementedException();
+            return "Hacer ejercicio";
         }
     }
 
