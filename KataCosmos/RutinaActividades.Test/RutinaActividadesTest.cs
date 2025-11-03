@@ -31,6 +31,9 @@ namespace RutinaActividades.Test
     {
         public string ActividadRealizar(TimeSpan timeSpan)
         {
+            if (timeSpan.Hours == 7)
+                return "Leer y estudiar";
+
             return "Hacer Ejercicio";
         }
     }
