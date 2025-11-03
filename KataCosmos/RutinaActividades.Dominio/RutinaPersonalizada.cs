@@ -18,5 +18,22 @@ namespace RutinaActividades.Dominio
 
             return actividadRealizar != null ? actividadRealizar.ObtenerNombreActividadEnHorario() : SIN_ACTIVIDAD;
         }
+
+        public void EliminarActividad(string Actividad)
+        {
+            if (Actividad == "Leer y estudiar")
+            {
+                _listaActividades.RemoveAll(act => act.ObtenerNombreActividadEnHorario().Equals("Leer y estudiar"));
+                return;
+            }
+
+            if (Actividad == "Hacer Ejercicio")
+            {
+                _listaActividades.RemoveAll(act => act.ObtenerNombreActividadEnHorario().Equals("Hacer Ejercicio"));
+                return;
+            } 
+
+            throw new ArgumentException($"Actividad {Actividad} no programada");
+        }
     }
 }
