@@ -21,19 +21,10 @@ namespace RutinaActividades.Dominio
 
         public void EliminarActividad(string Actividad)
         {
-            if (Actividad == "Leer y estudiar")
-            {
-                _listaActividades.RemoveAll(act => act.ObtenerNombreActividadEnHorario().Equals("Leer y estudiar"));
-                return;
-            }
+            int actividadEliminada = _listaActividades.RemoveAll(act => act.ObtenerNombreActividadEnHorario().Equals(Actividad));
 
-            if (Actividad == "Hacer Ejercicio")
-            {
-                _listaActividades.RemoveAll(act => act.ObtenerNombreActividadEnHorario().Equals("Hacer Ejercicio"));
-                return;
-            } 
-
-            throw new ArgumentException($"Actividad {Actividad} no programada");
+            if(actividadEliminada == 0)
+                throw new ArgumentException($"Actividad {Actividad} no programada");
         }
     }
 }
