@@ -101,7 +101,7 @@ namespace RutinaActividades.Test
             //Act
             var resultado =  () => rutina.EliminarActividad("Ducharse");
             //Assert
-            resultado.Should().ThrowExactly<ArgumentException>("Actividad no programada");
+            resultado.Should().ThrowExactly<ArgumentException>("Actividad Ducharse no programada");
         }
     }
 }
