@@ -128,5 +128,16 @@ namespace RutinaActividades.Test
             Actividad.Should().BeEquivalentTo(RutinaPersonalizada.SIN_ACTIVIDAD);
         }
 
+        [Fact]
+        public void Si_SolicitanAgregarActividadDucharseAlasSeisAM_Debe_RetornarExcepcion()
+        {
+            //Arrange
+            RutinaPersonalizada rutina = new RutinaPersonalizada();
+            Actividad ducharse = new Actividad ("Ducharse", new TimeSpan(6, 0, 0), new TimeSpan(6, 0, 0));
+            //Act
+            var resultado = () => rutina.AgregarActividad(ducharse);
+            //Assert
+            resultado.Should().ThrowExactly<ArgumentException>("Ya existe una actividad programada en ese horario");
+        }
     }
 }

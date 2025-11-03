@@ -19,6 +19,11 @@ namespace RutinaActividades.Dominio
             return actividadRealizar != null ? actividadRealizar.ObtenerNombreActividadEnHorario() : SIN_ACTIVIDAD;
         }
 
+        public void AgregarActividad(Actividad actividad)
+        {
+            throw new NotImplementedException();
+        }
+
         public void EliminarActividad(string Actividad)
         {
             int actividadEliminada = _listaActividades.RemoveAll(act => act.ObtenerNombreActividadEnHorario().Equals(Actividad));
