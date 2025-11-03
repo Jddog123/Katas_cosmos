@@ -84,6 +84,9 @@ namespace RutinaActividades.Test
         }
         public string ActividadRealizar(TimeSpan horaActual)
         {
+            if (horaActual == new TimeSpan(8, 59, 59))
+                return "Desayunar";
+
             if (horaActual == new TimeSpan(7, 59, 59))
                 return "Leer y estudiar";
 
